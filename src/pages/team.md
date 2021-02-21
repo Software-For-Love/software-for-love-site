@@ -19,7 +19,7 @@ sections:
       neque. Lectus arcu bibendum at varius vel pharetra. Enim sed faucibus
       turpis in eu mi bibendum neque egestas.
   - type: team_section
-    title: Our Team
+    title: Meet the team
     team:
       - src/data/team/miles-tone.yaml
       - src/data/team/dianne-ameter.yaml

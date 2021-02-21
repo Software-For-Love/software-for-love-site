@@ -2,19 +2,19 @@
 title: Home
 sections:
   - type: hero_section
-    title: This Is A Big Hero Headline
+    title: Software for Love
     subtitle: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus
+      Developing software for non-profits, consectetur adipiscing elit. Nullam a metus
       quis lorem malesuada luctus.
     actions:
-      - label: Learn More
-        url: /features
+      - label: Non-Profits
+        url: /non-profits
         style: primary
-      - label: Contact Us
-        url: /contact
+      - label: Volunteer
+        url: /volunteers
         style: secondary
     align: left
-    image: images/hero.svg
+    image: images/splash.png
     image_alt: Hero placeholder image
     image_position: right
     has_background: true
@@ -25,7 +25,7 @@ sections:
       background_image_size: auto
       background_image_repeat: repeat
   - type: features_section
-    title: Features
+    title: Who we Are
     features:
       - title: Feature 1
         content: >-
@@ -67,18 +67,20 @@ sections:
             url: /features
             style: secondary
   - type: blog_feed_section
-    title: What's New
+    title: Current Projects
     show_recent: true
     recent_count: 3
   - type: cta_section
-    title: This Is A CTA
+    title: Join us!
     subtitle: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus
-      quis lorem malesuada luctus.
+      Apply as Non-Profit or as a Volunteer to get involved with Software for Love
     actions:
-      - label: Learn More
+      - label: Non-profits
         url: /features
         style: primary
+      - label: Volunteers
+        url: /features
+        style: secondary
     has_background: true
     background_color: gray
 template: advanced
