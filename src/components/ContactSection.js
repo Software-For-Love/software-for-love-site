@@ -12,14 +12,6 @@ export default class ContactSection extends React.Component {
                   </div>
                   <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="contactForm" />
                   <div className="form-group">
-                    <label id="name-label" htmlFor="name">Name</label>
-                    <input aria-labelledby="name-label" type="text" name="name" id="name" placeholder="Your name" required />
-                  </div>
-                  <div className="form-group">
-                    <label id="email-label" htmlFor="email">Email</label>
-                    <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" required />
-                  </div>
-                  <div className="form-group">
                     <label htmlFor="subject">Subject</label>
                     <div className="form-select-wrap">
                       <select name="subject" id="subject">
@@ -30,6 +22,18 @@ export default class ContactSection extends React.Component {
                       </select>
                     </div>
                   </div>
+                  <div className="form-group">
+                    <label id="name-label" htmlFor="name">Name</label>
+                    <input aria-labelledby="name-label" type="text" name="name" id="name" placeholder="Your name" required />
+                  </div>
+                  <div className="form-group">
+                    <label id="email-label" htmlFor="email">Email</label>
+                    <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" />
+                  </div>
+                  <div className="form-group">
+                    <label id="phone-label" htmlFor="phone">Phone Number</label>
+                    <input aria-labelledby="phone-label" type="tel" name="tel" id="tel" placeholder="Your phone number" />
+                  </div>                  
                   <div className="form-group">
                     <label id="message-label" htmlFor="message">Message</label>
                     <textarea aria-labelledby="message-label" name="message" id="message" rows="5" placeholder="Your message" />
