@@ -59,9 +59,21 @@ export default class ContactSection extends React.Component {
                         <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="contactForm" />
 
                         <div className="form-group">
-                          <label id="name-label" htmlFor="name">Name</label>
-                          <input aria-labelledby="name-label" type="text" name="name" id="name" placeholder="Your name" required />
+                          <label id="first-name-label" htmlFor="name">First Name</label>
+                          <input aria-labelledby="first-name-label" type="text" name="name" id="first-name" placeholder="Your first name" required />
                         </div>
+
+                        <div className="form-group">
+                          <label id="last-name-label" htmlFor="name">Last Name</label>
+                          <input aria-labelledby="last-name-label" type="text" name="name" id="last-name" placeholder="Your last name" required />
+                        </div>
+
+                        {_.get(section, 'has_organization_field', null) &&
+                          (<div className="form-group">
+                            <label id="organization" htmlFor="name">Organization</label>
+                            <input aria-labelledby="organization" type="text" name="name" id="organization" placeholder="N/A if non-applicable" required />
+                          </div>)
+                        }
 
                         <div className="form-group">
                           <label id="email-label" htmlFor="email">Email</label>
