@@ -16,7 +16,7 @@ sections:
     image: images/volunteer.png
     image_alt: Hero placeholder image
     image_position: right
-    has_background: true
+    has_background: false
     background:
       background_color: grey
       background_image: images/diagonal-lines.svg
@@ -25,8 +25,9 @@ sections:
       background_image_repeat: repeat
   - type: contact_section 
     title: Contact Form 
+    subtitle: Fill in the contact form below to register as a volunteer for SFL!
     has_form: true 
-    has_message_field: true
+    has_message_field: false
     has_university_field: true
     has_technologies_field: true
     background:
