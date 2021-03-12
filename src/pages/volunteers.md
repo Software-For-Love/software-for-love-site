@@ -7,11 +7,10 @@ sections:
       
       Volunteers are a essential part of the SFL organization that collaborate together to spread positivity in the community by helping out at the organization. The following are the requirements if you’re willing to become apart of the volunteer commitee:  
 
-      <ol><li>Must be willing to put in 2-3 hours per week</li>
+      <ul><li>Must be willing to put in 2-3 hours per week</li>
       <li>Must adhere to the policies set by the orgnaization</li> 
-      <li>Must atleast be enrolled in an undergraduate program at a accredited institution</li></ol>  
+      <li>Must atleast be enrolled in an undergraduate program at a accredited institution</li></ul>  
 
-        Please fill out the contact form below to continue
     align: left
     image: images/volunteer.png
     image_alt: Hero placeholder image
