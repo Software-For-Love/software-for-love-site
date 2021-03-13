@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import {markdownify} from '../utils';
 
 import {classNames, toStyleObj, withPrefix} from '../utils';
 import SectionActions from './SectionActions';
@@ -31,7 +32,7 @@ export default class HeroSection extends React.Component {
                     )}
                     {_.get(section, 'subtitle', null) && (
                     <div className="section__copy">
-                      <p>{_.get(section, 'subtitle', null)}</p>
+                      <div>{markdownify(_.get(section, 'subtitle', null))}</div>
                     </div>
                     )}
                     {_.get(section, 'actions', null) && (
