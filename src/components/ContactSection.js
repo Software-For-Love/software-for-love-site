@@ -67,7 +67,7 @@ export default class ContactSection extends React.Component {
                 )}
 
                     {_.get(section, 'has_form', null) && (
-                      <form name="contactForm" id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                      <form name="contactForm" id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={() => handleSubmit} subject="Someone reached out to SFL">
                         
                         <div className="sr-only">
                           <label id="honeypot-label" htmlFor="honeypot">Don't fill this out if you're human:</label>
