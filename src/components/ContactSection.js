@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import { navigate } from 'gatsby';
 
 import {classNames, toStyleObj, withPrefix} from '../utils';
 import SectionActions from './SectionActions';
@@ -13,6 +14,23 @@ export default class ContactSection extends React.Component {
       let background_opacity = background_opacity_pct * 0.01;
       let background_size = _.get(background, 'background_image_size', null) || 'cover';
       let background_repeat = _.get(background, 'background_image_repeat', null) || 'no-repeat';
+
+      function encode(data) {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&")
+      }
+    
+      const handleSubmit = (event) => {
+        event.preventDefault()
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({
+            "form-name": event.target.getAttribute("name"),
+          })
+        }).then(() => navigate("/thank-you/")).catch(error => alert(error))
+      }
 
       return (
           <section className={classNames('section', 'hero', {'bg-image': _.get(section, 'has_background', null) && _.get(background, 'background_image', null), 'inverse bg-blue': _.get(section, 'has_background', null) && (background_color === 'blue'), 'bg-gray': _.get(section, 'has_background', null) && (background_color === 'gray'), 'section--padding': _.get(section, 'has_background', null) || _.get(section, 'image', null)})}>
