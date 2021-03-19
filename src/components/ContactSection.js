@@ -13,6 +13,8 @@ export default class ContactSection extends React.Component {
       let background_opacity = background_opacity_pct * 0.01;
       let background_size = _.get(background, 'background_image_size', null) || 'cover';
       let background_repeat = _.get(background, 'background_image_repeat', null) || 'no-repeat';
+      let starStyle = {color: "red"};
+      let required_star = <span style={starStyle}>*</span>
 
       return (
         
@@ -40,6 +42,7 @@ export default class ContactSection extends React.Component {
                 {_.get(section, 'subtitle', null) && (
                 <div className="section__copy">
                   <p>{_.get(section, 'subtitle', null)}</p>
+                  <p><em>All fields marked with {required_star} are required</em></p>
                 </div>
                 )}
 
@@ -48,42 +51,6 @@ export default class ContactSection extends React.Component {
                   <SectionActions {...this.props} actions={_.get(section, 'actions', null)} />
                 </div>
                 )}
-
-                function validateFirstName(){
-                  document.forms["contactForm"]["fname"].value;
-                  if (x == "") //if name is blank 
-                  alert("First Name must be filled out")
-                }
-
-                function validateLastName(){
-                  var x = document.forms["contactForm"]["lname"].value;
-                  if (x == "") //if name is blank 
-                  alert("Last Name must be filled out")
-                }
-
-                function validateEmail(){
-                    var x = document.forms["contactForm"]["email"].value;
-                    if (x == "") //if name is blank 
-                    alert("Email must be filled out")
-                }
-
-                function validatePhoneNumber(){
-                    var x = document.forms["contactForm"]["tel"].value;
-                    if (x == "") //if name is blank 
-                    alert("Telephone must be filled out")
-                }
-
-                function validateUniversities(){
-                    var x = document.forms["contactForm"]["has_university_field"].value;
-                    if (x == "") //if name is blank 
-                    alert("Universities must be filled out")
-                }
-
-                function validateTechnologies(){
-                    var x = document.forms["contactForm"]["has_technologies_field"].value;
-                    if (x == "") //if name is blank 
-                    alert("Technologies must be filled out")
-                }
             
                     {_.get(section, 'has_form', null) && (
                       <form name="contactForm" id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
@@ -96,12 +63,12 @@ export default class ContactSection extends React.Component {
                         <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="contactForm" />
 
                         <div className="form-group">
-                          <label id="first-name-label" htmlFor="name">First Name *</label>
+                          <label id="first-name-label" htmlFor="name">First Name {required_star} </label>
                           <input aria-labelledby="first-name-label" type="text" name="fname" id="first-name" placeholder="Your first name" required />
                         </div>
 
                         <div className="form-group">
-                          <label id="last-name-label" htmlFor="name">Last Name *</label>
+                          <label id="last-name-label" htmlFor="name">Last Name {required_star} </label>
                           <input aria-labelledby="last-name-label" type="text" name="lname" id="last-name" placeholder="Your last name" required />
                         </div>
 
@@ -113,8 +80,8 @@ export default class ContactSection extends React.Component {
                         }
 
                         <div className="form-group">
-                          <label id="email-label" htmlFor="email">Email *</label>
-                          <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" />
+                          <label id="email-label" htmlFor="email">Email {required_star} </label>
+                          <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" required/>
                         </div>
 
                         <div className="form-group">
@@ -135,15 +102,15 @@ export default class ContactSection extends React.Component {
 
                         {_.get(section, 'has_university_field', null) && (
                           <div className="form-group">
-                            <label id="university" htmlFor="phone">University *</label>
-                            <input aria-labelledby="university" type="text" name="has_university_field" id="university" placeholder="Current Institution" />
+                            <label id="university" htmlFor="phone">University {required_star} </label>
+                            <input aria-labelledby="university" type="text" name="has_university_field" id="university" placeholder="Current Institution" required/>
                           </div>
                         )}
 
                         {_.get(section, 'has_technologies_field', null) && (
                           <div className="form-group">
-                            <label id="technologies" htmlFor="phone">Technologies *</label>
-                            <input aria-labelledby="technologies" type="text" name="has_technologies_field" id="technologies" placeholder="List all technologies and programming languages you know" />
+                            <label id="technologies" htmlFor="phone">Technologies {required_star} </label>
+                            <input aria-labelledby="technologies" type="text" name="has_technologies_field" id="technologies" placeholder="List all technologies and programming languages you know" required/>
                           </div>
                         )}
 
@@ -155,7 +122,7 @@ export default class ContactSection extends React.Component {
                         )}
 
                         <div className="form-group form-checkbox">
-                          <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" />
+                          <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
                           <label id="consent-label" htmlFor="consent">I understand that this form is storing my submitted information so I can be
                             contacted.</label>
                         </div>
