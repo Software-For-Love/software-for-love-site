@@ -15,6 +15,7 @@ export default class ContactSection extends React.Component {
       let background_repeat = _.get(background, 'background_image_repeat', null) || 'no-repeat';
 
       return (
+        
           <section className={classNames('section', 'hero', {'bg-image': _.get(section, 'has_background', null) && _.get(background, 'background_image', null), 'inverse bg-blue': _.get(section, 'has_background', null) && (background_color === 'blue'), 'bg-gray': _.get(section, 'has_background', null) && (background_color === 'gray'), 'section--padding': _.get(section, 'has_background', null) || _.get(section, 'image', null)})}>
             <div className="container container--lg">
               <div className={classNames('flex', 'flex--middle', 'flex--center', 'flex--col-2', {'align-center': _.get(section, 'align', null) === 'center', 'align-right': _.get(section, 'align', null) === 'right'})}>
@@ -48,6 +49,42 @@ export default class ContactSection extends React.Component {
                 </div>
                 )}
 
+                function validateFirstName(){
+                  document.forms["contactForm"]["fname"].value;
+                  if (x == "") //if name is blank 
+                  alert("First Name must be filled out")
+                }
+
+                function validateLastName(){
+                  var x = document.forms["contactForm"]["lname"].value;
+                  if (x == "") //if name is blank 
+                  alert("Last Name must be filled out")
+                }
+
+                function validateEmail(){
+                    var x = document.forms["contactForm"]["email"].value;
+                    if (x == "") //if name is blank 
+                    alert("Email must be filled out")
+                }
+
+                function validatePhoneNumber(){
+                    var x = document.forms["contactForm"]["tel"].value;
+                    if (x == "") //if name is blank 
+                    alert("Telephone must be filled out")
+                }
+
+                function validateUniversities(){
+                    var x = document.forms["contactForm"]["has_university_field"].value;
+                    if (x == "") //if name is blank 
+                    alert("Universities must be filled out")
+                }
+
+                function validateTechnologies(){
+                    var x = document.forms["contactForm"]["has_technologies_field"].value;
+                    if (x == "") //if name is blank 
+                    alert("Technologies must be filled out")
+                }
+            
                     {_.get(section, 'has_form', null) && (
                       <form name="contactForm" id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                         
@@ -59,24 +96,24 @@ export default class ContactSection extends React.Component {
                         <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="contactForm" />
 
                         <div className="form-group">
-                          <label id="first-name-label" htmlFor="name">First Name</label>
-                          <input aria-labelledby="first-name-label" type="text" name="name" id="first-name" placeholder="Your first name" required />
+                          <label id="first-name-label" htmlFor="name">First Name *</label>
+                          <input aria-labelledby="first-name-label" type="text" name="fname" id="first-name" placeholder="Your first name" required />
                         </div>
 
                         <div className="form-group">
-                          <label id="last-name-label" htmlFor="name">Last Name</label>
-                          <input aria-labelledby="last-name-label" type="text" name="name" id="last-name" placeholder="Your last name" required />
+                          <label id="last-name-label" htmlFor="name">Last Name *</label>
+                          <input aria-labelledby="last-name-label" type="text" name="lname" id="last-name" placeholder="Your last name" required />
                         </div>
 
                         {_.get(section, 'has_organization_field', null) &&
                           (<div className="form-group">
                             <label id="organization" htmlFor="name">Organization</label>
-                            <input aria-labelledby="organization" type="text" name="name" id="organization" placeholder="N/A if non-applicable" required />
+                            <input aria-labelledby="organization" type="text" name="oname" id="organization" placeholder="N/A if non-applicable" required />
                           </div>)
                         }
 
                         <div className="form-group">
-                          <label id="email-label" htmlFor="email">Email</label>
+                          <label id="email-label" htmlFor="email">Email *</label>
                           <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" />
                         </div>
 
@@ -98,15 +135,15 @@ export default class ContactSection extends React.Component {
 
                         {_.get(section, 'has_university_field', null) && (
                           <div className="form-group">
-                            <label id="university" htmlFor="phone">University</label>
-                            <input aria-labelledby="university" type="text" name="text" id="university" placeholder="Current Institution" />
+                            <label id="university" htmlFor="phone">University *</label>
+                            <input aria-labelledby="university" type="text" name="has_university_field" id="university" placeholder="Current Institution" />
                           </div>
                         )}
 
                         {_.get(section, 'has_technologies_field', null) && (
                           <div className="form-group">
-                            <label id="technologies" htmlFor="phone">Technologies</label>
-                            <input aria-labelledby="technologies" type="text" name="text" id="technologies" placeholder="List all technologies and programming languages you know" />
+                            <label id="technologies" htmlFor="phone">Technologies *</label>
+                            <input aria-labelledby="technologies" type="text" name="has_technologies_field" id="technologies" placeholder="List all technologies and programming languages you know" />
                           </div>
                         )}
 
