@@ -29,7 +29,7 @@ export default class ContactSection extends React.Component {
           body: encode({
             "form-name": event.target.getAttribute("name"),
           })
-        }).then(() => navigate("/success/")).catch(error => alert(error))
+        }).then(() => navigate("/thank-you/")).catch(error => alert(error))
       }
 
       return (
