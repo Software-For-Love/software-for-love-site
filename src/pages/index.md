@@ -14,7 +14,7 @@ sections:
         url: /volunteers
         style: secondary
     align: left
-    image: images/splash.png
+    image: images/humans3.png
     image_alt: Hero placeholder image
     image_position: right
     has_background: true
@@ -31,7 +31,7 @@ sections:
         content: >-
           Software For Love is a charitable organization of university students striving to give back to our community using software.
         align: left
-        image: images/feature.svg
+        image: images/Humaaans1.png
         image_alt: Volunteers placeholder image
         image_position: right
         actions:
@@ -42,7 +42,7 @@ sections:
         content: >-
           Visit our projects page to see what we have done for other organizations.
         align: left
-        image: images/feature.svg
+        image: images/humaaansnobg.png
         image_alt: Projects Page placeholder image
         image_position: left
         actions:
@@ -53,7 +53,7 @@ sections:
         content: >-
           Visit our projects page to see what we have done for other organizations.
         align: left
-        image: images/feature.svg
+        image: images/Humaaan-Characters.png
         image_alt: Projects Page placeholder image
         image_position: right
         actions:

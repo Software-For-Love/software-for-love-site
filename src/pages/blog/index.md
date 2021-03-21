@@ -1,8 +1,8 @@
 ---
-title: Blog
+title: Projects
 sections:
   - type: hero_section
-    title: Blog
+    title: Projects
     align: center
   - type: blog_feed_section
     show_recent: true
