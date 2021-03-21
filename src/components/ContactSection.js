@@ -22,14 +22,15 @@ export default class ContactSection extends React.Component {
       }
     
       const handleSubmit = (event) => {
-        event.preventDefault()
+        event.preventDefault();
+        const form = event.target;
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
-            "form-name": event.target.getAttribute("name"),
+            "form-name": form.getAttribute("name"),
           })
-        }).then(() => navigate("/thank-you/")).catch(error => alert(error))
+        }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
       }
 
       return (
@@ -67,7 +68,7 @@ export default class ContactSection extends React.Component {
                 )}
 
                     {_.get(section, 'has_form', null) && (
-                      <form name="contactForm" id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={() => handleSubmit} subject="Someone reached out to SFL">
+                      <form name="contactForm" id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit={() => handleSubmit} subject="Someone reached out to SFL">
                         
                         <div className="sr-only">
                           <label id="honeypot-label" htmlFor="honeypot">Don't fill this out if you're human:</label>
