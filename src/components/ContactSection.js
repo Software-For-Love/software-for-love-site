@@ -28,9 +28,7 @@ export default class ContactSection extends React.Component {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
-            "form-name": form.getAttribute("name"),
-            "subject" : 'New message from softwareforlove.com',
-            ...form,
+            "form-name": form.getAttribute("name")
           })
         }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
       }
@@ -70,7 +68,7 @@ export default class ContactSection extends React.Component {
                 )}
 
                     {_.get(section, 'has_form', null) && (
-                      <form name="contactForm" id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit={() => handleSubmit} subject="Someone reached out to SFL">
+                      <form name="contactForm" id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit={() => handleSubmit} >
                         
                         <div className="sr-only">
                           <label id="honeypot-label" htmlFor="honeypot">Don't fill this out if you're human:</label>
@@ -79,7 +77,7 @@ export default class ContactSection extends React.Component {
 
                         <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="contactForm" />
 
-                        <input aria-labelledby="honeypot-label" type="hidden" id="subject" name="subject" value="Default subject" />
+                        <input aria-labelledby="honeypot-label" type="hidden" id="subject" name="subject" value="A new person wishes to get in contact with SFL" />
 
                         <div className="form-group">
                           <label id="first-name-label" htmlFor="name">First Name</label>
