@@ -77,7 +77,9 @@ export default class ContactSection extends React.Component {
 
                         <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="contactForm" />
 
-                        <input aria-labelledby="honeypot-label" type="hidden" id="subject" name="subject" value="A new person wishes to get in contact with SFL" />
+                        {_.get(section, 'subject', null) && (
+                          <input aria-labelledby="honeypot-label" type="hidden" id="subject" name="subject" value={_.get(section, 'subject', null)} />
+                        )}
 
                         <div className="form-group">
                           <label id="first-name-label" htmlFor="name">First Name</label>
