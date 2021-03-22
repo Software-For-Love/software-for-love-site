@@ -28,7 +28,9 @@ export default class ContactSection extends React.Component {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
-            "form-name": form.getAttribute("name")
+            "form-name": form.getAttribute("name"),
+            "subject" : 'New message',
+            ...form,
           })
         }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
       }
@@ -76,6 +78,8 @@ export default class ContactSection extends React.Component {
                         </div>
 
                         <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="contactForm" />
+
+                        <input aria-labelledby="honeypot-label" type="hidden" id="subject" name="subject" value="Default subject"></input>
 
                         <div className="form-group">
                           <label id="first-name-label" htmlFor="name">First Name</label>
