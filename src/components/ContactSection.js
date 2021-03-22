@@ -64,20 +64,20 @@ export default class ContactSection extends React.Component {
 
                         <div className="form-group">
 
-                          <label id="first-name-label" htmlFor="name">First Name</label>
+                          <label id="first-name-label" htmlFor="name">First Name {required_star}</label>
                           <input aria-labelledby="first-name-label" type="text" name="first-name" id="first-name" placeholder="Your first name" required />
                         </div>
 
                         <div className="form-group">
-                          <label id="last-name-label" htmlFor="name">Last Name</label>
+                          <label id="last-name-label" htmlFor="name">Last Name {required_star}</label>
                           <input aria-labelledby="last-name-label" type="text" name="last-name" id="last-name" placeholder="Your last name" required />
                         </div>
 
                         {_.get(section, 'has_organization_field', null) &&
                           (<div className="form-group">
-                            <label id="organization" htmlFor="name">Organization</label>
+                            <label id="organization" htmlFor="name">Organization {required_star}</label>
 
-                            <input aria-labelledby="organization" type="text" name="organization" id="organization" placeholder="N/A if non-applicable" required />
+                            <input aria-labelledby="organization" type="text" name="organization" id="organization" placeholder="Name of your organization" required />
 
                           </div>)
                         }
@@ -119,7 +119,7 @@ export default class ContactSection extends React.Component {
 
                         {_.get(section, 'has_message_field', null) && (
                           <div className="form-group">
-                          <label id="message-label" htmlFor="message">Message</label>
+                          <label id="message-label" htmlFor="message">Message {required_star}</label>
                           <textarea aria-labelledby="message-label" name="message" id="message" rows="5" placeholder="Your message" />
                         </div>
                         )}
@@ -127,7 +127,7 @@ export default class ContactSection extends React.Component {
                         <div className="form-group form-checkbox">
                           <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
                           <label id="consent-label" htmlFor="consent">I understand that this form is storing my submitted information so I can be
-                            contacted.</label>
+                            contacted. {required_star}</label>
                         </div>
 
                         <div className="form-submit">
