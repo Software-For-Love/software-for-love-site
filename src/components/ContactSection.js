@@ -63,19 +63,22 @@ export default class ContactSection extends React.Component {
                         <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="contactForm" />
 
                         <div className="form-group">
-                          <label id="first-name-label" htmlFor="name">First Name {required_star} </label>
-                          <input aria-labelledby="first-name-label" type="text" name="fname" id="first-name" placeholder="Your first name" required />
+
+                          <label id="first-name-label" htmlFor="name">First Name</label>
+                          <input aria-labelledby="first-name-label" type="text" name="first-name" id="first-name" placeholder="Your first name" required />
                         </div>
 
                         <div className="form-group">
-                          <label id="last-name-label" htmlFor="name">Last Name {required_star} </label>
-                          <input aria-labelledby="last-name-label" type="text" name="lname" id="last-name" placeholder="Your last name" required />
+                          <label id="last-name-label" htmlFor="name">Last Name</label>
+                          <input aria-labelledby="last-name-label" type="text" name="last-name" id="last-name" placeholder="Your last name" required />
                         </div>
 
                         {_.get(section, 'has_organization_field', null) &&
                           (<div className="form-group">
                             <label id="organization" htmlFor="name">Organization</label>
-                            <input aria-labelledby="organization" type="text" name="oname" id="organization" placeholder="N/A if non-applicable" required />
+
+                            <input aria-labelledby="organization" type="text" name="organization" id="organization" placeholder="N/A if non-applicable" required />
+
                           </div>)
                         }
 
@@ -94,8 +97,8 @@ export default class ContactSection extends React.Component {
                           <div className="form-select-wrap">
                             <select name="subject" id="subject">
                               <option value="">Please select</option>
-                              <option value="Business Inquiries">Email</option>
-                              <option value="Sponsorship">Phone</option>
+                              <option value="Email">Email</option>
+                              <option value="Phone">Phone</option>
                             </select>
                           </div>
                         </div>

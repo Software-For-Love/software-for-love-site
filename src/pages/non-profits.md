@@ -20,7 +20,7 @@ sections:
     has_organization_field: true
     # has_university_field: true
     # has_technologies_field: true
-    image: images/progressive_app.svg
+    image: images/undraw_contact_us_15o2.svg
     image_alt: Hero placeholder image
     image_position: right
     has_background: true
