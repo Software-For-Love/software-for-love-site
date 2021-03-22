@@ -29,7 +29,7 @@ export default class ContactSection extends React.Component {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
             "form-name": form.getAttribute("name"),
-            "subject" : 'New message',
+            "subject" : 'New message from softwareforlove.com',
             ...form,
           })
         }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
@@ -79,7 +79,7 @@ export default class ContactSection extends React.Component {
 
                         <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="contactForm" />
 
-                        <input aria-labelledby="honeypot-label" type="hidden" id="subject" name="subject" value="Default subject"></input>
+                        <input aria-labelledby="honeypot-label" type="hidden" id="subject" name="subject" value="Default subject" />
 
                         <div className="form-group">
                           <label id="first-name-label" htmlFor="name">First Name</label>
@@ -109,9 +109,9 @@ export default class ContactSection extends React.Component {
                         </div>
 
                         <div className="form-group">
-                          <label htmlFor="subject">Preferred method of contact</label>
+                          <label htmlFor="contact-method">Preferred method of contact</label>
                           <div className="form-select-wrap">
-                            <select name="subject" id="subject">
+                            <select name="contact-method" id="contact-method">
                               <option value="">Please select</option>
                               <option value="Email">Email</option>
                               <option value="Phone">Phone</option>
