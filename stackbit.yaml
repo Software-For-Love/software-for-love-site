@@ -431,6 +431,7 @@ models:
               - white
               - gray
               - blue
+              - mintgreen
             default: white
             description: The background color of the section
           - type: image

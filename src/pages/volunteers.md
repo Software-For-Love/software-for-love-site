@@ -26,6 +26,9 @@ sections:
     title: Contact Form 
     subtitle: Fill in the contact form below to register as a volunteer for SFL!
     has_form: true 
+    image: images/Humaans-3-Characters-_2_.svg
+    image_alt: Hero placeholder image
+    image_position: right
     has_message_field: false
     has_university_field: true
     has_technologies_field: true
