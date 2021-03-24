@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: Blog
 sections:
   - type: hero_section
     title: Projects
