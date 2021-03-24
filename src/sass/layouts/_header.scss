@@ -3,8 +3,8 @@
  */
 .site-header {
   border-bottom: 1px solid $color-border;
-  padding-bottom: 1.125rem;
-  padding-top: 1.125rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .navbar {
@@ -23,6 +23,10 @@
   img {
     max-height: 2.75rem;
   }
+}
+
+.navbar__logo:hover{
+  background-image: url("images\softwareforlove.png");
 }
 
 .navbar__menu {
@@ -44,7 +48,7 @@
   }
 
   .navbar__item {
-    margin-left: 1.25rem;
+    margin-left: 8.2rem;
   }
 
   .js-menu-toggle {
