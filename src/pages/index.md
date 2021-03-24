@@ -14,7 +14,7 @@ sections:
         url: /volunteers
         style: secondary
     align: left
-    image: images/splash.png
+    image: images/humans3.png
     image_alt: Hero placeholder image
     image_position: right
     has_background: true
@@ -25,51 +25,41 @@ sections:
       background_image_size: auto
       background_image_repeat: repeat
   - type: features_section
-    title: Who we Are
+    title: About Us
     features:
-      - title: Feature 1
+      - title: What We Do
         content: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl
-          ligula, cursus id molestie vel, maximus aliquet risus. Vivamus in nibh
-          fringilla, fringilla.
+          Software For Love is a charitable organization of university students striving to give back to our community using software.
         align: left
-        image: images/feature.svg
-        image_alt: Feature 1 placeholder image
+        image: images/Humaaans1.png
+        image_alt: Volunteers placeholder image
         image_position: right
         actions:
-          - label: Learn More
-            url: /features
+          - label: Join the Team
+            url: /volunteers
             style: secondary
-      - title: Feature 2
+      - title: See Our Projects
         content: >-
-          Ac felis donec et odio pellentesque. Sagittis vitae et leo duis ut
-          diam quam nulla. Ullamcorper a lacus vestibulum sed arcu non odio
-          euismod lacinia.
+          Visit our projects page to see what we have done for other organizations.
         align: left
-        image: images/feature.svg
-        image_alt: Feature 2 placeholder image
+        image: images/humaaansnobg.png
+        image_alt: Projects Page placeholder image
         image_position: left
         actions:
-          - label: Learn More
-            url: /features
+          - label: Go to Projects
+            url: /blog
             style: secondary
-      - title: Feature 3
+      - title: How To Work With Us
         content: >-
-          Id nibh tortor id aliquet lectus proin. Amet venenatis urna cursus
-          eget nunc. Lacus sed turpis tincidunt id aliquet risus feugiat in
-          ante.
+          Visit our projects page to see what we have done for other organizations.
         align: left
-        image: images/feature.svg
-        image_alt: Feature 3 placeholder image
+        image: images/Humaaan-Characters.png
+        image_alt: Projects Page placeholder image
         image_position: right
         actions:
-          - label: Learn More
-            url: /features
-            style: secondary
-  - type: blog_feed_section
-    title: Current Projects
-    show_recent: true
-    recent_count: 3
+          - label: Go To Non-Profits
+            url: /non-profits
+            style: primary
   - type: cta_section
     title: Join us!
     subtitle: >-
