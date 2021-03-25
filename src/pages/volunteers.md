@@ -12,7 +12,7 @@ sections:
       <li>Must atleast be enrolled in an undergraduate program at a accredited institution</li></ul>  
 
     align: left
-    image: images/Humaans-3-Characters-_2_.svg
+    image: images/humans3.png
     image_alt: Hero placeholder image
     image_position: right
     has_background: true
@@ -29,6 +29,8 @@ sections:
     has_university_field: true
     has_technologies_field: true
     has_resume_links: true
+    has_linkedln: true
+    has_github: true
     background:
       background_color: gray
 template: advanced

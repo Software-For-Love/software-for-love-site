@@ -124,6 +124,20 @@ export default class ContactSection extends React.Component {
                           </div>
                         )}
 
+                        {_.get(section, 'has_linkedln', null) && (
+                          <div className="form-group">
+                            <label id="resume" htmlFor="phone">Linkedln </label>
+                            <input aria-labelledby="linkedln" type="text" name="has_linkedln" id="linkedln" placeholder="Linkedln URL Here" required/>
+                          </div>
+                        )}
+
+                        {_.get(section, 'has_github', null) && (
+                          <div className="form-group">
+                            <label id="resume" htmlFor="phone">Github </label>
+                            <input aria-labelledby="github" type="text" name="has_github" id="github" placeholder="GitHub URL Here" required/>
+                          </div>
+                        )}
+
                         {_.get(section, 'has_message_field', null) && (
                           <div className="form-group">
                           <label id="message-label" htmlFor="message">Message {required_star}</label>
