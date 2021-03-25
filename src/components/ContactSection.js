@@ -117,6 +117,13 @@ export default class ContactSection extends React.Component {
                           </div>
                         )}
 
+                        {_.get(section, 'has_resume_links', null) && (
+                          <div className="form-group">
+                            <label id="resume" htmlFor="phone">Resume {required_star} </label>
+                            <input aria-labelledby="resume" type="file" name="has_resume_links" id="resume" placeholder="Please add your resume" required/>
+                          </div>
+                        )}
+
                         {_.get(section, 'has_message_field', null) && (
                           <div className="form-group">
                           <label id="message-label" htmlFor="message">Message {required_star}</label>

@@ -12,26 +12,23 @@ sections:
       <li>Must atleast be enrolled in an undergraduate program at a accredited institution</li></ul>  
 
     align: left
-    image: images/volunteer.png
+    image: images/Humaans-3-Characters-_2_.svg
     image_alt: Hero placeholder image
     image_position: right
-    has_background: false
+    has_background: true
     background:
-      background_color: grey
-      background_image: images/diagonal-lines.svg
-      background_image_opacity: 20
-      background_image_size: auto
-      background_image_repeat: repeat
+      background_color: blue
   - type: contact_section 
     title: Contact Form 
     subtitle: Fill in the contact form below to register as a volunteer for SFL!
     has_form: true 
-    image: images/Humaans-3-Characters-_2_.svg
+    image: images/undraw_people_search_wctu.svg
     image_alt: Hero placeholder image
     image_position: right
     has_message_field: false
     has_university_field: true
     has_technologies_field: true
+    has_resume_links: true
     background:
       background_color: gray
 template: advanced
