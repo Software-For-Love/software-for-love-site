@@ -87,23 +87,25 @@ export default class ContactSection extends React.Component {
                           <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" required/>
                         </div>
 
-                        {/* --------------------TO DELETE-------------------------
-                        <div className="form-group">
-                          <label id="phone-label" htmlFor="phone">Phone Number</label>
-                          <input aria-labelledby="phone-label" type="tel" name="tel" id="tel" placeholder="Your phone number" />
-                        </div> */}
-
-                        {/* --------------------TO DELETE-------------------------
-                        <div className="form-group">
-                          <label htmlFor="subject">Preferred method of contact</label>
-                          <div className="form-select-wrap">
-                            <select name="subject" id="subject">
-                              <option value="">Please select</option>
-                              <option value="Email">Email</option>
-                              <option value="Phone">Phone</option>
-                            </select>
+                        {_.get(section, 'has_phone_number', null) && (
+                          <div className="form-group">
+                            <label id="phone-label" htmlFor="phone">Phone Number</label>
+                            <input aria-labelledby="phone-label" type="tel" name="tel" id="tel" placeholder="Your phone number" />
                           </div>
-                        </div> */}
+                        )}
+
+                        {_.get(section, 'has_phone_number', null) && (
+                          <div className="form-group">
+                            <label htmlFor="subject">Preferred method of contact</label>
+                            <div className="form-select-wrap">
+                              <select name="subject" id="subject">
+                                <option value="">Please select</option>
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                              </select>
+                            </div>
+                          </div>
+                        )}
 
                         {_.get(section, 'has_university_field', null) && (
                           <div className="form-group">
