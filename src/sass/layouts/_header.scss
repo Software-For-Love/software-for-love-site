@@ -21,7 +21,11 @@
 
 .navbar__logo {
   img {
-    max-height: 2.75rem;
+    max-height: 2.5rem;
+  }
+
+  &:hover{
+    transform: scale(1.1, 1.1);
   }
 }
 
