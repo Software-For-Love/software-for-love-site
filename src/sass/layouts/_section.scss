@@ -82,14 +82,18 @@
   .cell {
     margin-bottom: 1.5rem;
     max-width: $width-sm;
+    
   }
 }
 
 .section--team {
+
   .card__media {
     margin-top: auto;
     padding-top: 100%;
     position: relative;
+
+
   
     img {
       position: absolute;
@@ -99,6 +103,8 @@
       left: 0;
     }
   }
+
+
 }
 
 .section--cta {
