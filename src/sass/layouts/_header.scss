@@ -19,14 +19,14 @@
   text-decoration: none;
 }
 
-.navbar__logo {
-  img {
-    max-height: 2.5rem;
-  }
+.navbar__logo img{
+  max-height: 2.5rem;
+}
 
-  &:hover{
-    transform: scale(1.1, 1.1);
-  }
+.navbar__logo:hover{
+  background-image: url("/public/images/softwareforlove.jpg") no-repeat;
+  background-size: cover;
+  transform: scale(1.05, 1.05);
 }
 
 .navbar__menu {
@@ -48,7 +48,7 @@
   }
 
   .navbar__item {
-    margin-left: 8.2rem;
+    margin-left: 12rem;
   }
 
   .js-menu-toggle {
