@@ -18,7 +18,7 @@ sections:
     has_form: true
     has_message_field: true
     has_organization_field: true
-    # has_university_field: true
+    has_phone_number: true
     # has_technologies_field: true
     image: images/undraw_contact_us_15o2.svg
     image_alt: Hero placeholder image
