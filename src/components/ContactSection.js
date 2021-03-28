@@ -98,7 +98,7 @@ export default class ContactSection extends React.Component {
 
                         {_.get(section, 'has_phone_number', null) && (
                           <div className="form-group">
-                            <label id="phone-label" htmlFor="phone">Phone Number</label>
+                            <label id="phone-label" htmlFor="phone">Phone Number {required_star} </label>
                             <PhoneInput
                             placeholder="Enter phone number"
                             value={this.state.phone}
