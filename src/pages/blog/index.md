@@ -9,15 +9,14 @@ sections:
     show_recent: true
     recent_count: 1
   - type: cta_section
-    title: Join us!
-    subtitle: >-
+    title2: Join us!
+    subtitle2: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ea mala virtuti 
       magnitudine obruebantur.Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. 
       Egestas sed sed risus pretiu Pm quam vulputate dignissim suspendisse in.Tempor orci eu lobortis 
-      elementum nibh. Senectus et netus et malesuada fames ac turpis egestas integer. 
-      Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Sed nisi lacus sed viverra tellus. 
-      Non curabitur gravida arcu ac tortor dignissim convallis aenean.
-    actions:
+      elementum nibh. enectus et netus et malesuada fames ac turpis egestas integer. 
+    
+    actions2:
       - label: Contact
         url: /contact
         style: primary

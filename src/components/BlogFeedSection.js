@@ -43,14 +43,6 @@ export default class BlogFeedSection extends React.Component {
                         })())}
                       </React.Fragment>)
                   })}
-                  
-                  {/* <p1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ea mala virtuti 
-                  magnitudine obruebantur.Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. 
-                  Egestas sed sed risus pretiu Pm quam vulputate dignissim suspendisse in.Tempor orci eu lobortis 
-                  elementum nibh. Senectus et netus et malesuada fames ac turpis egestas integer. 
-                  Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Sed nisi lacus sed viverra tellus. 
-                  Non curabitur gravida arcu ac tortor dignissim convallis aenean.</p1> */}
-                  {/* <a1 class="btn" href="/contact ">Contact Us</a1> */}
                 </div>
 
                 
