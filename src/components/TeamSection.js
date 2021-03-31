@@ -35,7 +35,7 @@ export default class TeamSection extends React.Component {
                               {markdownify(person_data.bio)}
                             </div>
                             )}
-                            
+
                             <div class="icon" style={{flex:"1" , float: "center center" ,  display:"inline-flex"}}>
                              {person_data.linkedin && <div class="linkedin" >
                               <a href= {person_data.linkedin}  target="_blank" rel="noopener noreferrer">
@@ -53,7 +53,7 @@ export default class TeamSection extends React.Component {
 
                           </div>
 
-                          
+
                         </div>
                       </div>
                       )
