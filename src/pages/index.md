@@ -38,24 +38,13 @@ sections:
           - label: Join the Team
             url: /volunteers
             style: secondary
-      - title: See Our Projects
-        content: >-
-          Visit our projects page to see what we have done for other organizations.
-        align: left
-        image: images/humaaansnobg.png
-        image_alt: Projects Page placeholder image
-        image_position: left
-        actions:
-          - label: Go to Projects
-            url: /blog
-            style: secondary
       - title: How To Work With Us
         content: >-
           Visit our projects page to see what we have done for other organizations.
         align: left
         image: images/Humaaan-Characters.png
         image_alt: Projects Page placeholder image
-        image_position: right
+        image_position: left
         actions:
           - label: Go To Non-Profits
             url: /non-profits
