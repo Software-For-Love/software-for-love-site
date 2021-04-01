@@ -4,7 +4,7 @@ sections:
   - type: hero_section
     title: Software for Love
     subtitle: >-
-      Developing software for other organizations and
+      A charitable organization working to spread positivity through software.
     actions:
       - label: Partner With Us
         url: /non-profits
