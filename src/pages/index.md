@@ -4,10 +4,9 @@ sections:
   - type: hero_section
     title: Software for Love
     subtitle: >-
-      Developing software for non-profits, consectetur adipiscing elit. Nullam a metus
-      quis lorem malesuada luctus.
+      Developing software for other organizations and
     actions:
-      - label: Non-Profits
+      - label: Partner With Us
         url: /non-profits
         style: primary
       - label: Volunteer
@@ -46,7 +45,7 @@ sections:
         image_alt: Projects Page placeholder image
         image_position: left
         actions:
-          - label: Go To Non-Profits
+          - label: Partner With Us
             url: /non-profits
             style: primary
   - type: cta_section
@@ -54,7 +53,7 @@ sections:
     subtitle: >-
       Apply as Non-Profit or as a Volunteer to get involved with Software for Love
     actions:
-      - label: Non-profits
+      - label: Organizations
         url: /features
         style: primary
       - label: Volunteers

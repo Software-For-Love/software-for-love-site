@@ -20,12 +20,11 @@
 }
 
 .navbar__logo img{
-  transform:"matrix(1.44776, 0, 0, 1.362965, -21.38666, -29.941322)";
   max-height: 2.3rem;
 }
 
 .navbar__logo:hover{
-  transform: scale(1.03, 1.03);
+  transform: scale(1.05, 1.05);
 }
 .navbar__logo:hover path:nth-child(2) {
   fill: #ac4a3b;
