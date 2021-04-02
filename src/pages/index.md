@@ -51,7 +51,7 @@ sections:
   - type: cta_section
     title: Join us!
     subtitle: >-
-      Apply as Non-Profit or as a Volunteer to get involved with Software for Love
+      Apply as Partner or as a Volunteer to get involved with Software for Love
     actions:
       - label: Organizations
         url: /features
