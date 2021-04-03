@@ -133,60 +133,66 @@ export default class ContactSection extends React.Component {
                             <div className="form">
                               <form>
                                 <label>
-                                <label id="technologies" htmlFor="phone">Technologies {required_star}</label>
-                                <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Java" required/>
-                                  Java 
+                                <label id="Interests" htmlFor="phone">Interests {required_star}</label>
+                                <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Marketing" required/>
+                                  Marketing 
                                 </label>   
                               </form>  
                             </div>
-                            <div className="form2">
-                              <form>
-                                  <label>
-                                    <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "PHP" required/>
-                                    PHP 
-                                  </label> 
-                                </form>
-                            </div>
 
                             <form>
                               <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "HTML" required/>
-                                HTML 
-                              </label>     
-                            </form>
-                           
-                            <form>
-                              <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "CSS" required/>
-                                CSS 
-                              </label>     
-                            </form>
-                           
-                            <form>
-                              <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "SQL" required/>
-                                SQL 
-                              </label>     
-                            </form>
-                           
-                            <form>
-                              <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Frontend" required/>
-                                Frontend 
-                              </label>     
-                            </form>
-                           
-                            <form>
-                              <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Backend" required/>
-                                Backend 
-                              </label>     
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Partnerships and Business Development" required/>
+                                Partnerships and Business Development 
+                              </label> 
                             </form>
 
                             <form>
                               <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Server - Side" required/>
-                                       Server Side 
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Legal and Finance" required/>
+                                Legal and Finance 
+                              </label>     
+                            </form>
+                           
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "HR and Culture" required/>
+                                HR and Culture 
+                              </label>     
+                            </form>
+                           
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Front-end engineering" required/>
+                                Front-end engineering 
+                              </label>     
+                            </form>
+                           
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Back-end engineering" required/>
+                                Back-end engineering 
+                              </label>     
+                            </form>
+                           
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Data Science" required/>
+                               Data Science
+                              </label>     
+                            </form>
+
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Project Management" required/>
+                               Project Management
+                              </label>     
+                            </form>
+
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "UI/UX and Design" required/>
+                              UI/UX and Design
                               </label>     
                             </form>
                            
