@@ -26,6 +26,27 @@ export default class CtaSection extends React.Component {
                     </div>
                     )}
                   </div>
+                  <div className={classNames('section__body', 'align-left', {'inverse bg-blue': _.get(section, 'has_background', null) && (_.get(section, 'background_color', null) === 'blue'), 'bg-gray': _.get(section, 'has_background', null) && (_.get(section, 'background_color', null) === 'gray')})}>
+                  <div className="container container--md">
+                  {_.get(section, 'title2', null) && (
+                    <h2 className="section__title2">{_.get(section, 'title2', null)}</h2>
+                    )}
+
+                  {_.get(section, 'subtitle2', null) && (
+                    <div className="section__copy2">
+                      
+                      <p1>{_.get(section, 'subtitle2', null)}</p1>
+                    </div>
+                    
+                    )}
+                    
+                    {_.get(section, 'actions2', null) && (
+                    <div className="section__actions btn-group">
+                      <p3><SectionActions {...this.props} actions={_.get(section, 'actions2', null)} /></p3>
+                    </div>
+                    )}
+                </div>
+                </div>
                 </div>
               </div>
             </section>

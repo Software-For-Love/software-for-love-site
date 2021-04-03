@@ -1,39 +1,27 @@
 ---
 title: Who We Are
 sections:
-  - type: hero_section
-    title: Who We Are
-    align: center
-  - type: content_section
-    content: >-
-      Nisi porta lorem mollis aliquam ut porttitor. Pellentesque dignissim enim
-      sit amet venenatis urna cursus eget nunc. Dui nunc mattis enim ut tellus.
-      Eu sem integer vitae justo eget magna fermentum. Habitant morbi tristique
-      senectus et netus et malesuada fames. Ipsum dolor sit amet consectetur
-      adipiscing elit pellentesque habitant.
-
-
-      Aliquet lectus proin nibh nisl condimentum id venenatis a condimentum. Ac
-      felis donec et odio pellentesque. Sem nulla pharetra diam sit amet.
-      Egestas tellus rutrum tellus pellentesque eu. Auctor augue mauris augue
-      neque. Lectus arcu bibendum at varius vel pharetra. Enim sed faucibus
-      turpis in eu mi bibendum neque egestas.
   - type: team_section
-    title: Meet the team
+    title: Executive Team
     team:
-      - src/data/team/miles-tone.yaml
-      - src/data/team/dianne-ameter.yaml
-      - src/data/team/eleanor-carr.yaml
-      - src/data/team/hanson-deck.yaml
-      - src/data/team/gordon-norman.yaml
-  - type: cta_section
-    title: Join the Team
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    actions:
-      - label: Contact Us
-        url: /contact
-        style: secondary
-    has_background: true
-    background_color: blue
+      - src/data/team/Executive-Team/faizaan-chishtie.yaml
+      - src/data/team/Executive-Team/jacob-cleysen.yaml
+      - src/data/team/Executive-Team/hrithik-shah.yaml
+  - type: team_section
+    title: Software Team
+    team:
+      - src/data/team/Software-Team/soorya-saravanapavan.yaml
+      - src/data/team/Software-Team/dirieh-ali.yaml
+      - src/data/team/Software-Team/avaneesh-madaram.yaml
+      - src/data/team/Software-Team/nutan-nimkar.yaml
+      - src/data/team/Software-Team/ali-muhammad.yaml
+      - src/data/team/Software-Team/jean-loickandikandi.yaml
+      - src/data/team/Software-Team/abilaash-uthayachandran.yaml
+      - src/data/team/Software-Team/dharitri-dixit.yaml
+      - src/data/team/Software-Team/fatimah-vakily.yaml
+  - type: team_section
+    title: Marketing Team
+    team:
+      - src/data/team/Marketing-Team/hamas-qureshi.yaml
 template: advanced
 ---

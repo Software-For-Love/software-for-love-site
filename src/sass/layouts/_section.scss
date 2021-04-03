@@ -22,8 +22,8 @@
 .bg-gray,
 .bg-mintgreen,
 .has-bg {
-  padding-bottom: 3.75em;
-  padding-top: 3.75em;
+  padding-bottom: 1.75em;
+  padding-top: 2.25em;
 }
 
 .bg-blue {
@@ -82,14 +82,18 @@
   .cell {
     margin-bottom: 1.5rem;
     max-width: $width-sm;
+    
   }
 }
 
 .section--team {
+
   .card__media {
     margin-top: auto;
     padding-top: 100%;
     position: relative;
+
+
   
     img {
       position: absolute;
@@ -99,6 +103,8 @@
       left: 0;
     }
   }
+
+
 }
 
 .section--cta {

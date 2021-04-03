@@ -29,6 +29,7 @@ export default class Post extends React.Component {
                   <img src={withPrefix(_.get(this.props, 'pageContext.frontmatter.image', null))} alt={_.get(this.props, 'pageContext.frontmatter.image_alt', null)} />
                 </div>
                 )}
+                <a href="/blog">Back</a>
                 <header className="post__header">
                   {_.get(this.props, 'pageContext.frontmatter.categories', null) && (
                     <BlogPostCategories {...this.props} categories={_.get(this.props, 'pageContext.frontmatter.categories', null)} container_class={'post__meta'} />
