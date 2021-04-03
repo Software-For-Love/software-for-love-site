@@ -1,10 +1,19 @@
 import React from 'react';
 import _ from 'lodash';
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css'
 
 import {classNames, toStyleObj, withPrefix} from '../utils';
 import SectionActions from './SectionActions';
 
 export default class ContactSection extends React.Component {
+    state = { phone: "" }
+
+    handleOnChange = value => {
+      this.setState({ phone: value }, () => {
+      });
+    };
+
     render() {
       let section = _.get(this.props, 'section', null);
       let background = _.get(section, 'background', null);
@@ -87,21 +96,30 @@ export default class ContactSection extends React.Component {
                           <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" required/>
                         </div>
 
-                        <div className="form-group">
-                          <label id="phone-label" htmlFor="phone">Phone Number</label>
-                          <input aria-labelledby="phone-label" type="tel" name="tel" id="tel" placeholder="Your phone number" />
-                        </div>
-
-                        <div className="form-group">
-                          <label htmlFor="subject">Preferred method of contact</label>
-                          <div className="form-select-wrap">
-                            <select name="subject" id="subject">
-                              <option value="">Please select</option>
-                              <option value="Email">Email</option>
-                              <option value="Phone">Phone</option>
-                            </select>
+                        {_.get(section, 'has_phone_number', null) && (
+                          <div className="form-group">
+                            <label id="phone-label" htmlFor="phone">Phone Number {required_star} </label>
+                            <PhoneInput
+                            placeholder="Enter phone number"
+                            value={this.state.phone}
+                            onChange={this.handleOnChange}
+                            required
+                            />
                           </div>
-                        </div>
+                        )}
+
+                        {_.get(section, 'has_phone_number', null) && (
+                          <div className="form-group">
+                            <label htmlFor="subject">Preferred method of contact</label>
+                            <div className="form-select-wrap">
+                              <select name="subject" id="subject">
+                                <option value="">Please select</option>
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                              </select>
+                            </div>
+                          </div>
+                        )}
 
                         {_.get(section, 'has_university_field', null) && (
                           <div className="form-group">
