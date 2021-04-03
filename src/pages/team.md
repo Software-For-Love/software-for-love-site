@@ -40,6 +40,9 @@ sections:
     title: Marketing Team
     team:
       - src/data/team/Marketing-Team/hamas-qureshi.yaml
+  - type: team_section
+    title: Finance Team
+    team:
       - src/data/team/Marketing-Team/fletcher-trinier.yaml
 template: advanced
 ---
