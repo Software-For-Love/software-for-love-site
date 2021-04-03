@@ -134,7 +134,7 @@ export default class ContactSection extends React.Component {
                               <form>
                                 <label>
                                 <label id="Interests" htmlFor="phone">Interests {required_star}</label>
-                                <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Marketing" required/>
+                                <input aria-labelledby="technologies"  type="checkbox" style={{'align-self': 'flex-end'}} name="has_technologies_field" id="technologies" Value = "Marketing" required/>
                                   Marketing 
                                 </label>   
                               </form>  
