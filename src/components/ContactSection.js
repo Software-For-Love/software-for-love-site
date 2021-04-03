@@ -112,9 +112,69 @@ export default class ContactSection extends React.Component {
 
                         {_.get(section, 'has_technologies_field', null) && (
                           <div className="form-group">
-                            <label id="technologies" htmlFor="phone">Technologies {required_star} </label>
-                            <input aria-labelledby="technologies" type="text" name="has_technologies_field" id="technologies" placeholder="List all technologies and programming languages you know" required/>
+                            <div className="form">
+                              <form>
+                                <label>
+                                <label id="technologies" htmlFor="phone">Technologies {required_star}</label>
+                                <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Java" required/>
+                                  Java 
+                                </label>   
+                              </form>  
+                            </div>
+                            <div className="form2">
+                              <form>
+                                  <label>
+                                    <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "PHP" required/>
+                                    PHP 
+                                  </label> 
+                                </form>
+                            </div>
+
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "HTML" required/>
+                                HTML 
+                              </label>     
+                            </form>
+                           
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "CSS" required/>
+                                CSS 
+                              </label>     
+                            </form>
+                           
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "SQL" required/>
+                                SQL 
+                              </label>     
+                            </form>
+                           
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Frontend" required/>
+                                Frontend 
+                              </label>     
+                            </form>
+                           
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Backend" required/>
+                                Backend 
+                              </label>     
+                            </form>
+
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Server - Side" required/>
+                                       Server Side 
+                              </label>     
+                            </form>
+                           
+                           
                           </div>
+
                         )}
 
                         {_.get(section, 'has_resume_links', null) && (

@@ -28,6 +28,7 @@ sections:
     has_message_field: false
     has_university_field: true
     has_technologies_field: true
+    form-group form-checkbox: true
     has_resume_links: true
     has_linkedln: true
     has_github: true
