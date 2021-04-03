@@ -4,10 +4,10 @@ sections:
   - type: hero_section
     title: Software for Love
     subtitle: >-
-      A charitable organization working to spread positivity through software.
+      Dedicated to providing a variety of services such as web development, redesigning, and maintenance.
     actions:
       - label: Partner With Us
-        url: /non-profits
+        url: /organizations
         style: primary
       - label: Volunteer
         url: /volunteers
@@ -46,7 +46,7 @@ sections:
         image_position: left
         actions:
           - label: Partner With Us
-            url: /non-profits
+            url: /organizations
             style: primary
   - type: cta_section
     title: Join us!
@@ -54,7 +54,7 @@ sections:
       Apply as Partner or as a Volunteer to get involved with Software for Love
     actions:
       - label: Organizations
-        url: /features
+        url: /organizations
         style: primary
       - label: Volunteers
         url: /features
