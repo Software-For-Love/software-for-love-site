@@ -4,10 +4,9 @@ sections:
   - type: hero_section
     title: Software for Love
     subtitle: >-
-      Developing software for non-profits, consectetur adipiscing elit. Nullam a metus
-      quis lorem malesuada luctus.
+      A charitable organization working to spread positivity through software.
     actions:
-      - label: Non-Profits
+      - label: Partner With Us
         url: /non-profits
         style: primary
       - label: Volunteer
@@ -38,34 +37,23 @@ sections:
           - label: Join the Team
             url: /volunteers
             style: secondary
-      - title: See Our Projects
-        content: >-
-          Visit our projects page to see what we have done for other organizations.
-        align: left
-        image: images/humaaansnobg.png
-        image_alt: Projects Page placeholder image
-        image_position: left
-        actions:
-          - label: Go to Projects
-            url: /blog
-            style: secondary
       - title: How To Work With Us
         content: >-
           Visit our projects page to see what we have done for other organizations.
         align: left
         image: images/Humaaan-Characters.png
         image_alt: Projects Page placeholder image
-        image_position: right
+        image_position: left
         actions:
-          - label: Go To Non-Profits
+          - label: Partner With Us
             url: /non-profits
             style: primary
   - type: cta_section
     title: Join us!
     subtitle: >-
-      Apply as Non-Profit or as a Volunteer to get involved with Software for Love
+      Apply as Partner or as a Volunteer to get involved with Software for Love
     actions:
-      - label: Non-profits
+      - label: Organizations
         url: /features
         style: primary
       - label: Volunteers

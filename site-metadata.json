@@ -2,15 +2,9 @@
   "description": "An ultra customizable generic theme for Stackbit",
   "header": {
     "logo": "images/logoTest2.svg",
-    "logo_alt": "images/softwareforlove.svg",
     "title":"SFL",
     "has_nav": true,
     "nav_links": [
-      {
-        "label": "Current Projects",
-        "url": "/blog",
-        "style": "link"
-      },
       {
         "label": "Team",
         "url": "/team",
