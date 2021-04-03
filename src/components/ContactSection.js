@@ -1,10 +1,19 @@
 import React from 'react';
 import _ from 'lodash';
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css'
 
 import {classNames, toStyleObj, withPrefix} from '../utils';
 import SectionActions from './SectionActions';
 
 export default class ContactSection extends React.Component {
+    state = { phone: "" }
+
+    handleOnChange = value => {
+      this.setState({ phone: value }, () => {
+      });
+    };
+
     render() {
       let section = _.get(this.props, 'section', null);
       let background = _.get(section, 'background', null);
@@ -87,21 +96,30 @@ export default class ContactSection extends React.Component {
                           <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" required/>
                         </div>
 
-                        <div className="form-group">
-                          <label id="phone-label" htmlFor="phone">Phone Number</label>
-                          <input aria-labelledby="phone-label" type="tel" name="tel" id="tel" placeholder="Your phone number" />
-                        </div>
-
-                        <div className="form-group">
-                          <label htmlFor="subject">Preferred method of contact</label>
-                          <div className="form-select-wrap">
-                            <select name="subject" id="subject">
-                              <option value="">Please select</option>
-                              <option value="Email">Email</option>
-                              <option value="Phone">Phone</option>
-                            </select>
+                        {_.get(section, 'has_phone_number', null) && (
+                          <div className="form-group">
+                            <label id="phone-label" htmlFor="phone">Phone Number {required_star} </label>
+                            <PhoneInput
+                            placeholder="Enter phone number"
+                            value={this.state.phone}
+                            onChange={this.handleOnChange}
+                            required
+                            />
                           </div>
-                        </div>
+                        )}
+
+                        {_.get(section, 'has_phone_number', null) && (
+                          <div className="form-group">
+                            <label htmlFor="subject">Preferred method of contact</label>
+                            <div className="form-select-wrap">
+                              <select name="subject" id="subject">
+                                <option value="">Please select</option>
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                              </select>
+                            </div>
+                          </div>
+                        )}
 
                         {_.get(section, 'has_university_field', null) && (
                           <div className="form-group">
@@ -112,8 +130,95 @@ export default class ContactSection extends React.Component {
 
                         {_.get(section, 'has_technologies_field', null) && (
                           <div className="form-group">
-                            <label id="technologies" htmlFor="phone">Technologies {required_star} </label>
-                            <input aria-labelledby="technologies" type="text" name="has_technologies_field" id="technologies" placeholder="List all technologies and programming languages you know" required/>
+                            <div className="form">
+                              <form>
+                                <label>
+                                <label id="Interests" htmlFor="phone">Interests {required_star}</label>
+                                <input aria-labelledby="technologies"  type="checkbox" style={{'align-self': 'flex-end'}} name="has_technologies_field" id="technologies" Value = "Marketing" required/>
+                                  Marketing 
+                                </label>   
+                              </form>  
+                            </div>
+
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Partnerships and Business Development" required/>
+                                Partnerships and Business Development 
+                              </label> 
+                            </form>
+
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Legal and Finance" required/>
+                                Legal and Finance 
+                              </label>     
+                            </form>
+                           
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "HR and Culture" required/>
+                                HR and Culture 
+                              </label>     
+                            </form>
+                           
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Front-end engineering" required/>
+                                Front-end engineering 
+                              </label>     
+                            </form>
+                           
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Back-end engineering" required/>
+                                Back-end engineering 
+                              </label>     
+                            </form>
+                           
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Data Science" required/>
+                               Data Science
+                              </label>     
+                            </form>
+
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Project Management" required/>
+                               Project Management
+                              </label>     
+                            </form>
+
+                            <form>
+                              <label>
+                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "UI/UX and Design" required/>
+                              UI/UX and Design
+                              </label>     
+                            </form>
+                           
+                           
+                          </div>
+
+                        )}
+
+                        {_.get(section, 'has_resume_links', null) && (
+                          <div className="form-group">
+                            <label id="resume" htmlFor="phone">Resume {required_star} </label>
+                            <input aria-labelledby="resume" type="file" name="has_resume_links" id="resume" placeholder="Please add your resume" required/>
+                          </div>
+                        )}
+
+                        {_.get(section, 'has_linkedln', null) && (
+                          <div className="form-group">
+                            <label id="resume" htmlFor="phone">Linkedln </label>
+                            <input aria-labelledby="linkedln" type="text" name="has_linkedln" id="linkedln" placeholder="Linkedln URL Here" required/>
+                          </div>
+                        )}
+
+                        {_.get(section, 'has_github', null) && (
+                          <div className="form-group">
+                            <label id="resume" htmlFor="phone">Github </label>
+                            <input aria-labelledby="github" type="text" name="has_github" id="github" placeholder="GitHub URL Here" required/>
                           </div>
                         )}
 
