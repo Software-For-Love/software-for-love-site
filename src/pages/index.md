@@ -13,7 +13,7 @@ sections:
         url: /volunteers
         style: secondary
     align: left
-    image: images/humans3.png
+    image: images/SFL_GIF_NEWEST.gif
     image_alt: Hero placeholder image
     image_position: right
     has_background: true
@@ -51,7 +51,7 @@ sections:
   - type: cta_section
     title: Join us!
     subtitle: >-
-      Apply as Partner or as a Volunteer to get involved with Software for Love
+      Apply as a Partner or as a Volunteer to get involved with Software for Love
     actions:
       - label: Organizations
         url: /organizations
