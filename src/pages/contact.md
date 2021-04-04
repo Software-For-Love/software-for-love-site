@@ -6,7 +6,7 @@ sections:
      subtitle: Want to work with us? Check out our organizations and volunteers page for more info
      actions:
       - label: Organizations
-        url: /non-profits
+        url: /organizations
         style: primary
       - label: Volunteers
         url: /volunteers
