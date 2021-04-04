@@ -1,7 +1,8 @@
 {
   "description": "An ultra customizable generic theme for Stackbit",
+  "favicon":"images/logoBlue.svg",
   "header": {
-    "logo": "images/logoTest2.svg",
+    "logo": "images/logoBlue.svg",
     "title":"SFL",
     "has_nav": true,
     "nav_links": [
