@@ -4,7 +4,7 @@ sections:
   - type: hero_section
     title: Software for Love
     subtitle: >-
-      A charitable organization working to spread positivity through software.
+      Software For Love is a charitable software solution organization based in Ottawa. Our team consists of young professionals who are creative and passionate about technology. 
     actions:
       - label: Partner With Us
         url: /organizations
@@ -28,7 +28,7 @@ sections:
     features:
       - title: What We Do
         content: >-
-          Software For Love is a charitable organization of university students striving to give back to our community using software.
+          Our work is dynamic and different. Our team is dedicated to providing a variety of services such as web development, redesigning, and maintenance.  We look forward to participating in the development of custom software solutions, contribution to open source projects and feature development, and additional services.
         align: left
         image: images/Humaaans1.png
         image_alt: Volunteers placeholder image
@@ -39,7 +39,7 @@ sections:
             style: secondary
       - title: How To Work With Us
         content: >-
-          Visit our projects page to see what we have done for other organizations.
+          We are a dedicated team of volunteers using our software expertise to influence change in the world around us. Apply today to join our growing team!
         align: left
         image: images/Humaaan-Characters.png
         image_alt: Projects Page placeholder image
