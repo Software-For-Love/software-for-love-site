@@ -106,6 +106,7 @@ export default class ContactSection extends React.Component {
                             required
                             />
                           </div>
+
                         )}
 
                         {_.get(section, 'has_phone_number', null) && (
@@ -131,71 +132,57 @@ export default class ContactSection extends React.Component {
                         {_.get(section, 'has_technologies_field', null) && (
                           <div className="form-group">
                             <div className="form">
-                              <form>
+                              <form >
                                 <label>
-                                <label id="Interests" htmlFor="phone">Interests {required_star}</label>
-                                <input aria-labelledby="technologies"  type="checkbox" style={{'align-self': 'flex-end'}} name="has_technologies_field" id="technologies" Value = "Marketing" required/>
-                                  Marketing 
+                                <label id="Interests" htmlFor="phone" >Interests {required_star}</label>
                                 </label>   
                               </form>  
                             </div>
 
-                            <form>
-                              <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Partnerships and Business Development" required/>
-                                Partnerships and Business Development 
-                              </label> 
-                            </form>
+                            <div className="form-group form-checkbox">
+                              <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
+                              <label id="consent-label" htmlFor="consent">Marketing </label>
+                            </div>
+                        
+                            <div className="form-group form-checkbox">
+                              <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
+                              <label id="consent-label" htmlFor="consent">Partnerships and Business Development  </label>
+                            </div>
 
-                            <form>
-                              <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Legal and Finance" required/>
-                                Legal and Finance 
-                              </label>     
-                            </form>
-                           
-                            <form>
-                              <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "HR and Culture" required/>
-                                HR and Culture 
-                              </label>     
-                            </form>
-                           
-                            <form>
-                              <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Front-end engineering" required/>
-                                Front-end engineering 
-                              </label>     
-                            </form>
-                           
-                            <form>
-                              <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Back-end engineering" required/>
-                                Back-end engineering 
-                              </label>     
-                            </form>
-                           
-                            <form>
-                              <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Data Science" required/>
-                               Data Science
-                              </label>     
-                            </form>
+                            <div className="form-group form-checkbox">
+                              <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
+                              <label id="consent-label" htmlFor="consent">Legal and Finance  </label>
+                            </div>
+                        
+                            <div className="form-group form-checkbox">
+                              <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
+                              <label id="consent-label" htmlFor="consent">HR and Culture  </label>
+                            </div>
 
-                            <form>
-                              <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "Project Management" required/>
-                               Project Management
-                              </label>     
-                            </form>
+                            <div className="form-group form-checkbox">
+                              <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
+                              <label id="consent-label" htmlFor="consent">Front-end engineering  </label>
+                            </div>
 
-                            <form>
-                              <label>
-                              <input aria-labelledby="technologies" type="checkbox" name="has_technologies_field" id="technologies" Value = "UI/UX and Design" required/>
-                              UI/UX and Design
-                              </label>     
-                            </form>
-                           
+                            <div className="form-group form-checkbox">
+                              <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
+                              <label id="consent-label" htmlFor="consent">Back-end engineering  </label>
+                            </div>
+
+                            <div className="form-group form-checkbox">
+                              <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
+                              <label id="consent-label" htmlFor="consent">Data Science  </label>
+                            </div>
+
+                            <div className="form-group form-checkbox">
+                              <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
+                              <label id="consent-label" htmlFor="consent">Project Management  </label>
+                            </div>
+
+                            <div className="form-group form-checkbox">
+                              <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
+                              <label id="consent-label" htmlFor="consent">UI/UX and Design  </label>
+                            </div>
                            
                           </div>
 
