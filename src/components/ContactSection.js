@@ -105,19 +105,18 @@ export default class ContactSection extends React.Component {
                     {_.get(section, 'has_form', null) && (
                       <form name="contactForm" id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit={() => handleSubmit} >
                         
+                        <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="contactForm" />
+
                         <div className="sr-only">
                           <label id="honeypot-label" htmlFor="honeypot">Don't fill this out if you're human:</label>
                           <input aria-labelledby="honeypot-label" id="honeypot" name="bot-field" />
                         </div>
-
-                        <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="contactForm" />
 
                         {_.get(section, 'subject', null) && (
                           <input aria-labelledby="honeypot-label" type="hidden" id="subject" name="subject" value={_.get(section, 'subject', null)} />
                         )}
 
                         <div className="form-group">
-
                           <label id="first-name-label" htmlFor="first-name">First Name {required_star}</label>
                           <input aria-labelledby="first-name-label" type="text" name="first-name" id="first-name" placeholder="Your first name" required />
                         </div>
