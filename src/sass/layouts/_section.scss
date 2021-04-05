@@ -20,6 +20,7 @@
 
 .bg-blue,
 .bg-gray,
+.bg-mintgreen,
 .has-bg {
   padding-bottom: 3.75em;
   padding-top: 3.75em;
@@ -31,6 +32,10 @@
 
 .bg-gray {
   background-color: $color-bg-alt;
+}
+
+.bg-mintgreen {
+  background-color: #98ff98;
 }
 
 .section__media,

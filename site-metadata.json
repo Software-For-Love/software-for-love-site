@@ -1,10 +1,15 @@
 {
   "description": "An ultra customizable generic theme for Stackbit",
   "header": {
-    "logo": "images/softwareforlove.svg",
+    "logo": "images/logoTest2.svg",
     "title":"SFL",
     "has_nav": true,
     "nav_links": [
+      {
+        "label": "Home",
+        "url": "/",
+        "style": "link"
+      },
       {
         "label": "Current Projects",
         "url": "/blog",
@@ -16,8 +21,8 @@
         "style": "link"
       },
       {
-        "label": "Non-profits",
-        "url": "/non-profits",
+        "label": "Organizations",
+        "url": "/organizations",
         "style": "link"
       },
       {
