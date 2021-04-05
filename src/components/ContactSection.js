@@ -37,23 +37,36 @@ export default class ContactSection extends React.Component {
         "UI/UX and Design"
       ]
 
-      function encode(data) {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&")
-      }
+      // function encode(data) {
+      //   return Object.keys(data)
+      //       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      //       .join("&")
+      // }
     
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({
-            "form-name": form.getAttribute("name")
-          })
-        }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
+      // const handleSubmit = (event) => {
+      //   event.preventDefault();
+      //   const form = event.target;
+      //   fetch("/", {
+      //     method: "POST",
+      //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      //     body: encode({
+      //       "form-name": form.getAttribute("name")
+      //     })
+      //   }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
+      // }
+
+      const handleSubmit = (e) => {
+        e.preventDefault()
+        let myForm = document.getElementById('contactForm');
+        let formData = new FormData(myForm)
+        fetch('/', {
+          method: 'POST',
+          headers: { "Content-Type": "multipart/form-data" },
+          body: new URLSearchParams(formData).toString()
+        }).then(() => navigate(e.target.getAttribute('action'))).catch((error) => alert(error))
       }
+
+      document.querySelector("form").addEventListener("submit", handleSubmit);
 
       return (
         
@@ -107,19 +120,19 @@ export default class ContactSection extends React.Component {
 
                         <div className="form-group">
 
-                          <label id="first-name-label" htmlFor="name">First Name {required_star}</label>
+                          <label id="first-name-label" htmlFor="first-name">First Name {required_star}</label>
                           <input aria-labelledby="first-name-label" type="text" name="first-name" id="first-name" placeholder="Your first name" required />
                         </div>
 
                         <div className="form-group">
-                          <label id="last-name-label" htmlFor="name">Last Name {required_star}</label>
+                          <label id="last-name-label" htmlFor="last-name">Last Name {required_star}</label>
                           <input aria-labelledby="last-name-label" type="text" name="last-name" id="last-name" placeholder="Your last name" required />
                         </div>
 
                         {_.get(section, 'has_organization_field', null) &&
                           (<div className="form-group">
-                            <label id="organization" htmlFor="name">Organization {required_star}</label>
-                            <input aria-labelledby="organization" type="text" name="organization" id="organization" placeholder="Name of your organization" required />
+                            <label id="organization-label" htmlFor="organization">Organization {required_star}</label>
+                            <input aria-labelledby="organization-label" type="text" name="organization" id="organization" placeholder="Name of your organization" required />
                           </div>
                         )}
 
@@ -132,6 +145,7 @@ export default class ContactSection extends React.Component {
                           <div className="form-group">
                             <label id="phone-label" htmlFor="tel">Phone Number {required_star} </label>
                             <PhoneInput
+                            aria-labelledby="phone-label"
                             name="tel"
                             placeholder="Enter phone number"
                             value={this.state.phone}
@@ -143,7 +157,7 @@ export default class ContactSection extends React.Component {
 
                         {_.get(section, 'has_phone_number', null) && (
                           <div className="form-group">
-                            <label htmlFor="contact-method">Preferred method of contact</label>
+                            <label htmlFor="contact-method">Preferred method of contact {required_star}</label>
                             <div className="form-select-wrap">
                               <select name="contact-method" id="contact-method">
                                 <option value="">Please select</option>
