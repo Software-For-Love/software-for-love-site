@@ -37,34 +37,34 @@ export default class ContactSection extends React.Component {
         "UI/UX and Design"
       ]
 
-      // function encode(data) {
-      //   return Object.keys(data)
-      //       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      //       .join("&")
-      // }
+      function encode(data) {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&")
+      }
     
-      // const handleSubmit = (event) => {
-      //   event.preventDefault();
-      //   const form = event.target;
-      //   fetch("/", {
-      //     method: "POST",
-      //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      //     body: encode({
-      //       "form-name": form.getAttribute("name")
-      //     })
-      //   }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
-      // }
-
-      const handleSubmit = (e) => {
-        e.preventDefault()
-        let myForm = document.getElementById('contactForm');
-        let formData = new FormData(myForm)
-        fetch('/', {
-          method: 'POST',
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        fetch("/", {
+          method: "POST",
           headers: { "Content-Type": "multipart/form-data" },
-          body: new URLSearchParams(formData).toString()
-        }).then(() => navigate(e.target.getAttribute('action'))).catch((error) => alert(error))
-      }      
+          body: encode({
+            "form-name": form.getAttribute("name")
+          })
+        }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
+      }
+
+      // const handleSubmit = (e) => {
+      //   e.preventDefault()
+      //   let myForm = document.getElementById('contactForm');
+      //   let formData = new FormData(myForm)
+      //   fetch('/', {
+      //     method: 'POST',
+      //     headers: { "Content-Type": "multipart/form-data" },
+      //     body: new URLSearchParams(formData).toString()
+      //   }).then(() => navigate(e.target.getAttribute('action'))).catch((error) => alert(error))
+      // }      
 
       return (
         

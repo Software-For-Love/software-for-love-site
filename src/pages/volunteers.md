@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Volunteers
 sections:
   - type: hero_section
     title: Volunteers
