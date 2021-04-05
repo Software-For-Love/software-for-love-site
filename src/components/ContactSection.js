@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { navigate } from 'gatsby';
+// import { navigate } from 'gatsby';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css'
 
@@ -37,23 +37,23 @@ export default class ContactSection extends React.Component {
         "UI/UX and Design"
       ]
 
-      function encode(data) {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&")
-      }
+      // function encode(data) {
+      //   return Object.keys(data)
+      //       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      //       .join("&")
+      // }
     
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "multipart/form-data" },
-          body: encode({
-            "form-name": form.getAttribute("name")
-          })
-        }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
-      }
+      // const handleSubmit = (event) => {
+      //   event.preventDefault();
+      //   const form = event.target;
+      //   fetch("/", {
+      //     method: "POST",
+      //     headers: { "Content-Type": "multipart/form-data" },
+      //     body: encode({
+      //       "form-name": form.getAttribute("name")
+      //     })
+      //   }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
+      // }
 
       // const handleSubmit = (e) => {
       //   e.preventDefault()
@@ -103,7 +103,7 @@ export default class ContactSection extends React.Component {
                 )}
             
                     {_.get(section, 'has_form', null) && (
-                      <form name="contactForm" id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit={() => handleSubmit} >
+                      <form name="contactForm" id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit="submit" >
                         
                         <div className="sr-only">
                           <label id="honeypot-label" htmlFor="honeypot">Don't fill this out if you're human:</label>
