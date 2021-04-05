@@ -4,7 +4,7 @@ sections:
   - type: hero_section
     title: Volunteers
     subtitle: >-
-      Volunteers are an essential part of Software For Love. We encourage our team to be unique and proud of their creativity. We provide a platform that allows our team to demonstrate their skills and abilities while providing back to the community. Apply today to join our growing team! 
+      Volunteers are an essential part of Software For Love! We encourage our team to be unique and proud of their creativity. We provide a platform that allows our volunteers to demonstrate their skills and abilities while providing back to our community. Apply today to join our growing team! 
     align: left
     image: images/humans3.png
     image_alt: Hero placeholder image
