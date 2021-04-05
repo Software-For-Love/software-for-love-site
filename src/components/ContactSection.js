@@ -64,9 +64,7 @@ export default class ContactSection extends React.Component {
           headers: { "Content-Type": "multipart/form-data" },
           body: new URLSearchParams(formData).toString()
         }).then(() => navigate(e.target.getAttribute('action'))).catch((error) => alert(error))
-      }
-
-      document.querySelector("form").addEventListener("submit", handleSubmit);
+      }      
 
       return (
         
