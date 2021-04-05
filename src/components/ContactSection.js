@@ -121,14 +121,14 @@ export default class ContactSection extends React.Component {
 
                         {_.get(section, 'has_university_field', null) && (
                           <div className="form-group">
-                            <label id="university" htmlFor="phone">University</label>
+                            <label id="university" htmlFor="university">University</label>
                             <input aria-labelledby="university" type="text" name="text" id="university" placeholder="Current Institution" />
                           </div>
                         )}
 
                         {_.get(section, 'has_technologies_field', null) && (
                           <div className="form-group">
-                            <label id="technologies" htmlFor="phone">Technologies</label>
+                            <label id="technologies" htmlFor="technologies">Technologies</label>
                             <input aria-labelledby="technologies" type="text" name="text" id="technologies" placeholder="List all technologies and programming languages you know" />
                           </div>
                         )}
