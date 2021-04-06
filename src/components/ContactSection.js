@@ -145,12 +145,17 @@ export default class ContactSection extends React.Component {
                             <input aria-labelledby="university" type="text" name="university" id="university" placeholder="N/A if non-applicable" required />
                           </div>
 
-                        {_.get(section, 'has_technologies_field', null) &&
+                        {/* {_.get(section, 'has_technologies_field', null) &&
                           (<div className="form-group">
                             <label id="technologies" htmlFor="name">technologies</label>
                             <input aria-labelledby="technologies" type="text" name="technologies" id="technologies" placeholder="N/A if non-applicable" required />
                           </div>)
-                        }
+                        } */}
+
+                          <div className="form-group">
+                            <label id="technologies" htmlFor="name">technologies</label>
+                            <input aria-labelledby="technologies" type="text" name="technologies" id="technologies" placeholder="N/A if non-applicable" required />
+                          </div>
 
                         {_.get(section, 'has_message_field', null) && (
                           <div className="form-group">
