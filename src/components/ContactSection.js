@@ -119,19 +119,33 @@ export default class ContactSection extends React.Component {
                           </div>
                         </div>
 
-                        {_.get(section, 'has_university_field', null) && (
+                        {/* {_.get(section, 'has_university_field', null) && (
                           <div className="form-group">
-                            <label id="university-label" htmlFor="university">University</label>
+                            <label id="university-label" htmlFor="name">University</label>
                             <input aria-labelledby="university-label" type="text" name="university" id="university" placeholder="Current Institution" />
                           </div>
-                        )}
+                        )} */}
 
-                        {_.get(section, 'has_technologies_field', null) && (
+                        {/* {_.get(section, 'has_technologies_field', null) && (
                           <div className="form-group">
-                            <label id="technologies-label" htmlFor="technologies">Technologies</label>
+                            <label id="technologies-label" htmlFor="name">Technologies</label>
                             <input aria-labelledby="technologies-label" type="text" name="technologies" id="technologies" placeholder="List all technologies and programming languages you know" />
                           </div>
-                        )}
+                        )} */}
+
+                        {_.get(section, 'has_university_field', null) &&
+                          (<div className="form-group">
+                            <label id="university" htmlFor="name">University</label>
+                            <input aria-labelledby="university" type="text" name="university" id="university" placeholder="N/A if non-applicable" required />
+                          </div>)
+                        }
+
+                        {_.get(section, 'has_technologies_field', null) &&
+                          (<div className="form-group">
+                            <label id="technologies" htmlFor="name">technologies</label>
+                            <input aria-labelledby="technologies" type="text" name="technologies" id="technologies" placeholder="N/A if non-applicable" required />
+                          </div>)
+                        }
 
                         {_.get(section, 'has_message_field', null) && (
                           <div className="form-group">
