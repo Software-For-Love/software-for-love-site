@@ -12,14 +12,14 @@ sections:
     has_background: true
     background:
       background_color: blue
-  - type: contact_section
+  - type: organizations_form
     title: Contact Us
     subtitle: Got a project request? Please fill out this form and leave a brief description of your project for review. We will schedule a meeting afterwards to discuss the project with you.
-    has_form: true
-    subject: A potential client wants to work with SFL
-    has_message_field: true
-    has_organization_field: true
-    has_phone_number: true
+    # has_form: true
+    # subject: A potential client wants to work with SFL
+    # has_message_field: true
+    # has_organization_field: true
+    # has_phone_number: true
     # has_technologies_field: true
     image: images/undraw_contact_us_15o2.svg
     image_alt: Hero placeholder image

@@ -12,21 +12,21 @@ sections:
     has_background: true
     background:
       background_color: blue
-  - type: contact_section 
+  - type: volunteers_form 
     title: Contact Form 
     subtitle: Fill in the contact form below to register as a volunteer for SFL!
-    has_form: true
-    subject: A potential volunteer wants to join SFL 
+    # has_form: true
+    # subject: A potential volunteer wants to join SFL 
     image: images/undraw_people_search_wctu.svg
     image_alt: Hero placeholder image
     image_position: right
-    has_message_field: false
-    has_university_field: true
-    has_technologies_field: true
-    form-group form-checkbox: true
-    has_resume_links: true
-    has_linkedln: true
-    has_github: true
+    # has_message_field: false
+    # has_university_field: true
+    # has_technologies_field: true
+    # form-group form-checkbox: true
+    # has_resume_links: true
+    # has_linkedln: true
+    # has_github: true
     background:
       background_color: gray
 template: advanced
