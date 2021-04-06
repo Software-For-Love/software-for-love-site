@@ -272,8 +272,11 @@ models:
             - content_section
             - cta_section
             - features_section
+            - general_form
             - hero_section
+            - organizations_form
             - team_section
+            - volunteers_form
   blog_feed_section:
     type: object
     label: Blog Feed Section
@@ -309,6 +312,15 @@ models:
   contact_section:
     type: object
     label: Contact Section
+  general_form:
+    type: object
+    label: General Form
+  organizations_form:
+    type: object
+    label: Organizations Form
+  volunteers_form:
+    type: object
+    label: Volunteers Form
   content_section:
     type: object
     label: Content Section
