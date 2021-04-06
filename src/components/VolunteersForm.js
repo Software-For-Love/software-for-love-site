@@ -193,10 +193,10 @@ export default class VolunteersForm extends React.Component {
                         </div>
 
                         {/* {_.get(section, 'has_resume_links', null) && ( */}
-                          <div className="form-group">
+                          {/* <div className="form-group">
                             <label id="resume_label" htmlFor="resume">Resume {required_star} </label>
                             <input aria-labelledby="resume_label" type="file" name="resume" id="resume" placeholder="Please add your resume" required/>
-                          </div>
+                          </div> */}
                         {/* // )} */}
 
                         {/* {_.get(section, 'has_linkedln', null) && ( */}
