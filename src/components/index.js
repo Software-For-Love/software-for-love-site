@@ -9,10 +9,13 @@ import ContentSection from './ContentSection';
 import CtaSection from './CtaSection';
 import FeaturesSection from './FeaturesSection';
 import Footer from './Footer';
+import GeneralForm from './GeneralForm';
 import Header from './Header';
 import HeroSection from './HeroSection';
+import OrganizationsForm from './OrganizationsForm'
 import SectionActions from './SectionActions';
 import TeamSection from './TeamSection';
+import VolunteersForm from './VolunteersForm';
 import Layout from './Layout';
 
 export {
@@ -27,10 +30,13 @@ export {
     CtaSection,
     FeaturesSection,
     Footer,
+    GeneralForm,
     Header,
     HeroSection,
+    OrganizationsForm,
     SectionActions,
     TeamSection,
+    VolunteersForm,
     Layout
 };
 
@@ -46,9 +52,12 @@ export default {
     CtaSection,
     FeaturesSection,
     Footer,
+    GeneralForm,
     Header,
     HeroSection,
+    OrganizationsForm,
     SectionActions,
     TeamSection,
+    VolunteersForm,
     Layout
 };

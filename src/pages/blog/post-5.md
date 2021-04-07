@@ -10,8 +10,8 @@ tags:
   - Netlify
 image: images/5.png
 actions:
-  - label: Non-Profits
-    url: /non-profits
+  - label: Organizations
+    url: /organizations
     style: primary
 excerpt: >-
   Estne, quaeso, inquam, sitienti in bibendo voluptas? Iam in altera
