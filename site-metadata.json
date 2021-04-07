@@ -1,15 +1,11 @@
 {
   "description": "An ultra customizable generic theme for Stackbit",
+  "favicon":"images/logoBlue.svg",
   "header": {
-    "logo": "images/logoTest2.svg",
+    "logo": "images/logoBlue.svg",
     "title":"SFL",
     "has_nav": true,
     "nav_links": [
-      {
-        "label": "Current Projects",
-        "url": "/blog",
-        "style": "link"
-      },
       {
         "label": "Team",
         "url": "/team",
@@ -45,7 +41,7 @@
     "social_links": [
       {
         "label": "Twitter",
-        "url": "https://twitter.com/",
+        "url": "https://twitter.com/softwareforlove",
         "style": "link",
         "new_window": true
       },

@@ -19,10 +19,15 @@
   text-decoration: none;
 }
 
-.navbar__logo {
-  img {
-    max-height: 2.75rem;
-  }
+.navbar__logo img{
+  max-height: 2.3rem;
+}
+
+.navbar__logo:hover{
+  transform: scale(1.05, 1.05);
+}
+.navbar__logo:hover path:nth-child(2) {
+  fill: #ac4a3b;
 }
 
 .navbar__menu {
@@ -44,7 +49,7 @@
   }
 
   .navbar__item {
-    margin-left: 8.2rem;
+    margin-left: 12rem;
   }
 
   .js-menu-toggle {
