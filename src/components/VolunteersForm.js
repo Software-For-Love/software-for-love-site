@@ -136,8 +136,8 @@ export default class VolunteersForm extends React.Component {
 
                         <div className="form-group">
                             <label id="Interests" htmlFor="interests">Interests {required_star}</label>
-                            {interests.map(interest => 
-                                <div className="form-checkbox">
+                            {interests.map((interest, index) => 
+                                <div className="form-checkbox" key={index}>
                                   <label id={interest} htmlFor={interest}>{interest}</label>
                                   <input aria-labelledby={interest} type="checkbox" name={interest} id="interest" onChange={this.handleOnSelect} required={!this.state.minimumSelection} />
                                 </div>
