@@ -36,6 +36,7 @@ export default class VolunteersForm extends React.Component {
         headers: { "Content-Type": "multipart/form-data" },
         body: encode({
           "form-name": form.getAttribute("name"),
+          "subject": "A potential volunteer wants to join SFL",
           ...this.state
         })
       }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
@@ -108,7 +109,7 @@ export default class VolunteersForm extends React.Component {
                           <input aria-labelledby="honeypot-label" id="honeypot" name="bot-field" />
                         </div>
 
-                          <input aria-labelledby="honeypot-label" type="hidden" id="subject" name="subject" value="A potential volunteer wants to join SFL" onChange={this.handleOnChange} />
+                          <input aria-labelledby="honeypot-label" type="hidden" id="subject" name="subject" value="A potential volunteer wants to join SFL" />
 
                         <div className="form-group">
                           <label id="first-name-label" htmlFor="first-name">First Name {required_star}</label>
