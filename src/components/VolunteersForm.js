@@ -7,10 +7,27 @@ import SectionActions from './SectionActions';
 
 export default class VolunteersForm extends React.Component {
 
-    handleOnChange = value => {
-      this.setState({ phone: value }, () => {
-      });
-    };
+    state = { }
+
+    handleCheckBoxClick = (e) => {
+      this.setState({ [e.target.name]: e.target.checked });
+    }
+
+    checkboxOptionsMinimumSelection = () => {
+      if (this.state && Object.keys(this.state).length === 0) return false;
+      let options = Object.keys(this.state);
+
+      for (option of options) {
+        if (this.state.option) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    handleSubmit = () => {
+
+    }
 
     render() {
       let section = _.get(this.props, 'section', null);
@@ -40,17 +57,18 @@ export default class VolunteersForm extends React.Component {
             .join("&")
       }
     
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "multipart/form-data" },
-          body: encode({
-            "form-name": form.getAttribute("name")
-          })
-        }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
-      }
+      // const handleSubmit = (event) => {
+      //   console.log(event);
+      //   event.preventDefault();
+      //   const form = event.target;
+      //   fetch("/", {
+      //     method: "POST",
+      //     headers: { "Content-Type": "multipart/form-data" },
+      //     body: encode({
+      //       "form-name": form.getAttribute("name")
+      //     })
+      //   }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
+      // }
      
       return (
         
@@ -88,7 +106,7 @@ export default class VolunteersForm extends React.Component {
                 </div>
                 )}
             
-                      <form name="volunteer-form" id="volunteer-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit={() => handleSubmit} >
+                      <form name="volunteer-form" id="volunteer-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit={this.handleSubmit} >
                         
                         <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="volunteer-form" />
 
@@ -124,13 +142,12 @@ export default class VolunteersForm extends React.Component {
 
                         <div className="form-group">
                             <label id="Interests" htmlFor="interests">Interests</label>
-                            {interests.map(interest => {
-                              return (
+                            {interests.map(interest => 
                                 <div className="form-checkbox">
-                                  <input aria-labelledby={interest+"_label"} type="checkbox" name={interest+"_name"} id={interest+"_id"} />
-                                  <label id={interest+"_label"} htmlFor={interest+"_id"}>{interest}</label>
+                                  <label id={interest+"_label"} htmlFor={interest}>{interest}</label>
+                                  <input aria-labelledby={interest+"_label"} type="checkbox" name={interest} id={interest} value={interest} onChange={this.handleCheckBoxClick} />
                                 </div>
-                              )})}
+                              )}
                         </div>
 
                         {/* {_.get(section, 'has_resume_links', null) && ( */}
@@ -161,7 +178,7 @@ export default class VolunteersForm extends React.Component {
                         </div>
 
                         <div className="form-submit">
-                          <button type="submit" className="button">Submit</button>
+                          <button type="submit" className="button" id="submit">Submit</button>
                         </div>
 
                     </form>

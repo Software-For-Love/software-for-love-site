@@ -181,8 +181,8 @@ export default class ContactSection extends React.Component {
                             {interests.map(interest => {
                               return (
                                 <div className="form-checkbox">
-                                  <input aria-labelledby={interest+"_label"} type="checkbox" name={interest+"_name"} id={interest+"_id"} />
-                                  <label id={interest+"_label"} htmlFor={interest+"_id"}>{interest}</label>
+                                  <label htmlFor="Interests">{interest}</label>
+                                  <input aria-labelledby="interest" type="checkbox" name="interest" id={interest} required/>
                                 </div>
                               )
                             })}
