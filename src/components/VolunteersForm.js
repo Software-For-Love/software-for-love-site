@@ -13,8 +13,8 @@ function encode(data) {
 
 export default class VolunteersForm extends React.Component {
 
-    handleOnChange = value => {
-      this.setState({ phone: value }, () => {
+    handleOnChange = e => {
+      this.setState({ [e.target.name]: e.target.value }, () => {
       });
     };
 
@@ -25,7 +25,8 @@ export default class VolunteersForm extends React.Component {
         method: "POST",
         headers: { "Content-Type": "multipart/form-data" },
         body: encode({
-          "form-name": form.getAttribute("name")
+          "form-name": form.getAttribute("name"),
+          ...this.state
         })
       }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
     }
@@ -101,24 +102,24 @@ export default class VolunteersForm extends React.Component {
 
                         <div className="form-group">
                           <label id="first-name-label" htmlFor="first-name">First Name {required_star}</label>
-                          <input aria-labelledby="first-name-label" type="text" name="first-name" id="first-name" placeholder="Your first name" required />
+                          <input aria-labelledby="first-name-label" type="text" name="first-name" id="first-name" placeholder="Your first name" onChange={this.handleOnChange} required />
                         </div>
 
                         <div className="form-group">
                           <label id="last-name-label" htmlFor="last-name">Last Name {required_star}</label>
-                          <input aria-labelledby="last-name-label" type="text" name="last-name" id="last-name" placeholder="Your last name" required />
+                          <input aria-labelledby="last-name-label" type="text" name="last-name" id="last-name" placeholder="Your last name" onChange={this.handleOnChange} required />
                         </div>
 
 
                         <div className="form-group">
                           <label id="email-label" htmlFor="email">Email {required_star} </label>
-                          <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" required/>
+                          <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" onChange={this.handleOnChange} required/>
                         </div>
 
 
                         <div className="form-group">
                             <label id="university_label" htmlFor="university_id">University {required_star} </label>
-                            <input aria-labelledby="university_label" type="text" name="university" id="university_id" placeholder="Current Institution" required/>
+                            <input aria-labelledby="university_label" type="text" name="university" id="university_id" placeholder="Current Institution" onChange={this.handleOnChange} required/>
                         </div>
 
 
@@ -127,7 +128,7 @@ export default class VolunteersForm extends React.Component {
                             {interests.map(interest => {
                               return (
                                 <div className="form-checkbox">
-                                  <input aria-labelledby={interest+"_label"} type="checkbox" name={interest+"_name"} id={interest+"_id"} />
+                                  <input aria-labelledby={interest+"_label"} type="checkbox" name={interest+"_name"} id={interest+"_id"} onChange={this.handleOnChange} />
                                   <label id={interest+"_label"} htmlFor={interest+"_id"}>{interest}</label>
                                 </div>
                               )})}
@@ -136,26 +137,26 @@ export default class VolunteersForm extends React.Component {
                         {/* {_.get(section, 'has_resume_links', null) && ( */}
                           {/* <div className="form-group">
                             <label id="resume_label" htmlFor="resume">Resume {required_star} </label>
-                            <input aria-labelledby="resume_label" type="file" name="resume" id="resume" placeholder="Please add your resume" required/>
+                            <input aria-labelledby="resume_label" type="file" name="resume" id="resume" placeholder="Please add your resume" onChange={this.handleOnChange} required/>
                           </div> */}
                         {/* // )} */}
 
                         
                           <div className="form-group">
                             <label id="linkedin_label" htmlFor="linkedin">LinkedIn </label>
-                            <input aria-labelledby="linkedin_label" type="text" name="linkedin" id="linkedin" placeholder="Linkedln URL Here" required/>
+                            <input aria-labelledby="linkedin_label" type="text" name="linkedin" id="linkedin" placeholder="Linkedln URL Here" onChange={this.handleOnChange} required/>
                           </div>
                         
 
                         
                           <div className="form-group">
                             <label id="github_label" htmlFor="github">Github </label>
-                            <input aria-labelledby="github_label" type="text" name="github" id="github" placeholder="GitHub URL Here" required/>
+                            <input aria-labelledby="github_label" type="text" name="github" id="github" placeholder="GitHub URL Here" onChange={this.handleOnChange} required/>
                           </div>
 
 
                         <div className="form-group form-checkbox">
-                          <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
+                          <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" onChange={this.handleOnChange} required/>
                           <label id="consent-label" htmlFor="consent">I understand that this form is storing my submitted information so I can be
                             contacted. {required_star}</label>
                         </div>
