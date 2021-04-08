@@ -127,7 +127,7 @@ export default class VolunteersForm extends React.Component {
                             {interests.map(interest => {
                               return (
                                 <div className="form-checkbox">
-                                  <input aria-labelledby={interest+"_label"} type="checkbox" name={interest+"_name"} id={interest+"_id"} />
+                                  <input aria-labelledby={interest+"_label"} type="checkbox" name={interest+"_name"} id={interest+"_id"} required/>
                                   <label id={interest+"_label"} htmlFor={interest+"_id"}>{interest}</label>
                                 </div>
                               )})}
