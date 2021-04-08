@@ -5,12 +5,30 @@ import { navigate } from 'gatsby';
 import {classNames, toStyleObj, withPrefix} from '../utils';
 import SectionActions from './SectionActions';
 
+function encode(data) {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+}
+
 export default class VolunteersForm extends React.Component {
 
     handleOnChange = value => {
       this.setState({ phone: value }, () => {
       });
     };
+
+    handleSubmit = (event) => {
+      event.preventDefault();
+      const form = event.target;
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "multipart/form-data" },
+        body: encode({
+          "form-name": form.getAttribute("name")
+        })
+      }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
+    }
 
     render() {
       let section = _.get(this.props, 'section', null);
@@ -33,24 +51,6 @@ export default class VolunteersForm extends React.Component {
         "Project Management",
         "UI/UX and Design"
       ]
-
-      function encode(data) {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&")
-      }
-    
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "multipart/form-data" },
-          body: encode({
-            "form-name": form.getAttribute("name")
-          })
-        }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
-      }
      
       return (
         
@@ -88,7 +88,7 @@ export default class VolunteersForm extends React.Component {
                 </div>
                 )}
             
-                      <form name="volunteer-form" id="volunteer-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit={() => handleSubmit} >
+                      <form name="volunteer-form" id="volunteer-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit={this.handleSubmit} >
                         
                         <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="volunteer-form" />
 
