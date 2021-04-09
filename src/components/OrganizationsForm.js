@@ -137,7 +137,7 @@ export default class OrganizationForm extends React.Component {
 
                         <div className="form-group">
                           <label id="message-label" htmlFor="message">Message {required_star}</label>
-                          <textarea aria-labelledby="message-label" name="message" id="message" rows="5" placeholder="Your message" />
+                          <textarea aria-labelledby="message-label" name="message" id="message" rows="5" placeholder="Your message" required/>
                         </div>
 
                         <div className="form-group form-checkbox">
