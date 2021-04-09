@@ -13,7 +13,7 @@ sections:
         url: /volunteers
         style: secondary
     align: left
-    image: images/SFL_GIF_NEWEST.gif
+    image: images/humans3.png
     image_alt: Hero placeholder image
     image_position: right
     has_background: true
