@@ -34,6 +34,7 @@ export default class TeamSection extends React.Component {
                                         style={{
                                             paddingRight: "0.75rem",
                                             paddingLeft: "0.75rem",
+                                            flex: "0 0 25%",
                                         }}
                                     >
                                         <div className="card team-member">
