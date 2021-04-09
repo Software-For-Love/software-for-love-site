@@ -6,7 +6,7 @@ sections:
     subtitle: >-
       Meet a dedicated group of young individuals who yearn to spread positivity and love through software. We encourage our team to be proud of their creativity, be optimistic and open-minded about technology while giving back to the community through Software for Love. 
     align: left
-    image: images/humans3.png
+    image: images/team.png
     image_alt: Hero placeholder image
     image_position: right
     has_background: true
