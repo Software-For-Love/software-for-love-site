@@ -4,7 +4,7 @@ sections:
   - type: hero_section
     title: Software for Love
     subtitle: >-
-      Software For Love is a charitable software solution organization based in Ottawa. Our team consists of young professionals who are creative and passionate about technology. 
+      Software For Love is a non-profit organization that focuses on providing software solutions. We are a team of young professionals who are passionate about technology and seek to give back to our community. 
     actions:
       - label: Partner With Us
         url: /organizations
@@ -19,7 +19,6 @@ sections:
     has_background: true
     background:
       background_color: blue
-      background_image: images/diagonal-lines.svg
       background_image_opacity: 20
       background_image_size: auto
       background_image_repeat: repeat
@@ -28,38 +27,38 @@ sections:
     features:
       - title: What We Do
         content: >-
-          Our work is dynamic and different. Our team is dedicated to providing a variety of services such as web development, redesigning, and maintenance.  We look forward to participating in the development of custom software solutions, contribution to open source projects and feature development, and additional services.
+          Our team is dedicated to providing a variety of services such as web development, UI/UX design, data analytics, and database management. We seek to develop software for clients in return for a charitable contribution, or a charitable service provided by an organization.
         align: left
         image: images/Humaaans1.png
         image_alt: Volunteers placeholder image
         image_position: right
         actions:
-          - label: Join the Team
-            url: /volunteers
+          - label: Partner With Us
+            url: /organizations
             style: secondary
-      - title: How To Work With Us
+      - title: Join The Team
         content: >-
-          We are a dedicated team of volunteers using our software expertise to influence change in the world around us. Apply today to join our growing team!
+          Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We actively recruit new talent for marketing, finance, engineering, and more.
         align: left
         image: images/Humaaan-Characters.png
         image_alt: Projects Page placeholder image
         image_position: left
         actions:
-          - label: Partner With Us
-            url: /organizations
+          - label: Apply today
+            url: /volunteers
             style: primary
   - type: cta_section
-    title: Join us!
-    subtitle: >-
-      Apply as Partner or as a Volunteer to get involved with Software for Love
-    actions:
-      - label: Organizations
-        url: /organizations
-        style: primary
-      - label: Volunteers
-        url: /volunteers
-        style: secondary
-    has_background: true
-    background_color: gray
+    # title: Join us!
+    # subtitle: >-
+    #   Apply as Partner or as a Volunteer to get involved with Software for Love
+    # actions:
+    #   - label: Organizations
+    #     url: /organizations
+    #     style: primary
+    #   - label: Volunteers
+    #     url: /volunteers
+    #     style: secondary
+    # has_background: true
+    # background_color: gray
 template: advanced
 ---

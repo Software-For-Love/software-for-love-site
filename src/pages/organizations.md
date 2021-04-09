@@ -4,7 +4,7 @@ sections:
   - type: hero_section
     title: Our Values
     subtitle: >-
-      We are a vibrant growing company that believes in the power of community built through open minded communication. We believe in an optimistic outlook on life and problem solving. With our team of growing young professionals we harness our tech skills to spread love and help other organizations reach their full potential within the tech industry.
+      At Software for Love, we foster a culture that promotes learning, collaboration, sustainability, and philanthrophy. We always put our best foot forward and love taking on new challenges. We strive to use our knowledge and abilities to help our partners solve problems within our community. 
     align: left
     image: images/organization_values.svg
     image_alt: Hero placeholder image
@@ -14,7 +14,7 @@ sections:
       background_color: blue
   - type: organizations_form
     title: Contact Us
-    subtitle: Got a project request? Please fill out this form and leave a brief description of your project for review. We will schedule a meeting afterwards to discuss the project with you.
+    subtitle: Got a project request? Please fill out this form with a brief description of your project. We will contact you and schedule a meeting as soon as possible.
     image: images/undraw_contact_us_15o2.svg
     image_alt: Hero placeholder image
     image_position: right
