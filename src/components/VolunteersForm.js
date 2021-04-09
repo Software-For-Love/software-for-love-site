@@ -5,12 +5,42 @@ import { navigate } from 'gatsby';
 import {classNames, toStyleObj, withPrefix} from '../utils';
 import SectionActions from './SectionActions';
 
+function encode(data) {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+}
+
 export default class VolunteersForm extends React.Component {
 
-    handleOnChange = value => {
-      this.setState({ phone: value }, () => {
-      });
-    };
+    constructor(props) {
+      super(props);
+      this.state = { minimumSelection: false }
+    }
+  
+    handleOnChange = (event) => {
+      this.setState({ [event.target.name]: event.target.value });
+    }
+
+    handleOnSelect = (event) => {
+      var checkboxes = document.querySelectorAll('#interest');
+      var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
+      this.setState({ [event.target.name]: event.target.value, minimumSelection : checkedOne });
+    }
+    
+    handleSubmit = (event) => {
+      event.preventDefault();
+      const form = event.target;
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "multipart/form-data" },
+        body: encode({
+          "form-name": form.getAttribute("name"),
+          "subject": "A potential volunteer wants to join SFL",
+          ...this.state
+        })
+      }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
+    }
 
     render() {
       let section = _.get(this.props, 'section', null);
@@ -33,25 +63,7 @@ export default class VolunteersForm extends React.Component {
         "Project Management",
         "UI/UX and Design"
       ]
-
-      function encode(data) {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&")
-      }
-    
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "multipart/form-data" },
-          body: encode({
-            "form-name": form.getAttribute("name")
-          })
-        }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
-      }
-     
+ 
       return (
         
           <section className={classNames('section', 'hero', {'bg-image': _.get(section, 'has_background', null) && _.get(background, 'background_image', null), 'inverse bg-blue': _.get(section, 'has_background', null) && (background_color === 'blue'), 'bg-gray': _.get(section, 'has_background', null) && (background_color === 'gray'), 'section--padding': _.get(section, 'has_background', null) || _.get(section, 'image', null)})}>
@@ -88,7 +100,7 @@ export default class VolunteersForm extends React.Component {
                 </div>
                 )}
             
-                      <form name="volunteer-form" id="volunteer-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit={() => handleSubmit} >
+                      <form name="volunteer-form" id="volunteer-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit={this.handleSubmit} >
                         
                         <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="volunteer-form" />
 
@@ -101,67 +113,66 @@ export default class VolunteersForm extends React.Component {
 
                         <div className="form-group">
                           <label id="first-name-label" htmlFor="first-name">First Name {required_star}</label>
-                          <input aria-labelledby="first-name-label" type="text" name="first-name" id="first-name" placeholder="Your first name" required />
+                          <input aria-labelledby="first-name-label" type="text" name="first-name" id="first-name" placeholder="Your first name" onChange={this.handleOnChange} required />
                         </div>
 
                         <div className="form-group">
                           <label id="last-name-label" htmlFor="last-name">Last Name {required_star}</label>
-                          <input aria-labelledby="last-name-label" type="text" name="last-name" id="last-name" placeholder="Your last name" required />
+                          <input aria-labelledby="last-name-label" type="text" name="last-name" id="last-name" placeholder="Your last name" onChange={this.handleOnChange} required />
                         </div>
 
 
                         <div className="form-group">
                           <label id="email-label" htmlFor="email">Email {required_star} </label>
-                          <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" required/>
+                          <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" onChange={this.handleOnChange} required/>
                         </div>
 
 
                         <div className="form-group">
                             <label id="university_label" htmlFor="university_id">University {required_star} </label>
-                            <input aria-labelledby="university_label" type="text" name="university" id="university_id" placeholder="Current Institution" required/>
+                            <input aria-labelledby="university_label" type="text" name="university" id="university_id" placeholder="Current Institution" onChange={this.handleOnChange} required/>
                         </div>
 
 
                         <div className="form-group">
-                            <label id="Interests" htmlFor="interests">Interests</label>
-                            {interests.map(interest => {
-                              return (
-                                <div className="form-checkbox">
-                                  <input aria-labelledby={interest+"_label"} type="checkbox" name={interest+"_name"} id={interest+"_id"} required/>
-                                  <label id={interest+"_label"} htmlFor={interest+"_id"}>{interest}</label>
+                            <label id="Interests" htmlFor="interests">Interests {required_star}</label>
+                            {interests.map((interest, index) => 
+                                <div className="form-checkbox" key={index}>
+                                  <label id={interest} htmlFor={interest}>{interest}</label>
+                                  <input aria-labelledby={interest} type="checkbox" name={interest} id="interest" onChange={this.handleOnSelect} required={!this.state.minimumSelection} />
                                 </div>
-                              )})}
+                            )}
                         </div>
 
                         {/* {_.get(section, 'has_resume_links', null) && ( */}
                           {/* <div className="form-group">
                             <label id="resume_label" htmlFor="resume">Resume {required_star} </label>
-                            <input aria-labelledby="resume_label" type="file" name="resume" id="resume" placeholder="Please add your resume" required/>
+                            <input aria-labelledby="resume_label" type="file" name="resume" id="resume" placeholder="Please add your resume" onChange={this.handleOnChange} required/>
                           </div> */}
                         {/* // )} */}
 
                         
                           <div className="form-group">
                             <label id="linkedin_label" htmlFor="linkedin">LinkedIn </label>
-                            <input aria-labelledby="linkedin_label" type="text" name="linkedin" id="linkedin" placeholder="Linkedln URL Here" required/>
+                            <input aria-labelledby="linkedin_label" type="text" name="linkedin" id="linkedin" placeholder="Linkedln URL Here" onChange={this.handleOnChange} />
                           </div>
                         
 
                         
                           <div className="form-group">
                             <label id="github_label" htmlFor="github">Github </label>
-                            <input aria-labelledby="github_label" type="text" name="github" id="github" placeholder="GitHub URL Here" required/>
+                            <input aria-labelledby="github_label" type="text" name="github" id="github" placeholder="GitHub URL Here" onChange={this.handleOnChange} />
                           </div>
 
 
                         <div className="form-group form-checkbox">
-                          <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" required/>
+                          <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" onChange={this.handleOnChange} required/>
                           <label id="consent-label" htmlFor="consent">I understand that this form is storing my submitted information so I can be
                             contacted. {required_star}</label>
                         </div>
 
                         <div className="form-submit">
-                          <button type="submit" className="button">Submit</button>
+                          <button type="submit" className="button" id="submit">Submit</button>
                         </div>
 
                     </form>
