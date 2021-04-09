@@ -4,7 +4,7 @@ sections:
   - type: hero_section
     title: Software for Love
     subtitle: >-
-      Dedicated to providing a variety of services such as web development, redesigning, and maintenance.
+      Software For Love is a non-profit organization that focuses on providing software solutions. We are a team of young professionals who are passionate about technology and seek to give back to our community. 
     actions:
       - label: Partner With Us
         url: /organizations
@@ -27,38 +27,38 @@ sections:
     features:
       - title: What We Do
         content: >-
-          Software For Love is a charitable organization of university students striving to give back to our community using software.
+          Our team is dedicated to providing a variety of services such as web development, UI/UX design, data analytics, and database management. We seek to develop software for clients in return for a charitable contribution, or a charitable service provided by an organization.
         align: left
         image: images/Humaaans1.png
         image_alt: Volunteers placeholder image
         image_position: right
         actions:
-          - label: Join the Team
-            url: /volunteers
+          - label: Partner With Us
+            url: /organizations
             style: secondary
-      - title: How To Work With Us
+      - title: Join The Team
         content: >-
-          Visit our projects page to see what we have done for other organizations.
+          Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We actively recruit new talent for marketing, finance, engineering, and more.
         align: left
         image: images/Humaaan-Characters.png
         image_alt: Projects Page placeholder image
         image_position: left
         actions:
-          - label: Partner With Us
-            url: /organizations
+          - label: Apply today
+            url: /volunteers
             style: primary
   - type: cta_section
-    title: Join us!
-    subtitle: >-
-      Apply as a Partner or as a Volunteer to get involved with Software for Love
-    actions:
-      - label: Organizations
-        url: /organizations
-        style: primary
-      - label: Volunteers
-        url: /features
-        style: secondary
-    has_background: true
-    background_color: gray
+    # title: Join us!
+    # subtitle: >-
+    #   Apply as Partner or as a Volunteer to get involved with Software for Love
+    # actions:
+    #   - label: Organizations
+    #     url: /organizations
+    #     style: primary
+    #   - label: Volunteers
+    #     url: /volunteers
+    #     style: secondary
+    # has_background: true
+    # background_color: gray
 template: advanced
 ---

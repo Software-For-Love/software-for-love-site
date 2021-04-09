@@ -30,9 +30,26 @@ input[type="reset"],
   }
 }
 
+.linkedin{
+  margin-left:15px;
+  margin-right:15px;
+
+}
+
 .linkedin:hover{
+    opacity: .8;
+}
+
+.github{
+  margin-left:15px;
+  margin-right:15px;
+}
+
+.github:hover{
   opacity: .8;
 }
+
+
 
 .btn--secondary {
   background-color: transparent;
