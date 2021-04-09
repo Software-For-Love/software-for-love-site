@@ -13,7 +13,7 @@ sections:
         url: /volunteers
         style: secondary
     align: left
-    image: images/humans3.png
+    image: images/ChangedBackgroundColour.gif
     image_alt: Hero placeholder image
     image_position: right
     has_background: true
