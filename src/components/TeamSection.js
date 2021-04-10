@@ -7,10 +7,7 @@ export default class TeamSection extends React.Component {
     render() {
         let section = _.get(this.props, "section", null);
         return (
-            <section
-                className="section section--team"
-                style={{ height: "50px;" }}
-            >
+            <section className="section section--team">
                 {_.get(section, "title", null) && (
                     <div className="container container--md align-center">
                         <h2 className="section__title">
@@ -34,7 +31,6 @@ export default class TeamSection extends React.Component {
                                         style={{
                                             paddingRight: "0.75rem",
                                             paddingLeft: "0.75rem",
-                                            flex: "0 0 25%",
                                         }}
                                     >
                                         <div className="card team-member">
