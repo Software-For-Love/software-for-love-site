@@ -1,7 +1,7 @@
 ---
 title: 3
 date: '2020-05-28'
-author: src/data/team/gordon-norman.yaml
+<!-- author: src/data/team/gordon-norman.yaml -->
 categories:
   - src/data/categories/general.yaml
 tags:
