@@ -23,7 +23,7 @@ sections:
       - src/data/team/Executive-Team/saheed-akinbile.yaml
       - src/data/team/Executive-Team/nia-ambursley.yaml
       - src/data/team/Executive-Team/jacob-cleysen.yaml
-      - src/data/team/Software-Team/soorya-saravanapavan.yaml
+      - src/data/team/Executive-Team/soorya-saravanapavan.yaml
   - type: team_section
     title: Software Team
     team:
