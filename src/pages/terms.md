@@ -3,7 +3,7 @@ title: Privacy and Terms
 template: page
 ---
 
-# Privacy Policy for Software For Love
+# Privacy Policy at Software For Love
 
 At Software For Love, accessible from https://www.softwareforlove.com/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Software For Love and how we use it.
 If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us. Our Privacy Policy was generated with the help of GDPR Privacy Policy Generator from GDPRPrivacyNotice.com
