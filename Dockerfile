@@ -1,8 +1,6 @@
-FROM node:6.14.4-alpine
-WORKDIR /app
-COPY . /app/
+FROM node:16
+WORKDIR /usr/src/app
+COPY . /usr/src/app
 RUN npm install
 EXPOSE 8000
-CMD [ “npm”, “run”, "develop" ] 
-
-
+CMD ["npm", "run", "bind"]
