@@ -7,11 +7,6 @@
     "has_nav": true,
     "nav_links": [
       {
-        "label": "Team",
-        "url": "/team",
-        "style": "link"
-      },
-      {
         "label": "Organizations",
         "url": "/organizations",
         "style": "link"
@@ -19,6 +14,11 @@
       {
         "label": "Volunteers",
         "url": "/volunteers",
+        "style": "link"
+      },
+      {
+        "label": "Team",
+        "url": "/team",
         "style": "link"
       },
       {
@@ -54,6 +54,12 @@
       {
         "label": "LinkedIn",
         "url": "https://www.linkedin.com/company/software-for-love/",
+        "style": "link",
+        "new_window": true
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/_softwareforlove.com",
         "style": "link",
         "new_window": true
       }
