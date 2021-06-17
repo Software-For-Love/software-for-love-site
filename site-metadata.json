@@ -40,14 +40,14 @@
     "has_social": true,
     "social_links": [
       {
-        "label": "Twitter",
-        "url": "https://twitter.com/softwareforlove",
+        "label": "GitHub",
+        "url": "https://github.com/Software-For-Love",
         "style": "link",
         "new_window": true
       },
       {
-        "label": "GitHub",
-        "url": "https://github.com/Software-For-Love",
+        "label": "Twitter",
+        "url": "https://twitter.com/softwareforlove",
         "style": "link",
         "new_window": true
       },
@@ -59,7 +59,19 @@
       },
       {
         "label": "Instagram",
-        "url": "https://www.instagram.com/_softwareforlove.com",
+        "url": "https://www.facebook.com/softwareforlove/",
+        "style": "link",
+        "new_window": true
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/_softwareforlove",
+        "style": "link",
+        "new_window": true
+      },
+      {
+        "label": "TikTok",
+        "url": "https://vm.tiktok.com/ZMd132SFD/",
         "style": "link",
         "new_window": true
       }
