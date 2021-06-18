@@ -43,6 +43,7 @@ sections:
           - src/data/team/Software-Team/mahyar-gorji.yaml
           - src/data/team/Software-Team/esra-kastrati.yaml
           - src/data/team/Software-Team/avaneesh-madaram.yaml
+          - src/data/team/Software-Team/harshit-manchanda.yaml
           - src/data/team/Software-Team/ali-muhammad.yaml
           - src/data/team/Software-Team/nutan-nimkar.yaml
           - src/data/team/Software-Team/yash-oza.yaml
