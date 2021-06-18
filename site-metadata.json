@@ -1,5 +1,5 @@
 {
-  "description": "A non-profit organization that focuses on providing software solutions in exchange for charitable contributions.",
+  "description": "Software For Love is a registered Canadian non-profit organization that focuses on providing software solutions in exchange for charitable contributions.",
   "favicon":"images/newLogoTest.svg",
   "header": {
     "logo": "images/logoBlue.svg",
@@ -58,7 +58,7 @@
         "new_window": true
       },
       {
-        "label": "Instagram",
+        "label": "Facebook",
         "url": "https://www.facebook.com/softwareforlove/",
         "style": "link",
         "new_window": true
@@ -75,7 +75,8 @@
         "style": "link",
         "new_window": true
       }
-    ]
+    ],
+    "content": "© Software For Love 2021"
   },
   "title": "Software For Love"
 }
