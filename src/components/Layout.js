@@ -7,6 +7,8 @@ import '../sass/main.scss';
 import Header from './Header';
 import Footer from './Footer';
 
+import CookieConsent from 'react-cookie-consent';
+
 export default class Body extends React.Component {
     render() {
         return (
@@ -27,6 +29,19 @@ export default class Body extends React.Component {
                   </main>
                   <Footer {...this.props} />
                 </div>
+                <CookieConsent
+                    location="bottom"
+                    buttonText="Accept"
+                    declineButtonText="Decline"
+                    cookieName="gatsby-gdpr-google-analytics"
+                    background="#394a74">
+                This site uses cookies. 
+                <div>
+                    <a href="https://www.softwareforlove.com/terms" target="_blank" rel="noopener noreferrer">
+                    Link to Terms and Conditions
+                    </a>
+                </div>
+                </CookieConsent>
             </React.Fragment>
         );
     }
