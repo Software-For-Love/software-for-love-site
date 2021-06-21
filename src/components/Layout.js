@@ -33,14 +33,8 @@ export default class Body extends React.Component {
                     location="bottom"
                     buttonText="Accept"
                     declineButtonText="Decline"
-                    cookieName="gatsby-gdpr-google-analytics"
-                    background="#394a74">
-                This site uses cookies. 
-                <div>
-                    <a href="https://www.softwareforlove.com/terms" target="_blank" rel="noopener noreferrer">
-                    Link to Terms and Conditions
-                    </a>
-                </div>
+                    cookieName="gatsby-gdpr-google-analytics">
+                    We value your privacy. We use cookies to give you the best online experience and to better understand our visitors. To find out more, please read our <a href="https://www.softwareforlove.com/terms" target="_blank" rel="noopener noreferrer"> privacy policy</a>.
                 </CookieConsent>
             </React.Fragment>
         );
