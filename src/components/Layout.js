@@ -34,7 +34,8 @@ export default class Body extends React.Component {
                     buttonText="Accept"
                     declineButtonText="Decline"
                     cookieName="gatsby-gdpr-google-analytics"
-                    background="#394a74">
+                    style={{ background: "#9BA9D0" }}
+                    buttonStyle={{ background: "#FFFFFF", color:"#394A74", fontSize: "18px" }}>
                     We value your privacy. We use cookies to give you the best online experience and to better understand our visitors. To find out more, please read our <a href="https://www.softwareforlove.com/terms" target="_blank" rel="noopener noreferrer"> privacy policy</a>.
                 </CookieConsent>
             </React.Fragment>
