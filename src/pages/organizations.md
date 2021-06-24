@@ -12,9 +12,21 @@ sections:
       has_background: true
       background:
           background_color: blue
-    - type: content_section
-      title: Who You Are
-      subtitle: We partner with charities, non-profits, startups and well-established businesses.
+    - type: timeline_section
+      title: Project Timeline
+      items:
+          - title: Feature 1
+            content: >-
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl
+                ligula, cursus id molestie vel, maximus aliquet risus. Vivamus in nibh
+                fringilla, fringilla.
+            align: left
+          - title: Feature 2
+            content: >-
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl
+                ligula, cursus id molestie vel, maximus aliquet risus. Vivamus in nibh
+                fringilla, fringilla.
+            align: right
     - type: organizations_form
       title: Contact Us
       subtitle: Got a project request? Please fill out this form with a brief description of your project. We will contact you and schedule a meeting as soon as possible.
