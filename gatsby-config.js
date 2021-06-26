@@ -18,7 +18,7 @@ module.exports = {
             resolve: `gatsby-plugin-gdpr-cookies`,
             options: {
                 googleAnalytics: {
-                  trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
+                  trackingId: 'UA-169286415-1',
                   anonymize: true
                 },
                 //Defines the environments where the tracking should be available  - default is ["production"]
