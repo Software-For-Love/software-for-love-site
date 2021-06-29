@@ -335,7 +335,23 @@ models:
               name: content
               label: Content
               description: The text content of the section
-    timeline_section:
+    faq_section:
+        type: object
+        label: FAQ Section
+        labelField: title
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the section
+            - type: list
+              name: panels
+              label: Panels
+              panels:
+                  type: model
+                  models:
+                      - panel
+      timeline_section:
         type: object
         label: Timeline Section
         labelField: title
@@ -506,6 +522,19 @@ models:
                   type: reference
                   models:
                       - person
+    panel:
+      type: object
+        label: Panel
+        labelField: title
+        fields:
+            - type: string
+              name: header
+              label: Header
+              description: The header of the panel
+            - type: markdown
+              name: content
+              label: Content
+              description: The text content of the feature
     item:
       type: object
         label: Item

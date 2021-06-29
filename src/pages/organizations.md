@@ -31,6 +31,21 @@ sections:
             content: >-
                 We target to complete most project within four months. At the end of project term, we work to deliver the product and making sure that you are content with the work done.
             align: left
+    - type: faq_section
+      title: FAQs
+      panels:
+          - header: 1. Discussion
+            content: >-
+                After filling out the form below, we set up a time to call and understand your needs. We work with you to understand the problem and how best we can apply our technical expertise to solve it.
+          - header: 2. Charity Donation
+            content: >-
+                We ask all our clients to donate to charity on behalf of the services we provided. A charity is mutually chosen before the signing of a contract. If you don't have one in mind, we are happy to you refer established charities across North America!
+          - header: 3. Software Development
+            content: >-
+                Once the contract has been signed, we meet on a weekly/biweekly basis to update you on the status of the project. Our process starts with designing, then implementation and finally documentation and maintenance. Throughout this process, you as the client will have the opportunity to provide input and feedback on the project.
+          - header: 4. Project Delivery
+            content: >-
+                We target to complete most project within four months. At the end of project term, we work to deliver the product and making sure that you are content with the work done.
     - type: organizations_form
       title: Contact Us
       subtitle: Got a project request? Please fill out this form with a brief description of your project. We will contact you and schedule a meeting as soon as possible.
