@@ -34,15 +34,15 @@ sections:
     - type: faq_section
       title: FAQs
       panels:
-          - header: 1. Discussion
+          - header: How does our pricing work?
             content: >-
-                After filling out the form below, we set up a time to call and understand your needs. We work with you to understand the problem and how best we can apply our technical expertise to solve it.
-          - header: 2. Charity Donation
+                Software For Love has two pricing models. 1) For for-profit organizations: we charge a regular industry rate (roughly $20-$30/hour). However, a substantial portion of that cost goes towards a charitable cause. You get your product delivered to you while helping out your local community! 2) For non-profit organizations: we charge a low-bono rate which is decided based on the project and your budget. In this case, we won't charge you for the portion that goes to charity, as you're the charity in this scenario!
+          - header: How does SFL prove they have donated to charities?
             content: >-
-                We ask all our clients to donate to charity on behalf of the services we provided. A charity is mutually chosen before the signing of a contract. If you don't have one in mind, we are happy to you refer established charities across North America!
-          - header: 3. Software Development
+                Software For Love does **not** donate to charities. We actually ask the client to directly donate to the charity and send us the receipts of their donations. This way our clients get the pleasure of satisfaction when they themselves donate to charity, as well as get tax benefits because of their donations.
+          - header: How often do project updates occur?
             content: >-
-                Once the contract has been signed, we meet on a weekly/biweekly basis to update you on the status of the project. Our process starts with designing, then implementation and finally documentation and maintenance. Throughout this process, you as the client will have the opportunity to provide input and feedback on the project.
+                Based on your preference, we try to meet as much as possible. Usually this is weekly or bi-weekly on your availability. We believe in an iterative design and development process where at each step your input is valued.
           - header: 4. Project Delivery
             content: >-
                 We target to complete most project within four months. At the end of project term, we work to deliver the product and making sure that you are content with the work done.
