@@ -29,6 +29,7 @@ sections:
       title: Marketing Team
       team:
           - src/data/team/Marketing-Team/manvir-mangat.yaml
+          - src/data/team/Marketing-Team/samraddhi-surana.yaml
 
     - type: team_section
       title: Software Team
