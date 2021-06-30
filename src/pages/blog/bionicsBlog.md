@@ -2,7 +2,11 @@
 title: 1
 date: '2021-07-01'
 author: 
-  - src/data/team/dharitri-dixit.yaml  
+  - src/data/team/dharitri-dixit.yaml 
+  - src/data/team/kush-bhagat.yaml 
+  - src/data/team/yash-contractor.yaml 
+  - src/data/team/yash-oza.yaml  
+  - src/data/team/adhish-maheswaran.yaml 
 categories:
   - src/data/categories/general.yaml
 image: images/ubionics-blogImg.png
@@ -27,4 +31,4 @@ SFL dedicated a team of four developers and a project manager to create an ideal
 The site was developed under a tight deadline thanks to the commitment of the team. Each week the developers would meet twice and would meet once a week with the client to ensure constant communication and feedback throughout the project. As a result of the meetings, development could be done in an agile manner. As goals were set, they were implemented on a regular basis. Further, due to the client’s feedback, changes could be made alongside development preventing any major surprises or requests for changes at the end of the development cycle. It also ensured that the project satisfied the client’s demands. Once the client was completely satisfied with the project we began to execute the deployment of the site. The site was deployed using Netlify alongside the client, and handed over at completion. 
 
 ## Link to Project
-[uBionics Wesbite](https://www.ctsbionics.com/)\
+[uBionics Wesbite](https://www.ctsbionics.com/) \
