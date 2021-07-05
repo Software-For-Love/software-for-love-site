@@ -21,6 +21,7 @@ export default class BlogFeedSection extends React.Component {
              section_category = getData(this.props.pageContext.site.data, _.get(section, 'category', null));
         }
         return (
+          
             <section className="section section--posts">
               {_.get(section, 'title', null) && (
               <div className="container container--md align-center">
@@ -38,7 +39,7 @@ export default class BlogFeedSection extends React.Component {
                         {(is_post && ((show_recent === false) || (post_count < recent_count))) && ((() => {
                              post_count = post_count + 1;
                             return (
-                              <BlogFeedItemFilter key={post_idx} {...this.props} blog_feed_section={section} post_page={post} section_author={section_author} section_category={section_category} />
+                              <BlogFeedItemFilter key={post_idx} {...this.props} blog_feed_section={section} post_page={post} section_author={section_author} zsection_category={section_category} />
                             );
                         })())}
                       </React.Fragment>)

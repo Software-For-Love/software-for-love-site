@@ -4,6 +4,7 @@ import moment from 'moment-strftime';
 
 import {Link, withPrefix, getData} from '../utils';
 import BlogPostCategories from './BlogPostCategories';
+import BlogPostAuthors from './BlogPostAuthors'
 
 export default class BlogPostFeedItem extends React.Component {
     render() {
@@ -44,6 +45,9 @@ export default class BlogPostFeedItem extends React.Component {
                             <span> by {author.first_name} {author.last_name}</span>
                         );
                     })())}
+                    {/* {_.get(post, 'frontmatter.author', null) && (
+                      <BlogPostAuthors {...this.props} author={_.get(post, 'frontmatter.author', null)} container_class={'card__meta'} />
+                    )} */}
                   </footer>
                 </div>
               </div>
