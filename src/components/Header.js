@@ -38,15 +38,6 @@ export default class Header extends React.Component {
                                 </svg>
                             </Link>
                         </div>
-                        <div className="h4 navbar__title">
-                            <Link to={withPrefix("/")}>
-                                {_.get(
-                                    this.props,
-                                    "pageContext.site.siteMetadata.header.title",
-                                    null
-                                )}
-                            </Link>
-                        </div>
                         {_.get(
                             this.props,
                             "pageContext.site.siteMetadata.header.has_nav",

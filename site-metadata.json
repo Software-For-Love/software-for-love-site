@@ -1,16 +1,11 @@
 {
-  "description": "A non-profit organization that focuses on providing software solutions in exchange for charitable contributions.",
+  "description": "Software For Love is a registered Canadian non-profit organization that focuses on providing software solutions in exchange for charitable contributions.",
   "favicon":"images/newLogoTest.svg",
   "header": {
     "logo": "images/logoBlue.svg",
     "title":"Software For Love",
     "has_nav": true,
     "nav_links": [
-      {
-        "label": "Team",
-        "url": "/team",
-        "style": "link"
-      },
       {
         "label": "Organizations",
         "url": "/organizations",
@@ -19,6 +14,11 @@
       {
         "label": "Volunteers",
         "url": "/volunteers",
+        "style": "link"
+      },
+      {
+        "label": "Team",
+        "url": "/team",
         "style": "link"
       },
       {
@@ -40,14 +40,14 @@
     "has_social": true,
     "social_links": [
       {
-        "label": "Twitter",
-        "url": "https://twitter.com/softwareforlove",
+        "label": "GitHub",
+        "url": "https://github.com/Software-For-Love",
         "style": "link",
         "new_window": true
       },
       {
-        "label": "GitHub",
-        "url": "https://github.com/Software-For-Love",
+        "label": "Twitter",
+        "url": "https://twitter.com/softwareforlove",
         "style": "link",
         "new_window": true
       },
@@ -56,8 +56,27 @@
         "url": "https://www.linkedin.com/company/software-for-love/",
         "style": "link",
         "new_window": true
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/softwareforlove/",
+        "style": "link",
+        "new_window": true
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/_softwareforlove",
+        "style": "link",
+        "new_window": true
+      },
+      {
+        "label": "TikTok",
+        "url": "https://vm.tiktok.com/ZMd132SFD/",
+        "style": "link",
+        "new_window": true
       }
-    ]
+    ],
+    "content": "© Software For Love 2021"
   },
   "title": "Software For Love"
 }
