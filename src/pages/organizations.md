@@ -39,10 +39,10 @@ sections:
                 Software For Love has two pricing models. 1) For for-profit organizations: we charge a regular industry rate (roughly $20-$30/hour). However, a substantial portion of that cost goes towards a charitable cause. You get your product delivered to you while helping out your local community! 2) For non-profit organizations: we charge a low-bono rate which is decided based on the project and your budget. In this case, we won't charge you for the portion that goes to charity, as you're the charity in this scenario!
           - header: How does SFL prove they have donated to charities?
             content: >-
-                Software For Love does **not** donate to charities. We actually ask the client to directly donate to the charity and send us the receipts of their donations. This way our clients get the pleasure of satisfaction when they themselves donate to charity, as well as get tax benefits because of their donations.
+                Software For Love does **not** donate to charities. We actually ask the client to directly donate to the charity and send us the receipts of their donations. This way our clients get the pleasure and satisfaction when they themselves donate to charity, as well as get tax benefits because of their donations.
           - header: How often do project updates occur?
             content: >-
-                Based on your preference, we try to meet as much as possible. Usually this is weekly or bi-weekly on your availability. We believe in an iterative design and development process where at each step your input is valued.
+                Based on your preference, we try to meet as much as possible. Usually this is weekly or bi-weekly based on your availability. We believe in an iterative design and development process where at each step your input is valued.
     - type: organizations_form
       title: Contact Us
       subtitle: Got a project request? Please fill out this form with a brief description of your project. We will contact you and schedule a meeting as soon as possible.
