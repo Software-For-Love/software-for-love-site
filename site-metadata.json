@@ -22,6 +22,11 @@
         "style": "link"
       },
       {
+        "label": "Blog",
+        "url": "/blog",
+        "style": "link"
+      },
+      {
         "label": "Contact Us",
         "url": "/contact",
         "style": "primary"
