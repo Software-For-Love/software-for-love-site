@@ -43,9 +43,6 @@ sections:
           - header: How often do project updates occur?
             content: >-
                 Based on your preference, we try to meet as much as possible. Usually this is weekly or bi-weekly on your availability. We believe in an iterative design and development process where at each step your input is valued.
-          - header: 4. Project Delivery
-            content: >-
-                We target to complete most project within four months. At the end of project term, we work to deliver the product and making sure that you are content with the work done.
     - type: organizations_form
       title: Contact Us
       subtitle: Got a project request? Please fill out this form with a brief description of your project. We will contact you and schedule a meeting as soon as possible.
