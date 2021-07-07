@@ -29,6 +29,7 @@ sections:
       title: Marketing Team
       team:
           - src/data/team/Marketing-Team/manvir-mangat.yaml
+          - src/data/team/Marketing-Team/samraddhi-surana.yaml
 
     - type: team_section
       title: Software Team
@@ -42,6 +43,7 @@ sections:
           - src/data/team/Software-Team/ben-flynn.yaml
           - src/data/team/Software-Team/mahyar-gorji.yaml
           - src/data/team/Software-Team/esra-kastrati.yaml
+          - src/data/team/Software-Team/adhish-maheswaran.yaml
           - src/data/team/Software-Team/avaneesh-madaram.yaml
           - src/data/team/Software-Team/harshit-manchanda.yaml
           - src/data/team/Software-Team/ali-muhammad.yaml
@@ -50,6 +52,7 @@ sections:
           - src/data/team/Software-Team/hamas-qureshi.yaml
           - src/data/team/Software-Team/smita-singh.yaml
           - src/data/team/Software-Team/abilaash-uthayachandran.yaml
+          - src/data/team/Software-Team/xinyi-wang.md
 
     - type: team_section
       title: Finance Team
