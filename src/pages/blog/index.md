@@ -8,17 +8,16 @@ sections:
     - type: blog_feed_section
       show_recent: false
     - type: cta_section
-      title2: Join us!
-      subtitle2: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ea mala virtuti 
-          magnitudine obruebantur.Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. 
-          Egestas sed sed risus pretiu Pm quam vulputate dignissim suspendisse in.Tempor orci eu lobortis 
-          elementum nibh. enectus et netus et malesuada fames ac turpis egestas integer.
-
-      actions2:
-          - label: Contact
-            url: /contact
+      title: Join us!
+      subtitle: >-
+          Apply as an Organization or as a Volunteer to get involved with Software for Love!
+      actions:
+          - label: Organizations
+            url: /organizations
             style: primary
+          - label: Volunteers
+            url: /volunteers
+            style: secondary
       has_background: true
       background_color: gray
 template: advanced
