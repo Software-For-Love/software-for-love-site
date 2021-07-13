@@ -288,25 +288,6 @@ export default class OrganizationForm extends React.Component {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="contact-method">
-                                        Preferred method of contact{" "}
-                                        {required_star}
-                                    </label>
-                                    <div className="form-select-wrap">
-                                        <select
-                                            name="contact-method"
-                                            id="contact-method"
-                                        >
-                                            <option value="">
-                                                Please select
-                                            </option>
-                                            <option value="Email">Email</option>
-                                            <option value="Phone">Phone</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div className="form-group">
                                     <label id="message-label" htmlFor="message">
                                         Message {required_star}
                                     </label>
