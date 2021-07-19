@@ -17,7 +17,7 @@ export default class VolunteersForm extends React.Component {
       super(props);
       this.state = { minimumSelection: false }
     }
-  
+
     handleOnChange = (event) => {
       this.setState({ [event.target.name]: event.target.value });
     }
@@ -27,7 +27,7 @@ export default class VolunteersForm extends React.Component {
       var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
       this.setState({ [event.target.name]: event.target.value, minimumSelection : checkedOne });
     }
-    
+
     handleSubmit = (event) => {
       event.preventDefault();
       const form = event.target;
@@ -55,21 +55,31 @@ export default class VolunteersForm extends React.Component {
       let interests = [
         "Marketing",
         "Partnerships and Business Development",
-        "Legal and Finance", 
-        "HR and Culture", 
-        "Front-end Engineering", 
+        "Legal and Finance",
+        "HR and Culture",
+        "Front-end Engineering",
         "Back-end Engineering",
         "Data Science",
         "Project Management",
         "UI/UX and Design"
       ]
- 
+      let heard = [
+        "Search Engine",
+        "LinkedIn",
+        "Facebook",
+        "Twitter",
+        "Instagram",
+        "Email",
+        "Word of Mouth",
+        "Other"
+      ]
+
       return (
-        
+
           <section className={classNames('section', 'hero', {'bg-image': _.get(section, 'has_background', null) && _.get(background, 'background_image', null), 'inverse bg-blue': _.get(section, 'has_background', null) && (background_color === 'blue'), 'bg-gray': _.get(section, 'has_background', null) && (background_color === 'gray'), 'section--padding': _.get(section, 'has_background', null) || _.get(section, 'image', null)})}>
             <div className="container container--lg">
               <div className={classNames('flex', 'flex--middle', 'flex--center', 'flex--col-2', {'align-center': _.get(section, 'align', null) === 'center', 'align-right': _.get(section, 'align', null) === 'right'})}>
-                
+
                 {(_.get(section, 'has_background', null) && _.get(background, 'background_image', null)) && (
                 <div className="bg-image__image" style={toStyleObj('background-image: url(\'' + withPrefix(_.get(background, 'background_image', null)) + '\'); opacity: ' + background_opacity + '; background-size: ' + background_size + '; background-repeat: ' + background_repeat)}/>
                 )}
@@ -79,7 +89,7 @@ export default class VolunteersForm extends React.Component {
                   <img src={withPrefix(_.get(section, 'image', null))} alt={_.get(section, 'image_alt', null)} />
                 </div>
                 )}
-                
+
                 <div className="cell section__body">
                   {_.get(section, 'title', null) && (
                   <div>
@@ -99,9 +109,9 @@ export default class VolunteersForm extends React.Component {
                   <SectionActions {...this.props} actions={_.get(section, 'actions', null)} />
                 </div>
                 )}
-            
+
                       <form name="volunteer-form" id="volunteer-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou" onSubmit={this.handleSubmit} >
-                        
+
                         <input aria-labelledby="honeypot-label" type="hidden" name="form-name" value="volunteer-form" />
 
                         <div className="sr-only">
@@ -136,7 +146,7 @@ export default class VolunteersForm extends React.Component {
 
                         <div className="form-group">
                             <label id="Interests" htmlFor="interests">Interests {required_star}</label>
-                            {interests.map((interest, index) => 
+                            {interests.map((interest, index) =>
                                 <div className="form-checkbox" key={index}>
                                   <label id={interest} htmlFor={interest}>{interest}</label>
                                   <input aria-labelledby={interest} type="checkbox" name={interest} id="interest" onChange={this.handleOnSelect} required={!this.state.minimumSelection} />
@@ -151,14 +161,23 @@ export default class VolunteersForm extends React.Component {
                           </div> */}
                         {/* // )} */}
 
-                        
+                          <div className="form-group">
+                              <label id="Heard_about_us" htmlFor="herd">How did you hear about Software For Love? (Select all that Apply) {required_star}</label>
+                              {heard.map((herd, index) =>
+                                  <div className="form-checkbox" key={index}>
+                                    <label id={herd} htmlFor={herd}>{herd}</label>
+                                    <input aria-labelledby={herd} type="checkbox" name={herd} id="Heard_about_us" onChange={this.handleOnSelect} required={!this.state.minimumSelection} />
+                                  </div>
+                              )}
+                          </div>
+
                           <div className="form-group">
                             <label id="linkedin_label" htmlFor="linkedin">LinkedIn </label>
                             <input aria-labelledby="linkedin_label" type="text" name="linkedin" id="linkedin" placeholder="Linkedln URL Here" onChange={this.handleOnChange} />
                           </div>
-                        
 
-                        
+
+
                           <div className="form-group">
                             <label id="github_label" htmlFor="github">Github </label>
                             <input aria-labelledby="github_label" type="text" name="github" id="github" placeholder="GitHub URL Here" onChange={this.handleOnChange} />
