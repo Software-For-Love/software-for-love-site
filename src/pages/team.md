@@ -53,12 +53,15 @@ sections:
           - src/data/team/Software-Team/smita-singh.yaml
           - src/data/team/Software-Team/abilaash-uthayachandran.yaml
           - src/data/team/Software-Team/xinyi-wang.md
+          - src/data/team/Software-Team/arpit-thakkar.yaml
+          - src/data/team/Software-Team/hamzah-abouseta.yaml
 
     - type: team_section
       title: Finance Team
       team:
           - src/data/team/Finance-Team/fletcher-trinier.yaml
           - src/data/team/Finance-Team/micheal-johnson.yaml
+          - src/data/team/Finance-Team/rudy-odovc.yaml
 
 template: advanced
 ---
