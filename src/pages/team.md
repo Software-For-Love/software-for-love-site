@@ -37,6 +37,7 @@ sections:
           - src/data/team/Software-Team/dharitri-dixit.yaml
           - src/data/team/Software-Team/jean-loickandikandi.yaml
           - src/data/team/Software-Team/fatimah-vakily.yaml
+          - src/data/team/Software-Team/hamzah-abouseta.yaml
           - src/data/team/Software-Team/dirieh-ali.yaml
           - src/data/team/Software-Team/kush-bhagat.yaml
           - src/data/team/Software-Team/yash-contractor.yaml
@@ -51,14 +52,16 @@ sections:
           - src/data/team/Software-Team/yash-oza.yaml
           - src/data/team/Software-Team/hamas-qureshi.yaml
           - src/data/team/Software-Team/smita-singh.yaml
+          - src/data/team/Software-Team/arpit-thakkar.yaml
           - src/data/team/Software-Team/abilaash-uthayachandran.yaml
           - src/data/team/Software-Team/xinyi-wang.md
 
     - type: team_section
       title: Finance Team
       team:
-          - src/data/team/Finance-Team/fletcher-trinier.yaml
           - src/data/team/Finance-Team/micheal-johnson.yaml
+          - src/data/team/Finance-Team/fletcher-trinier.yaml
+          - src/data/team/Finance-Team/rudy-udovc.yaml
 
 template: advanced
 ---
