@@ -1,6 +1,6 @@
 ---
 title: Software For Love and Snyk Pursuing Impact Together
-date: "2021-07-23"
+date: "2021-07-26"
 author: src/data/team/Executive-Team/hrithik-shah.yaml
 categories:
     - src/data/categories/general.yaml
