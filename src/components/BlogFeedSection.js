@@ -43,9 +43,7 @@ export default class BlogFeedSection extends React.Component {
                         })())}
                       </React.Fragment>)
                   })}
-                </div>
-
-                
+                </div> 
               </div>
             </section>
         );
