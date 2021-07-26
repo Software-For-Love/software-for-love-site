@@ -61,7 +61,8 @@ export default class VolunteersForm extends React.Component {
         "Back-end Engineering",
         "Data Science",
         "Project Management",
-        "UI/UX and Design"
+        "UI/UX and Design",
+        "DevOps"
       ]
       let heard = [
         "Search Engine",
