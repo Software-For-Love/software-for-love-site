@@ -23,9 +23,12 @@ export default class VolunteersForm extends React.Component {
     }
 
     handleOnSelect = (event) => {
-      var checkboxes = document.querySelectorAll('#interest');
+      var checkboxes = document.querySelectorAll("#interest");
       var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
       this.setState({ [event.target.name]: event.target.value, minimumSelection : checkedOne });
+      // var check = document.querySelectorAll('#herd');
+      // var checkOne = Array.prototype.slice.call(check).some(x => x.checked);
+      // this.setState({ [event.target.name]: event.target.value, minimumSelection : checkOne });
     }
 
     handleSubmit = (event) => {
@@ -163,11 +166,11 @@ export default class VolunteersForm extends React.Component {
                         {/* // )} */}
 
                           <div className="form-group">
-                              <label id="Heard_about_us" htmlFor="herd">How did you hear about Software For Love? (Select all that Apply) {required_star}</label>
+                              <label id="Heard" htmlFor="heard">How did you hear about Software For Love? (Select all that Apply) {required_star}</label>
                               {heard.map((herd, index) =>
                                   <div className="form-checkbox" key={index}>
                                     <label id={herd} htmlFor={herd}>{herd}</label>
-                                    <input aria-labelledby={herd} type="checkbox" name={herd} id="Heard_about_us" onChange={this.handleOnSelect} required={!this.state.minimumSelection} />
+                                    <input aria-labelledby={herd} type="checkbox" name={herd} id="herd" onChange={this.handleOnSelect} required={!this.state.minimumSelection} />
                                   </div>
                               )}
                           </div>
