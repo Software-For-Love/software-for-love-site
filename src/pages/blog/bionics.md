@@ -12,6 +12,16 @@ image: images/ubionics-blogImg.png
 image_alt: uBionics placeholder image
 excerpt: >-
     How we made the website for the uBionics organization!
+anchor_section:
+    - anchors:
+          - placeholder: Client
+            href: Nothing
+          - placeholder: Problem
+            href: Nothing
+          - placeholder: How is SFL involved?
+            href: Nothing
+          - placeholder: Development of Project
+            href: Nothing
 template: post
 ---
 

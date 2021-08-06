@@ -522,6 +522,18 @@ models:
                   type: reference
                   models:
                       - person
+    anchor_section:
+        type: object
+        label: Anchor Section
+        labelField: title
+        fields:
+            - type: list
+              name: anchors
+              label: Anchors
+              anchors:
+                  type: model
+                  models:
+                      - anchor
     panel:
       type: object
         label: Panel
@@ -535,6 +547,19 @@ models:
               name: content
               label: Content
               description: The text content of the feature
+    anchor:
+      type: object
+      label: Anchor
+      labelField: title
+      fields:
+        - type: string
+          name: placeholder
+          label: Placeholder
+          description: The placeholder for the link
+        - type: string
+          name: href
+          label: Href
+          description: The href for the link
     item:
       type: object
         label: Item

@@ -34,13 +34,22 @@ sections:
     - type: faq_section
       title: FAQs
       panels:
-          
           - header: How does SFL prove they have donated to charities?
             content: >-
                 Software For Love does **not** donate to charities. We actually ask the client to directly donate to the charity and send us the receipts of their donations. This way our clients get the pleasure and satisfaction when they themselves donate to charity, as well as get tax benefits because of their donations.
           - header: How often do project updates occur?
             content: >-
                 Based on your preference, we try to meet as much as possible. Usually this is weekly or bi-weekly based on your availability. We believe in an iterative design and development process where at each step your input is valued.
+    - type: anchor_section
+      anchors:
+          - placeholder: Client
+            href: Nothing
+          - placeholder: Problem
+            href: Nothing
+          - placeholder: How is SFL involved?
+            href: Nothing
+          - placeholder: Development of Project
+            href: Nothing
     - type: organizations_form
       title: Contact Us
       subtitle: Got a project request? Please fill out this form with a brief description of your project. We will contact you and schedule a meeting as soon as possible.

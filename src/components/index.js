@@ -1,4 +1,5 @@
 import Action from "./Action";
+import AnchorSection from "./AnchorSection";
 import BlogFeedItemFilter from "./BlogFeedItemFilter";
 import BlogFeedSection from "./BlogFeedSection";
 import BlogPostCategories from "./BlogPostCategories";
@@ -22,6 +23,7 @@ import Layout from "./Layout";
 
 export {
     Action,
+    AnchorSection,
     BlogFeedItemFilter,
     BlogFeedSection,
     BlogPostCategories,
@@ -46,6 +48,7 @@ export {
 
 export default {
     Action,
+    AnchorSection,
     BlogFeedItemFilter,
     BlogFeedSection,
     BlogPostCategories,
