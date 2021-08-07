@@ -22,13 +22,13 @@ sections:
           - src/data/team/Executive-Team/hrithik-shah.yaml
           - src/data/team/Executive-Team/jacob-cleysen.yaml
           - src/data/team/Executive-Team/soorya-saravanapavan.yaml
-          - src/data/team/Executive-Team/nia-ambursley.yaml
+          - src/data/team/Executive-Team/manvir-mangat.yaml
           - src/data/team/Executive-Team/saheed-akinbile.yaml
 
     - type: team_section
       title: Marketing Team
       team:
-          - src/data/team/Marketing-Team/manvir-mangat.yaml
+          - src/data/team/Marketing-Team/syeda-azad.yaml
           - src/data/team/Marketing-Team/samraddhi-surana.yaml
 
     - type: team_section
@@ -43,7 +43,7 @@ sections:
           - src/data/team/Software-Team/yash-contractor.yaml
           - src/data/team/Software-Team/ben-flynn.yaml
           - src/data/team/Software-Team/mahyar-gorji.yaml
-          - src/data/team/Software-Team/esra-kastrati.yaml
+          - src/data/team/Software-Team/cem-gurel.yaml
           - src/data/team/Software-Team/adhish-maheswaran.yaml
           - src/data/team/Software-Team/avaneesh-madaram.yaml
           - src/data/team/Software-Team/harshit-manchanda.yaml
