@@ -167,7 +167,7 @@ export default class VolunteersForm extends React.Component {
                               {heard.map((herd, index) =>
                                   <div className="form-checkbox" key={index}>
                                     <label id={herd} htmlFor={herd}>{herd}</label>
-                                    <input aria-labelledby={herd} type="checkbox" name={herd} id="herd" onChange={this.handleOnSelect} required={!this.state.minimumSelection} />
+                                    <input aria-labelledby={herd} type="checkbox" name={herd} id="Heard_about_us" onChange={this.handleOnSelect} required={!this.state.minimumSelection} />
                                   </div>
                               )}
                           </div>
