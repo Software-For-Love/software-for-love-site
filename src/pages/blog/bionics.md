@@ -1,7 +1,9 @@
 ---
 title: uBionics Website
 date: "2021-07-01"
-author: src/data/team/Software-Team/dharitri-dixit.yaml
+author: 
+    - src/data/team/Software-Team/dharitri-dixit.yaml
+    - src/data/team/Software-Team/nutan-nimkar.yaml
 categories:
     - src/data/categories/project.yaml
 tags:
