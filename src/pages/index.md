@@ -25,17 +25,46 @@ sections:
   - type: features_section
     title: About Us
     features:
-      - title: What We Do
+      - title: Our Mission
         content: >-
-          Our team is dedicated to providing a variety of services such as web development, UI/UX design, data analytics, and database management. We seek to develop software for clients in return for a charitable contribution, or a charitable service provided by an organization.
+         Software For Love is a non-profit organization that focuses on providing software solutions. We are a team of young professionals who are passionate about technology and seek to give back to our community.<br/><br/>We seek to develop software for clients in return for a charitable contribution, or a charitable service provided by an organization.
+
+         <h3> Services </h3>
+
+         Our team is dedicated to providing a variety of services such as : 
+         <br/>  
+         <br/>
+         
+          * Web Development
+          * UI/UX Design
+          * Data Analytics
+          * Database Management
+
         align: left
         image: images/Humaaans1.png
         image_alt: Volunteers placeholder image
         image_position: right
+         
+      # - title: Services 
+      #   content: >- 
+      #     Our team is dedicated to providing a variety of services such as :
+      #     <br/> 
+      #     Web Development
+      #     <br/>
+      #     UI/UX Design
+      #     <br/>
+      #     Data Analytics
+      #     <br/>
+      #     Database Management
+      #   align: left
+
+
         actions:
-          - label: Partner With Us
-            url: /organizations
-            style: secondary
+        - label: Learn More
+          url: /organizations
+          style: secondary
+          
+
       - title: Join The Team
         content: >-
           Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We actively recruit new talent for marketing, finance, engineering, and more.
@@ -47,18 +76,6 @@ sections:
           - label: Apply today
             url: /volunteers
             style: primary
-  - type: cta_section
-    # title: Join us!
-    # subtitle: >-
-    #   Apply as Partner or as a Volunteer to get involved with Software for Love
-    # actions:
-    #   - label: Organizations
-    #     url: /organizations
-    #     style: primary
-    #   - label: Volunteers
-    #     url: /volunteers
-    #     style: secondary
-    # has_background: true
-    # background_color: gray
+   
 template: advanced
 ---
