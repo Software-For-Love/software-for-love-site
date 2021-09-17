@@ -36,6 +36,17 @@ sections:
           - label: Partner With Us
             url: /organizations
             style: secondary
+      - title: Work With Us
+        content: >-
+          Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We recruit new talent for marketing, finance, engineering, and more.
+        align: left
+        image: images/Humaaans1.png
+        image_alt: Volunteers placeholder image
+        image_position: right
+        actions:
+          - label: Work With Us
+            url: /organizations
+            style: secondary
       - title: Join The Team
         content: >-
           Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We actively recruit new talent for marketing, finance, engineering, and more.
@@ -46,7 +57,7 @@ sections:
         actions:
           - label: Apply today
             url: /volunteers
-            style: primary
+            style: secondary
   - type: cta_section
     # title: Join us!
     # subtitle: >-
