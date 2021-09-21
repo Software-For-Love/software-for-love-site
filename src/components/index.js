@@ -19,7 +19,7 @@ import TeamSection from "./TeamSection";
 import TimelineSection from "./TimelineSection";
 import VolunteersForm from "./VolunteersForm";
 import Layout from "./Layout";
-
+import Carousel from "./Carousel"
 export {
     Action,
     BlogFeedItemFilter,
@@ -30,6 +30,7 @@ export {
     ContactSection,
     ContentSection,
     CtaSection,
+    Carousel,
     FaqSection,
     FeaturesSection,
     Footer,
@@ -43,6 +44,7 @@ export {
     VolunteersForm,
     Layout,
 };
+    
 
 export default {
     Action,
@@ -54,6 +56,7 @@ export default {
     ContactSection,
     ContentSection,
     CtaSection,
+    Carousel,
     FaqSection,
     FeaturesSection,
     Footer,
