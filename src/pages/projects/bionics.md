@@ -9,11 +9,12 @@ tags:
     - React
     - Gatsby.JS
     - Netlify
+
 image: images/ubionics-blogImg.png
 image_alt: uBionics placeholder image
 excerpt: >-
     How we made the website for the uBionics organization!
-template: post
+template: post  
 ---
 
 ## Client

@@ -278,6 +278,7 @@ models:
                       - organizations_form
                       - team_section
                       - volunteers_form
+                      -project_feed_section
     blog_feed_section:
         type: object
         label: Blog Feed Section
@@ -310,6 +311,40 @@ models:
               description: Filter posts by category
               models:
                   - category
+
+    project_feed_section:
+      type: object
+      label: Project Feed Section
+      labelField: title
+      fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the section
+            - type: boolean
+              # name: show_recent
+              # label: Show recent posts
+              description: >-
+                  Show the specified number of recent posts. Should not be used with
+                  author and category filters.
+              default: false
+              required: true
+            - type: number
+              # name: recent_count
+              # label: Number of recent posts to show
+            - type: reference
+              name: author
+              label: Author Filter
+              description: Filter posts by an author
+              models:
+                  - person
+            - type: reference
+              name: category
+              label: Category Filter
+              description: Filter posts by category
+              models:
+                  - category  
+
     contact_section:
         type: object
         label: Contact Section

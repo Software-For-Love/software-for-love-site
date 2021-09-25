@@ -19,6 +19,11 @@ import TeamSection from "./TeamSection";
 import TimelineSection from "./TimelineSection";
 import VolunteersForm from "./VolunteersForm";
 import Layout from "./Layout";
+import ProjectFeedItemFilter from "./ProjectFeedItemFilter";
+import ProjectFeedSection from "./ProjectFeedSection";
+import ProjectPostCategories from "./ProjectPostCategories";
+import ProjectPostFeedItem from "./ProjectPostFeedItem";
+import ProjectPostTags from "./ProjectPostTags";
 
 export {
     Action,
@@ -42,6 +47,11 @@ export {
     TimelineSection,
     VolunteersForm,
     Layout,
+    ProjectFeedItemFilter,
+    ProjectFeedSection,
+    ProjectPostCategories,
+    ProjectPostFeedItem,
+    ProjectPostTags,
 };
 
 export default {
@@ -66,4 +76,9 @@ export default {
     TimelineSection,
     VolunteersForm,
     Layout,
+    ProjectFeedItemFilter,
+    ProjectFeedSection,
+    ProjectPostCategories,
+    ProjectPostFeedItem,
+    ProjectPostTags,
 };

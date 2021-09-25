@@ -2,9 +2,9 @@
 # title: Projects
 sections:
     - type: hero_section
-      title: Projects led by us at SFL
+      title: Take a look at our Projects 
       align: center
-    - type: blog_feed_section
+    - type: project_feed_section
       show_recent: false
     - type: cta_section
       title: Join us!
