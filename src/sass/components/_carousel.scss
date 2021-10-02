@@ -63,7 +63,7 @@
   color: #000000;
 }
 .seperator {
-  width: 120px;
+  width: 130px;
   height: 1px;
   border: 0.5px solid #e8edf3;
   margin-bottom: 1.1em;
@@ -76,8 +76,9 @@
 
 .content-wrapper {
   width: 100%;
-  padding: 1.5em 1.5em 1em 1.5em;
+  padding: 1.5rem 1.5em 1em 1.6em;
   height: 100%;
+  position:absolute;
 }
 
 .overflow-container {
