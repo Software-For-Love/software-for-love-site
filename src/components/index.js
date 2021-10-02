@@ -4,6 +4,7 @@ import BlogFeedSection from "./BlogFeedSection";
 import BlogPostCategories from "./BlogPostCategories";
 import BlogPostFeedItem from "./BlogPostFeedItem";
 import BlogPostTags from "./BlogPostTags";
+import Carousel from "./Carousel"
 import ContactSection from "./ContactSection";
 import ContentSection from "./ContentSection";
 import CtaSection from "./CtaSection";
@@ -19,7 +20,6 @@ import TeamSection from "./TeamSection";
 import TimelineSection from "./TimelineSection";
 import VolunteersForm from "./VolunteersForm";
 import Layout from "./Layout";
-import Carousel from "./Carousel"
 export {
     Action,
     BlogFeedItemFilter,

@@ -351,6 +351,31 @@ models:
                   type: model
                   models:
                       - panel
+    # carousel_section:
+    #     type: object
+    #     label: Features Section
+    #     labelField: title
+    #     fields:
+    #         - type: string
+    #           name: title
+    #           label: Title
+    #           description: The title of the section
+    #         - type: list
+    #           name: features
+    #           label: Features
+    #           items:
+    #               type: model
+    #               name: model
+    #               models:
+    #                   - feature
+    #         - type: carousel
+    #           name: carousel
+    #           label: Carousel
+    #           carousel:
+    #               type: model
+    #               models:
+    #                   - carousel
+
       timeline_section:
         type: object
         label: Timeline Section
@@ -416,6 +441,13 @@ models:
                   type: model
                   models:
                       - feature
+            - type: carousel
+              name: carousel
+              label: Carousel
+              carousel:
+                  type: model
+                  models:
+                      - carousel
     hero_section:
         type: object
         label: Hero Section
