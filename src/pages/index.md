@@ -40,9 +40,7 @@ sections:
         content: >-
           Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We recruit new talent for marketing, finance, engineering, and more.
         align: left
-        image: images/Humaaans1.png
-        image_alt: Volunteers placeholder image
-        image_position: right
+        carousel: 
         actions:
           - label: Work With Us
             url: /organizations
