@@ -23,9 +23,10 @@ export default class VolunteersForm extends React.Component {
     }
 
     handleOnSelect = (event) => {
-      var checkboxes = document.querySelectorAll('#interest');
-      var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
-      this.setState({ [event.target.name]: event.target.value, minimumSelection : checkedOne });
+      var checkboxOne = document.querySelectorAll('#interest');
+      var checkboxTwo = document.querySelectorAll('#Heard_about_us');
+      var checkedMinimum = (Array.prototype.slice.call(checkboxOne).some(x => x.checked) && Array.prototype.slice.call(checkboxTwo).some(x => x.checked) );
+      this.setState({ [event.target.name]: event.target.value, minimumSelection:checkedMinimum });
     }
 
     handleSubmit = (event) => {
