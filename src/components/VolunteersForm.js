@@ -15,18 +15,28 @@ export default class VolunteersForm extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = { minimumSelection: false }
+      this.state = { 
+        minimumSelectionInterest: false,
+        minimumSelectionHAU: false
+      };
     }
 
     handleOnChange = (event) => {
       this.setState({ [event.target.name]: event.target.value });
     }
 
-    handleOnSelect = (event) => {
-      var checkboxOne = document.querySelectorAll('#interest');
-      var checkboxTwo = document.querySelectorAll('#Heard_about_us');
-      var checkedMinimum = (Array.prototype.slice.call(checkboxOne).some(x => x.checked) && Array.prototype.slice.call(checkboxTwo).some(x => x.checked) );
-      this.setState({ [event.target.name]: event.target.value, minimumSelection:checkedMinimum });
+    handleOnSelectInterest = (event) => {
+      var checkbox = document.querySelectorAll('#'+event.target.id);
+      var checkedMinimum = (Array.prototype.slice.call(checkbox).some(x => x.checked));
+      this.setState({ [event.target.name]: event.target.value, minimumSelectionInterest:checkedMinimum });
+      console.log(checkedMinimum);
+    }
+
+    handleOnSelectHAU = (event) =>{
+      var checkbox = document.querySelectorAll('#'+event.target.id);
+      var checkedMinimum = (Array.prototype.slice.call(checkbox).some(x => x.checked));
+      this.setState({ [event.target.name]: event.target.value, minimumSelectionHAU:checkedMinimum });
+      console.log(checkedMinimum);
     }
 
     handleSubmit = (event) => {
@@ -153,7 +163,7 @@ export default class VolunteersForm extends React.Component {
                             {interests.map((interest, index) =>
                                 <div className="form-checkbox" key={index}>
                                   <label id={interest} htmlFor={interest}>{interest}</label>
-                                  <input aria-labelledby={interest} type="checkbox" name={interest} id="interest" onChange={this.handleOnSelect} required={!this.state.minimumSelection} />
+                                  <input aria-labelledby={interest} type="checkbox" name={interest} id="interest" onChange={this.handleOnSelectInterest} required={!this.state.minimumSelectionInterest} />
                                 </div>
                             )}
                         </div>
@@ -170,7 +180,7 @@ export default class VolunteersForm extends React.Component {
                               {heard.map((herd, index) =>
                                   <div className="form-checkbox" key={index}>
                                     <label id={herd} htmlFor={herd}>{herd}</label>
-                                    <input aria-labelledby={herd} type="checkbox" name={herd} id="Heard_about_us" onChange={this.handleOnSelect} required={!this.state.minimumSelection} />
+                                    <input aria-labelledby={herd} type="checkbox" name={herd} id="Heard_about_us" onChange={this.handleOnSelectHAU} required={!this.state.minimumSelectionHAU} />
                                   </div>
                               )}
                           </div>
