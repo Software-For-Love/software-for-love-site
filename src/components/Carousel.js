@@ -82,6 +82,7 @@ export default class Carousel extends React.Component {
         </div>
    </section>
    <script src="/path/to/flickity.pkgd.min.js"></script>
+
       </>
     );
   }
