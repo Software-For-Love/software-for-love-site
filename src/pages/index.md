@@ -2,11 +2,11 @@
 title: Home
 sections:
   - type: hero_section
-    title: Software for Love
+    title: Hello, We are Software For Love
     subtitle: >-
-      Software For Love is a non-profit organization that focuses on providing software solutions. We are a team of young professionals who are passionate about technology and seek to give back to our community. 
+      We are a non-profit organization focused on providing software solutions and giving back to our community.
     actions:
-      - label: Partner With Us
+      - label: Work With Us
         url: /organizations
         style: primary
       - label: Volunteer
@@ -33,7 +33,7 @@ sections:
         image_alt: Volunteers placeholder image
         image_position: right
         actions:
-          - label: Partner With Us
+          - label: Work With Us
             url: /organizations
             style: secondary
       - title: Join The Team

@@ -25,6 +25,7 @@ input[type="reset"],
   &:hover,
   &:focus,
   &:active {
+    color: #fff !important;
     opacity: .8;
     outline: 0;
   }
@@ -55,6 +56,14 @@ input[type="reset"],
   background-color: transparent;
   border-color: $color-btn-alt-border;
   color: $color-btn-alt;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-btn-alt !important;
+    opacity: .8;
+    outline: 0;
+  }
 }
 
 .btn--icon {
