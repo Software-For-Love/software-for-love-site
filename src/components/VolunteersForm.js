@@ -176,8 +176,8 @@ export default class VolunteersForm extends React.Component {
                           </div>
 
                           <div className="form-group">
-                            <label id="motive_label" htmlFor="motive">Why do you want to volunteer with Software For Love ?</label>
-                            <textarea aria-labelledby="motive_label" id="motive" rows="4"></textarea>
+                            <label id="whySFL_label" htmlFor="whySFL">Why do you want to volunteer with Software For Love ? {required_star}</label>
+                            <textarea aria-labelledby="whySFL_label" name="whySFL" id="whySFL" rows="4" onChange={this.handleOnChange} required></textarea>
                           </div>
 
                           <div className="form-group">
