@@ -1,5 +1,5 @@
 ---
-title: uOttawa's Students Society of Engineering Website
+title: ESS uOttawa Website Revamp
 date: "2021-10-07"
 author: src/data/team/Software-Team/jean-loickandikandi.yaml
 categories:
@@ -9,6 +9,8 @@ tags:
     - Gatsby.JS
     - Netlify
     - Ant Design
+    - i18N
+    - spreadinglovethroughsoftware
 image: images/ess-website.png
 image_alt: uOttawa ESS Website
 excerpt: >-
@@ -16,22 +18,24 @@ excerpt: >-
 template: post
 ---
 
-## Client
+The Engineering Students' Society of the University of Ottawa (ESS) is an organization run by students and for students.
+ESS' goal is to improve the Engineering Student Experience at uOttawa by providing resources and services to facilitate the lives of Engineering students. They also plan events where students get to network with professionals in the industry. as well as their peers from other Engineering schools in Canada. They advertise more of their work and core values on their website.
 
-The Carpal Tunnel Solutions team at uBionics at the University of Ottawa, are a student run team that is developing a wrist guard for those with Carpal Tunnel Syndrome (CTS). Their goal currently is to create a product that can be entered into clinical trials.
 
-## Problem
+For the last couple of years, ESS had been maintaining their website using Wordpress. While it is a great content management system, it didn't give them enough flexibility to experiment with the design to make it look more modern. Software for Love reached out to the student organization with a proposal to revamp their website using modern frameworks. The goal was to create a maintainable product that meets the current Web UI standards. There were two core requirements to the project: 
 
-The client required a website to effectively showcase what their team does, who they are, and relevant projects, in an organised manner. The client needs a website that they need to submit to an ethics committee.
+- The website had to be bilingual 
+- The website had to be easily editable by our client.
 
-The team successfully completed an organized site that fulfilled all of the clients requirements. The team page shows the team members in a well organised manner. A well designed navigation bar makes it easy for the user to shuffle between each page. A well functioning contact page makes it easier for users to comfortably reach out to the client’s team. The client can now use the site to promote their work. Furthermore, the site effectively displays four pages: Home Page, Solutions Page, Teams Page, and Contact Page.
 
-## How is SFL involved?
+To take on this project, SFL assembled a team of six developers (Adhish Maheswaran, Cem Gurel, Hamzah Abouseta, Harshit Manchanda, Sultan Oloyede, Yash Contractor), four designers (Ben Flynn, Fatimah Vakily, Hamas Qureshi and Sakeena Adinoyi) and a project manager (Loic Kandikandi) to create a product that meets the Engineering Students' Society's requirements as well as modern UI standards.
 
-SFL dedicated a team of four developers and a project manager to create an ideal website for the carpal tunnel solutions team at uBionics in uOttawa. SFL designed a responsive layout with four unique pages displaying a welcome message, past and current solutions that the carpal team has implemented, the members of the uBionics team at uOttawa, and a contact us page to get interested people to apply to the team. The site was created using React.js and hosted on Netlify. Interactive elements like slideshows and videos were implemented using sophisticated node packages, while general layout schemes and member cards were implemented using HTML and CSS. SFL suggested the use of Netlify to host the completed website. This helped to fully integrate form submission, by giving the opportunity to view and manage forms directly on one’s Netlify account. In addition, Netlify provides spam detection and the power to build and deploy websites with the press of a few buttons. Overall, SFL was able to provide a completed and hosted website within a span of only 2 months, while ensuring that all client needs were met.
 
-## Development of Project
+The first phase of the project consisted of creating design wireframes. Designers met on a weekly basis with the project manager to discuss concept ideas for the website. Each designer came up with an individual concept made with Figma. The concepts were presented to our client during our biweekly meeting for feedback. The designers then combined the positives from each design feedback to create a group design concept. It was iterated multiple times to account for new feedback from our client until they were satisfied with the prototype.
 
-The site was developed under a tight deadline thanks to the commitment of the team. Each week the developers would meet twice and would meet once a week with the client to ensure constant communication and feedback throughout the project. As a result of the meetings, development could be done in an agile manner. As goals were set, they were implemented on a regular basis. Further, due to the client’s feedback, changes could be made alongside development preventing any major surprises or requests for changes at the end of the development cycle. It also ensured that the project satisfied the client’s demands. Once the client was completely satisfied with the project we began to execute the deployment of the site. The site was deployed using Netlify alongside the client, and handed over at completion.
+The following phase of the project was the development. Developers built the website using the Gatsby framework and the industry standard React UI component library Ant Design. Each developer was initially tasked with developing a reusable UI component. The plan was to build reusable layout components first and then assemble them to build full pages. They met with the project manager twice a week to share their progress and issues they were facing going forward. The website was deployed on a private test domain as it was being built in order for the client to preview the developers' progress on the UI. With a remarkable will and dynamism, the developers succeeded in building a 20-page website, adapted to French and English-speaking readers, within the deadline. During the project handoff meeting, alongside the codebase was submitted a detailed documentation written by the project manager highlighting the website architecture and instructions on how to make changes if needed.
 
-Check out the project: [uBionics Wesbite](https://www.ctsbionics.com/)
+
+Check out the project: [uBionics Wesbite](https://www.essaeg.ca/)
+
+SFL is proud to add another completed project to its catalog. Not only did our partnership with ESS provide them with a brand new redesign of their website, but it also gave us the ability to donate $2450 to Actua Canada. Actua is a national charity that strives to engage youth ages 6-26 in accessible STEM experiences to develop critical employability and confidence skills. To learn more about the charity, visit https://www.actua.ca/en/about/.
