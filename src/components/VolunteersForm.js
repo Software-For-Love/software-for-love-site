@@ -41,6 +41,7 @@ export default class VolunteersForm extends React.Component {
 
     handleSubmit = (event) => {
       event.preventDefault();
+      
       const form = event.target;
       fetch("/", {
         method: "POST",
@@ -183,6 +184,11 @@ export default class VolunteersForm extends React.Component {
                                     <input aria-labelledby={herd} type="checkbox" name={herd} id="Heard_about_us" onChange={this.handleOnSelectHAU} required={!this.state.minimumSelectionHAU} />
                                   </div>
                               )}
+                          </div>
+
+                          <div className="form-group">
+                            <label id="whySFL_label" htmlFor="whySFL">Why do you want to volunteer with Software For Love? {required_star}</label>
+                            <textarea aria-labelledby="whySFL_label" name="whySFL" id="whySFL" rows="4" placeholder="Maximum of 500 characters" onChange={this.handleOnChange} maxLength="500" required ></textarea>
                           </div>
 
                           <div className="form-group">
