@@ -40,7 +40,10 @@ sections:
         content: >-
           Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We recruit new talent for marketing, finance, engineering, and more.
         align: left
-        carousel: 
+        carousels:
+            - header:
+              content: >-
+                  This is a sample
         actions:
           - label: Work With Us
             url: /organizations

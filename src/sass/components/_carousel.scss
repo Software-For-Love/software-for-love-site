@@ -6,7 +6,9 @@
 
   height: 100%;
   position: relative;
-  /*float:right;*/
+  /*top: 950px;
+  right: 300px;
+  float:right;*/
 }
 @media (max-width: 700px) {
   .container {
@@ -129,11 +131,16 @@
 .overflow-container {
   height: 100%;
   -ms-overflow-style: none !important; /* IE and Edge */
-  scrollbar-width: none !important;
+  scrollbar-width: thin !important;
 }
 /* For chrome and safari and others hides scrollbar */
 .overflow-container::-webkit-scrollbar {
   display: none !important;
+}
+
+.overflow-container::-webkit-scrollbar-thumb {
+  background: #3c4b71 !important;
+  border-radius: 8px !important;
 }
 
 .overflow-container p {

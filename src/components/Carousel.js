@@ -3,7 +3,10 @@ import _ from "lodash";
 import { navigate } from "gatsby";
 import "../sass/components/_carousel.scss";
 import Flickity from "react-flickity-component";
-import { classNames, toStyleObj, withPrefix } from "../utils";
+import { classNames, toStyleObj, withPrefix, markdownify } from "../utils";
+import { Anchor } from "antd";
+import { Collapse } from "antd";
+const { CarouselComp } = Collapse;
 
 export default class Carousel extends React.Component {
   constructor(props) {
@@ -16,11 +19,17 @@ export default class Carousel extends React.Component {
       draggable: false,
       pageDots: false,
     };
+    let section = _.get(this.props, "section", null);
     return (
       <>
         <section class="carousel-box-container">
           <Flickity options={flickityOptions}>
             <div class="carousel-cell carousel-content">
+                {_.get(section, 'image', null) && (
+                  <div className={classNames('cell', 'section__media', {'section__media--right': _.get(section, 'image_position', null) === 'right'})}>
+                    <img src={withPrefix(_.get(section, 'image', null))} alt={_.get(section, 'image_alt', null)} />
+                  </div>
+                )}
               <div class="content-wrapper">
                 <div class="quote-icon">
                   <svg
@@ -38,12 +47,20 @@ export default class Carousel extends React.Component {
                 </div>
                 <div class="overflow-container">
                   <p class="testimonial">
-                    {" "}
-                    Do not let arrogance go to your head and despair to your
-                    heart; do not let compliments go to your head and criticisms
-                    to your heart; do not let success go to your head and
-                    failure to your heart.
-                  </p>
+                  <Collapse className="section__body cell" ghost>
+                      {_.map(
+                          _.get(section, "carousels", null),
+                          (carousel, panel_idx) => (
+                              <CarouselComp key={panel_idx}>
+                                  <p>
+                                      {markdownify(
+                                          _.get(carousel, "content", null)
+                                      )}
+                                  </p>
+                              </CarouselComp>
+                          )
+                      )}
+                  </Collapse></p>
                   <div class="seperator"></div>
                   <p class="author">
                     Joe M.,<span> CEO of </span> Company
