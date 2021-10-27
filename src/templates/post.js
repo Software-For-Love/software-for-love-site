@@ -53,9 +53,9 @@ export default class Post extends React.Component {
                   </div>
                   <div id = "block3">
                   <header5>Services&nbsp;</header5>
-                  <header5>Services&nbsp;</header5>
-                  <header5>Services&nbsp;</header5>
-                  <header5>Services&nbsp;</header5>
+                  <header5>UI/UX-Design&nbsp;</header5>
+                  <header5>Deliverables&nbsp;</header5>
+                  <header5>Responsive-Website&nbsp;</header5>
                   </div>
                 </header>
                 <h5 className="post__divider">{_.get(this.props, 'pageContext.frontmatter.divider', null)}</h5>
