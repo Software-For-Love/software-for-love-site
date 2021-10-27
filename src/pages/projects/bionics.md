@@ -12,6 +12,18 @@ tags:
 
 image: images/ubionics-blogImg.png
 image_alt: uBionics placeholder image
+intro: The Carpal Tunnel Solutions team at uBionics at the University of Ottawa, are a student run team that is developing a wrist guard for those with Carpal Tunnel Syndrome (CTS). Their goal currently is to create a product that can be entered into clinical trials.
+
+
+link: https://www.ctsbionics.com 
+# # sections:
+#     actions:
+#         - label: Visit Site
+#         url: https://www.ctsbionics.com
+#         style: secondary
+
+
+
 excerpt: >-
     How we made the website for the uBionics organization!
 template: post  

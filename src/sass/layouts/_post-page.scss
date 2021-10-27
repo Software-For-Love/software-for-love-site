@@ -13,15 +13,91 @@
   margin: 0 0 1.5rem;
 }
 
-.post__title,
-.page__title {
-  margin-top: 0;
+// #block1, #block2{
+//   display: flex;
+//   flex-direction: row;
+// }
+button{
+  background-color: transparent;
+  border-color: $color-btn-alt-border;
+  color: $color-btn-alt;
+  align-items: center;
+}
+.post__header{
+  flex-flow:row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#block1{
+  float:left;
+  // direction: column;
+  // flex-direction: column;
+
+  // display:inline;
+}
+#block2{
+  // float:right;
+  padding-left: 25rem;
+  align-items: center;
+  
+}
+#block3{
+  @media only screen and (min-width: 1200px) and (max-width: 10000px){
+    display : inline; 
+    word-spacing: 300px;
+  }
+  @media only screen and (min-width: 900px) and (max-width: 1200px){
+    display : inline; 
+    word-spacing: 200px;
+  }
+  @media only screen and (min-width: 400px) and (max-width: 900px){
+    display : inline; 
+    word-spacing: 150px;
+  }
+  @media only screen and (min-width: 400px) and (max-width: 900px){
+    display : inline; 
+    word-spacing: 75px;
+  }
+  @media only screen and (min-width: 50px) and (max-width: 400px){
+    display : inline; 
+    word-spacing: 50px;
+  }
 }
 
+// .wrapper {
+//   // width:600px;
+//   // margin: 0 auto;
+// }
+
+// #block1 {
+//   float:left;
+// }
+
+// #block2
+// {
+//   float:right;
+//   margin-bottom: 20px;
+// }
+// .post__title,
+// .page__title {
+//   margin-top: 0;
+//   text-align:left;
+//   margin-right:0.5rem;
+//   display:inline;
+// }
+.post__intro{
+  margin-top: 0;
+  // text-align:right;
+  margin-right:0.5rem;
+  display: inline;
+  float: right;
+  font-size:14px;
+}
 .post__meta,
 .post__footer {
   color: $color-meta;
   font-size: 0.875rem;
+  text-align: left;
 }
 
 .post__meta {

@@ -29,11 +29,8 @@ export default class Post extends React.Component {
                 </div>
                 )}
                 <div className="container container--lg">
-                <a href="/blog">Back</a>
                 <header className="post__header">
-                  {_.get(this.props, 'pageContext.frontmatter.categories', null) && (
-                    <BlogPostCategories {...this.props} categories={_.get(this.props, 'pageContext.frontmatter.categories', null)} container_class={'post__meta'} />
-                  )}
+                  <div id="block1">
                   <h1 className="post__title">{_.get(this.props, 'pageContext.frontmatter.title', null)}</h1>
                   <div className="post__meta">
                     <span>On <time dateTime={moment(_.get(this.props, 'pageContext.frontmatter.date', null)).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(this.props, 'pageContext.frontmatter.date', null)).strftime('%B %d, %Y')}</time></span>
@@ -47,7 +44,21 @@ export default class Post extends React.Component {
                         );
                     })())}
                   </div>
+                  </div>
+                  <div id="block2">
+                  <h5 className="post__intro">{_.get(this.props, 'pageContext.frontmatter.intro', null)}</h5>
+                  <Link to="https://www.ctsbionics.com">
+                    <button>Visit Us</button>
+                  </Link>
+                  </div>
+                  <div id = "block3">
+                  <header5>Services&nbsp;</header5>
+                  <header5>Services&nbsp;</header5>
+                  <header5>Services&nbsp;</header5>
+                  <header5>Services&nbsp;</header5>
+                  </div>
                 </header>
+                <h5 className="post__divider">{_.get(this.props, 'pageContext.frontmatter.divider', null)}</h5>
                 <div className="post__copy">
                   {htmlToReact(_.get(this.props, 'pageContext.html', null))}
                 </div>
