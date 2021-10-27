@@ -602,6 +602,15 @@ models:
               name: content
               label: Content
               description: The text content of the feature
+            - type: enum
+              name: align
+              label: Align
+              options:
+                  - left
+                  - right
+                  - center
+              default: left
+              description: The alignment of the text content
     item:
       type: object
         label: Item
