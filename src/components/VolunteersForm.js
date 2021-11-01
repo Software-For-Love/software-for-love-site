@@ -4,6 +4,7 @@ import { navigate } from 'gatsby';
 
 import {classNames, toStyleObj, withPrefix} from '../utils';
 import SectionActions from './SectionActions';
+import DragDropSection from './DragDropSection';
 
 function encode(data) {
   return Object.keys(data)
@@ -179,7 +180,11 @@ export default class VolunteersForm extends React.Component {
                             <input aria-labelledby="linkedin_label" type="text" name="linkedin" id="linkedin" placeholder="Linkedln URL Here" onChange={this.handleOnChange} />
                           </div>
 
-
+                          <div className="form-group">
+                            <DragDropSection >
+                              
+                            </DragDropSection>
+                          </div>
 
                           <div className="form-group">
                             <label id="github_label" htmlFor="github">Github </label>
