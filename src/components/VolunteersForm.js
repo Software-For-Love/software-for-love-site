@@ -22,7 +22,7 @@ export default class VolunteersForm extends React.Component {
     }
 
     handleOnChange = (event) => {
-      if(trim(event.target.value) != ""){
+      if(trim(event.target.value) !== ""){
         document.getElementById(event.target.id).setCustomValidity("");
         this.setState({
           [event.target.name]: trim(event.target.value)
