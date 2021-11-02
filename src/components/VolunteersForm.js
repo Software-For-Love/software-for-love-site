@@ -1,10 +1,9 @@
 import React from 'react';
-import _, { trim } from 'lodash';
+import _ from 'lodash';
 import { navigate } from 'gatsby';
 
 import {classNames, toStyleObj, withPrefix} from '../utils';
 import SectionActions from './SectionActions';
-import { NULL } from 'node-sass';
 
 function encode(data) {
   return Object.keys(data)
@@ -18,48 +17,25 @@ export default class VolunteersForm extends React.Component {
       super(props);
       this.state = { 
         minimumSelectionInterest: false,
-        minimumSelectionHAU: false,
+        minimumSelectionHAU: false
       };
     }
 
     handleOnChange = (event) => {
-      this.setState({ 
-        [event.target.name]: event.target.value 
-      });
-      
-      /*if (event.target.name == "last-name" || event.target.name == "first-name") {
-        var pattern = new RegExp("^[a-zA-Z,.'-]+(?:[-'\s][a-zA-Z]+)*$");
-        value = pattern.test(trim(event.target.value));
-      }
-      else if(event.target.name == "whySFL"){
-        var pattern = new RegExp("(?!\s*$).+");
-        value = pattern.test(event.target.value);
-      }*/
-    }
-
-    textValidation = (event) =>{
-      var emptyInput = false;
-      emptyInput = (trim(event.target.value) == NULL);
-      console.log(emptyInput);
+      this.setState({ [event.target.name]: event.target.value });
     }
 
     handleOnSelectInterest = (event) => {
       var checkbox = document.querySelectorAll('#'+event.target.id);
       var checkedMinimum = (Array.prototype.slice.call(checkbox).some(x => x.checked));
-      this.setState({ 
-        [event.target.name]: event.target.value, 
-        minimumSelectionInterest:checkedMinimum 
-      });
+      this.setState({ [event.target.name]: event.target.value, minimumSelectionInterest:checkedMinimum });
       console.log(checkedMinimum);
     }
 
     handleOnSelectHAU = (event) =>{
       var checkbox = document.querySelectorAll('#'+event.target.id);
       var checkedMinimum = (Array.prototype.slice.call(checkbox).some(x => x.checked));
-      this.setState({ 
-        [event.target.name]: event.target.value, 
-        minimumSelectionHAU:checkedMinimum 
-      });
+      this.setState({ [event.target.name]: event.target.value, minimumSelectionHAU:checkedMinimum });
       console.log(checkedMinimum);
     }
 
@@ -162,12 +138,12 @@ export default class VolunteersForm extends React.Component {
 
                         <div className="form-group">
                           <label id="first-name-label" htmlFor="first-name">First Name {required_star}</label>
-                          <input aria-labelledby="first-name-label" type="text" name="first-name" id="first-name" placeholder="Your first name"  pattern="^[a-zA-Z,.'-]+(?:[-'\s][a-zA-Z]+)*$" onChange={this.handleOnChange} required />
+                          <input aria-labelledby="first-name-label" type="text" name="first-name" id="first-name" placeholder="Your first name" onChange={this.handleOnChange} required />
                         </div>
 
                         <div className="form-group">
                           <label id="last-name-label" htmlFor="last-name">Last Name {required_star}</label>
-                          <input aria-labelledby="last-name-label" type="text" name="last-name" id="last-name" placeholder="Your last name" pattern="[a-z ,.'-]+$" onChange={this.handleOnChange} required />
+                          <input aria-labelledby="last-name-label" type="text" name="last-name" id="last-name" placeholder="Your last name" onChange={this.handleOnChange} required />
                         </div>
 
 
@@ -212,7 +188,7 @@ export default class VolunteersForm extends React.Component {
 
                           <div className="form-group">
                             <label id="whySFL_label" htmlFor="whySFL">Why do you want to volunteer with Software For Love? {required_star}</label>
-                            <textarea aria-labelledby="whySFL_label" name="whySFL" id="whySFL" rows="4" placeholder="Maximum of 500 characters" onChange={this.handleOnChange} maxLength="500" required={!this.textValidation.emptyInput} ></textarea>
+                            <textarea aria-labelledby="whySFL_label" name="whySFL" id="whySFL" rows="4" placeholder="Maximum of 500 characters" onChange={this.handleOnChange} maxLength="500" required ></textarea>
                           </div>
 
                           <div className="form-group">
