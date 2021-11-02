@@ -188,7 +188,7 @@ export default class VolunteersForm extends React.Component {
 
                           <div className="form-group">
                             <label id="whySFL_label" htmlFor="whySFL">Why do you want to volunteer with Software For Love? {required_star}</label>
-                            <textarea aria-labelledby="whySFL_label" name="whySFL" id="whySFL" rows="4" placeholder="Maximum of 500 characters" onChange={this.handleOnChange} maxLength="500" required ></textarea>
+                            <input aria-labelledby="whySFL_label" name="whySFL" id="whySFL" rows="4" placeholder="Maximum of 500 characters" onChange={this.handleOnChange} maxLength="500" required />
                           </div>
 
                           <div className="form-group">
