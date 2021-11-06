@@ -31,17 +31,12 @@ button{
   }
   @media screen and (min-width: 0px) and (max-width: 1000px){
     direction: column;
-    // flex-direction: column;
   }
 }
 #block1{
   @media screen and (min-width: 1200px) and (max-width: 10000px){
   float:left;
   }
-  // direction: column;
-  // flex-direction: column;
-
-  // display:inline;
 }
 #block2{
   padding-bottom: 3rem;
@@ -52,55 +47,42 @@ button{
   @media screen and (min-width: 0px) and (max-width: 1200px){
 
   }
-  // float:right;
 }
-#block3{
+.block3 h5{
   @media only screen and (min-width: 1200px) and (max-width: 10000px){
-    display : inline; 
-    word-spacing: 200px;
+    display : inline;
   }
   @media only screen and (min-width: 900px) and (max-width: 1200px){
     display : inline; 
-    word-spacing: 100px;
+
   }
   @media only screen and (min-width: 400px) and (max-width: 900px){
     display : none; 
-    // word-spacing: 150px;
   }
-  // @media only screen and (min-width: 400px) and (max-width: 900px){
-  //   display : inline; 
-  //   word-spacing: 75px;
-  // }
-  // @media only screen and (min-width: 0px) and (max-width: 400px){
-  //   display : inline; 
-  //   word-spacing: 50px;
-  // }
+}
+.post__header1, 
+.post__header2,
+.post__header3 {
+  @media only screen and (min-width: 1200px) and (max-width: 10000px){
+    padding-right: 8rem;
+    
+  }
+  @media only screen and (min-width: 900px) and (max-width: 1200px){
+    padding-right: 2rem;
+  }
+} 
+
+.post__header2,
+.post__header4
+{
+font-weight: normal;
+}
+.post__intro{
+  font-weight: normal;
 }
 
-// .wrapper {
-//   // width:600px;
-//   // margin: 0 auto;
-// }
-
-// #block1 {
-//   float:left;
-// }
-
-// #block2
-// {
-//   float:right;
-//   margin-bottom: 20px;
-// }
-// .post__title,
-// .page__title {
-//   margin-top: 0;
-//   text-align:left;
-//   margin-right:0.5rem;
-//   display:inline;
-// }
 .post__intro{
   margin-top: 0;
-  // text-align:right;
   margin-right:0.5rem;
   display: inline;
   float: right;

@@ -248,6 +248,17 @@ models:
               name: excerpt
               label: Excerpt
               description: The excerpt of the page displayed in the blog feed and meta data
+
+    projectpost:
+        type: page
+        urlPath: "/projects/{slug}"
+        label: ProjectPost
+        layout: projectpost
+        folder: projects
+        exclude:
+            - index.md
+            - category/**
+            - author/**
     advanced:
         type: page
         label: Advanced Page

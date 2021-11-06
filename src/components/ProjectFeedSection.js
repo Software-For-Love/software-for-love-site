@@ -31,7 +31,7 @@ export default class ProjectFeedSection extends React.Component {
                 <div className="flex flex--col-3">
                   {_.map(posts_sorted, (post, post_idx) => {
                       let is_post = false;
-                      if ((_.get(post, 'frontmatter.template', null) === 'post')) {
+                      if ((_.get(post, 'frontmatter.template', null) === 'projectpost')) {
                            is_post = true;
                       }
                       return (<React.Fragment key={post_idx + '.1'}>
