@@ -4,7 +4,7 @@ import { navigate } from 'gatsby';
 
 import {classNames, toStyleObj, withPrefix} from '../utils';
 import SectionActions from './SectionActions';
-import DragDropSection from './DragDropSection';
+import DragDropComponent from './DragDropComponent';
 
 function encode(data) {
   return Object.keys(data)
@@ -181,9 +181,8 @@ export default class VolunteersForm extends React.Component {
                           </div>
 
                           <div className="form-group">
-                            <DragDropSection >
-                              
-                            </DragDropSection>
+                            <label id="resume_label">Share your resume with us {required_star}</label>
+                            <DragDropComponent id="resume"/>
                           </div>
 
                           <div className="form-group">
