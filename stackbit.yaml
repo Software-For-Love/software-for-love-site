@@ -259,6 +259,49 @@ models:
             - index.md
             - category/**
             - author/**
+         fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the post
+              required: true
+            - type: date
+              name: date
+              label: Date
+              description: The publish date of the post
+              required: true
+            - type: reference
+              name: author
+              label: Author
+              description: The author of the post
+              models:
+                  - person
+            - type: list
+              name: categories
+              label: Categories
+              description: The categories of the post
+              items:
+                  type: reference
+                  models:
+                      - category
+            - type: list
+              name: tags
+              label: Tags
+              description: The tags of the post
+              items:
+                  type: string
+            - type: image
+              name: image
+              label: Featured Image
+              description: The image shown in the blog post and blog feed
+            - type: string
+              name: image_alt
+              label: Featured Image Alt Text
+              description: The alt text of the featured image
+            - type: string
+              name: excerpt
+              label: Excerpt
+              description: The excerpt of the page displayed in the blog feed and meta data
     advanced:
         type: page
         label: Advanced Page
