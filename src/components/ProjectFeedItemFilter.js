@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 import {getData} from '../utils';
-import ProjectPostFeedItem from './ProjectPostFeedItem';
+import ProjectPostFeedItem from './BlogPostFeedItem';
 
 export default class ProjectFeedItemFilter extends React.Component {
     render() {

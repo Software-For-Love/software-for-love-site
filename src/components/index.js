@@ -21,9 +21,6 @@ import VolunteersForm from "./VolunteersForm";
 import Layout from "./Layout";
 import ProjectFeedItemFilter from "./ProjectFeedItemFilter";
 import ProjectFeedSection from "./ProjectFeedSection";
-import ProjectPostCategories from "./ProjectPostCategories";
-import ProjectPostFeedItem from "./ProjectPostFeedItem";
-import ProjectPostTags from "./ProjectPostTags";
 
 export {
     Action,
@@ -49,9 +46,6 @@ export {
     Layout,
     ProjectFeedItemFilter,
     ProjectFeedSection,
-    ProjectPostCategories,
-    ProjectPostFeedItem,
-    ProjectPostTags,
 };
 
 export default {
@@ -78,7 +72,4 @@ export default {
     Layout,
     ProjectFeedItemFilter,
     ProjectFeedSection,
-    ProjectPostCategories,
-    ProjectPostFeedItem,
-    ProjectPostTags,
 };
