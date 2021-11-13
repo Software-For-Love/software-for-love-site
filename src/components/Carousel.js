@@ -6,7 +6,7 @@ import Flickity from "react-flickity-component";
 import { classNames, toStyleObj, withPrefix, markdownify } from "../utils";
 import { Anchor } from "antd";
 import { Collapse } from "antd";
-const { CarouselComp } = Collapse;
+const { CarouselSection } = Collapse;
 
 export default class Carousel extends React.Component {
   constructor(props) {
@@ -47,20 +47,30 @@ export default class Carousel extends React.Component {
                 </div>
                 <div class="overflow-container">
                   <p class="testimonial">
+                  <div className="container container--lg">
+                    <div
+                        className={classNames(
+                            "flex",
+                            "flex--middle",
+                            "flex--center",
+                            "flex--col-2",
+                            "bg-gray"
+                        )}
+                    >
                   <Collapse className="section__body cell" ghost>
                       {_.map(
                           _.get(section, "carousels", null),
                           (carousel, panel_idx) => (
-                              <CarouselComp key={panel_idx}>
+                              <CarouselSection key={panel_idx}>
                                   <p>
                                       {markdownify(
                                           _.get(carousel, "content", null)
                                       )}
                                   </p>
-                              </CarouselComp>
+                              </CarouselSection>
                           )
                       )}
-                  </Collapse></p>
+                  </Collapse></div></div></p>
                   <div class="seperator"></div>
                   <p class="author">
                     Joe M.,<span> CEO of </span> Company

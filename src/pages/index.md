@@ -42,7 +42,7 @@ sections:
         align: left
         carousels:
             - content: >-
-                  This is a sample
+                  This is a sample testimonial
         image_position: right
         actions:
           - label: Work With Us
