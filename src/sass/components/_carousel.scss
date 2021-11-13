@@ -93,15 +93,6 @@
   margin-top: 1.1em;
 }
 
-.carousel-content {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 0.8em;
-  line-height: 1.2rem !important;
-  /* or 129% */
-}
-
 .quote-icon {
   width: 100%;
 }
@@ -116,20 +107,6 @@
 
 .overflow-container {
   height: 100%;
-  /*overflow: auto; removes extra slide upa nd down for author
--ms-overflow-style: none !important;  /* IE and Edge 
-  scrollbar-width: none !important; */
-}
-
-.content-wrapper {
-  width: 100%;
-  padding: 1.5rem 1.5em 1em 1.6em;
-  height: 100%;
-  position: absolute;
-}
-
-.overflow-container {
-  height: 100%;
   -ms-overflow-style: none !important; /* IE and Edge */
   scrollbar-width: thin !important;
 }
@@ -141,10 +118,6 @@
 .overflow-container::-webkit-scrollbar-thumb {
   background: #3c4b71 !important;
   border-radius: 8px !important;
-}
-
-.overflow-container p {
-  overflow: auto;
 }
 
 .overflow-container p {
