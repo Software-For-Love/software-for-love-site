@@ -1,10 +1,8 @@
 import React from "react";
 import _ from "lodash";
-import { navigate } from "gatsby";
 import "../sass/components/_carousel.scss";
 import Flickity from "react-flickity-component";
-import { classNames, toStyleObj, withPrefix, markdownify } from "../utils";
-import { Anchor } from "antd";
+import { classNames, withPrefix, markdownify } from "../utils";
 import { Collapse } from "antd";
 const { CarouselSection } = Collapse;
 
