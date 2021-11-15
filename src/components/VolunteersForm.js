@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import _, { trim } from 'lodash';
 import { navigate } from 'gatsby';
 
 import {classNames, toStyleObj, withPrefix} from '../utils';
@@ -15,14 +15,22 @@ export default class VolunteersForm extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = { 
+      this.state = {
         minimumSelectionInterest: false,
-        minimumSelectionHAU: false
+        minimumSelectionHAU: false,
       };
     }
 
     handleOnChange = (event) => {
-      this.setState({ [event.target.name]: event.target.value });
+      if(trim(event.target.value) !== ""){
+        document.getElementById(event.target.id).setCustomValidity("");
+        this.setState({
+          [event.target.name]: trim(event.target.value)
+        })
+      }
+      else{
+        document.getElementById(event.target.id).setCustomValidity("Please fill out this field correctly.")
+      }
     }
 
     handleOnSelectInterest = (event) => {
@@ -36,12 +44,10 @@ export default class VolunteersForm extends React.Component {
       var checkbox = document.querySelectorAll('#'+event.target.id);
       var checkedMinimum = (Array.prototype.slice.call(checkbox).some(x => x.checked));
       this.setState({ [event.target.name]: event.target.value, minimumSelectionHAU:checkedMinimum });
-      console.log(checkedMinimum);
     }
-
     handleSubmit = (event) => {
       event.preventDefault();
-      
+
       const form = event.target;
       fetch("/", {
         method: "POST",
@@ -51,7 +57,9 @@ export default class VolunteersForm extends React.Component {
           "subject": "A potential volunteer wants to join SFL",
           ...this.state
         })
-      }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
+      })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch(error => alert(error))
     }
 
     render() {
@@ -149,7 +157,7 @@ export default class VolunteersForm extends React.Component {
 
                         <div className="form-group">
                           <label id="email-label" htmlFor="email">Email {required_star} </label>
-                          <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" onChange={this.handleOnChange} required/>
+                          <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" onChange={this.handleOnChange} required />
                         </div>
 
 
@@ -188,7 +196,7 @@ export default class VolunteersForm extends React.Component {
 
                           <div className="form-group">
                             <label id="whySFL_label" htmlFor="whySFL">Why do you want to volunteer with Software For Love? {required_star}</label>
-                            <textarea aria-labelledby="whySFL_label" name="whySFL" id="whySFL" rows="4" placeholder="Maximum of 500 characters" onChange={this.handleOnChange} maxLength="500" required ></textarea>
+                            <textarea aria-labelledby="whySFL_label" name="whySFL" id="whySFL" rows="4" placeholder="Maximum of 500 characters" onChange={this.handleOnChange} maxLength="500" required  ></textarea>
                           </div>
 
                           <div className="form-group">
