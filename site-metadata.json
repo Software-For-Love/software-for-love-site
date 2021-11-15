@@ -34,14 +34,6 @@
     ]
   },
   "footer": {
-    "has_nav": true,
-    "nav_links": [
-      {
-        "label": "Contact Us",
-        "url": "/contact",
-        "style": "link"
-      }
-    ],
     "has_social": true,
     "social_links": [
       {
@@ -79,6 +71,11 @@
         "url": "https://vm.tiktok.com/ZMd132SFD/",
         "style": "link",
         "new_window": true
+      },
+      {
+        "label": "Contact Us",
+        "url": "/contact",
+        "style": "primary"
       }
     ],
     "content": "© Software For Love 2021"

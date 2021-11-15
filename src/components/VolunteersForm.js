@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import _, { trim } from 'lodash';
 import { navigate } from 'gatsby';
 
 import {classNames, toStyleObj, withPrefix} from '../utils';
@@ -15,21 +15,39 @@ export default class VolunteersForm extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = { minimumSelection: false }
+      this.state = {
+        minimumSelectionInterest: false,
+        minimumSelectionHAU: false,
+      };
     }
 
     handleOnChange = (event) => {
-      this.setState({ [event.target.name]: event.target.value });
+      if(trim(event.target.value) !== ""){
+        document.getElementById(event.target.id).setCustomValidity("");
+        this.setState({
+          [event.target.name]: trim(event.target.value)
+        })
+      }
+      else{
+        document.getElementById(event.target.id).setCustomValidity("Please fill out this field correctly.")
+      }
     }
 
-    handleOnSelect = (event) => {
-      var checkboxes = document.querySelectorAll('#interest');
-      var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
-      this.setState({ [event.target.name]: event.target.value, minimumSelection : checkedOne });
+    handleOnSelectInterest = (event) => {
+      var checkbox = document.querySelectorAll('#'+event.target.id);
+      var checkedMinimum = (Array.prototype.slice.call(checkbox).some(x => x.checked));
+      this.setState({ [event.target.name]: event.target.value, minimumSelectionInterest:checkedMinimum });
+      console.log(checkedMinimum);
     }
 
+    handleOnSelectHAU = (event) =>{
+      var checkbox = document.querySelectorAll('#'+event.target.id);
+      var checkedMinimum = (Array.prototype.slice.call(checkbox).some(x => x.checked));
+      this.setState({ [event.target.name]: event.target.value, minimumSelectionHAU:checkedMinimum });
+    }
     handleSubmit = (event) => {
       event.preventDefault();
+
       const form = event.target;
       fetch("/", {
         method: "POST",
@@ -39,7 +57,9 @@ export default class VolunteersForm extends React.Component {
           "subject": "A potential volunteer wants to join SFL",
           ...this.state
         })
-      }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
+      })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch(error => alert(error))
     }
 
     render() {
@@ -57,14 +77,14 @@ export default class VolunteersForm extends React.Component {
         "Partnerships and Business Development",
         "Legal and Finance",
         "HR and Culture",
+        "Software Development",
         //"Front-end Engineering",
         //"Back-end Engineering",
-        //"Data Science",
-        "Data Analysis",
+        "Data Science",
         "Project Management",
-        "UI/UX and Design",
-        "Graphic Design",
-        "DevOps"
+        //"UI/UX and Design",
+        "Graphic Design"
+        //"DevOps"
       ]
       let heard = [
         "Search Engine",
@@ -137,7 +157,7 @@ export default class VolunteersForm extends React.Component {
 
                         <div className="form-group">
                           <label id="email-label" htmlFor="email">Email {required_star} </label>
-                          <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" onChange={this.handleOnChange} required/>
+                          <input aria-labelledby="email-label" type="email" name="email" id="email" placeholder="Your email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" onChange={this.handleOnChange} required />
                         </div>
 
 
@@ -152,7 +172,7 @@ export default class VolunteersForm extends React.Component {
                             {interests.map((interest, index) =>
                                 <div className="form-checkbox" key={index}>
                                   <label id={interest} htmlFor={interest}>{interest}</label>
-                                  <input aria-labelledby={interest} type="checkbox" name={interest} id="interest" onChange={this.handleOnSelect} required={!this.state.minimumSelection} />
+                                  <input aria-labelledby={interest} type="checkbox" name={interest} id="interest" onChange={this.handleOnSelectInterest} required={!this.state.minimumSelectionInterest} />
                                 </div>
                             )}
                         </div>
@@ -169,9 +189,14 @@ export default class VolunteersForm extends React.Component {
                               {heard.map((herd, index) =>
                                   <div className="form-checkbox" key={index}>
                                     <label id={herd} htmlFor={herd}>{herd}</label>
-                                    <input aria-labelledby={herd} type="checkbox" name={herd} id="Heard_about_us" onChange={this.handleOnSelect} required={!this.state.minimumSelection} />
+                                    <input aria-labelledby={herd} type="checkbox" name={herd} id="Heard_about_us" onChange={this.handleOnSelectHAU} required={!this.state.minimumSelectionHAU} />
                                   </div>
                               )}
+                          </div>
+
+                          <div className="form-group">
+                            <label id="whySFL_label" htmlFor="whySFL">Why do you want to volunteer with Software For Love? {required_star}</label>
+                            <textarea aria-labelledby="whySFL_label" name="whySFL" id="whySFL" rows="4" placeholder="Maximum of 500 characters" onChange={this.handleOnChange} maxLength="500" required  ></textarea>
                           </div>
 
                           <div className="form-group">

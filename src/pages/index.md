@@ -2,11 +2,11 @@
 title: Home
 sections:
   - type: hero_section
-    title: Software for Love
+    title: Hello, We are Software For Love <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
     subtitle: >-
-      Software For Love is a non-profit organization that focuses on providing software solutions. We are a team of young professionals who are passionate about technology and seek to give back to our community. 
+      Spreading love through software.
     actions:
-      - label: Partner With Us
+      - label: Work With Us
         url: /organizations
         style: primary
       - label: Volunteer
@@ -27,43 +27,35 @@ sections:
     features:
       - title: Our Mission
         content: >-
-         Software For Love is a non-profit organization that focuses on providing software solutions. We are a team of young professionals who are passionate about technology and seek to give back to our community.<br/><br/>We seek to develop software for clients in return for a charitable contribution, or a charitable service provided by an organization.
+         
+         Software For Love is a non-profit organization that focuses on providing software solutions. We are a team of young professionals who are passionate about technology and seek to give back to our community.<br/><br/>We seek to develop software for clients in return for a charitable contribution, or a charitable service provided by an organization. #spreadinglovethroughsoftware
 
-         <h3> Services </h3>
+         <h3> What We Do </h3>
 
-         Our team is dedicated to providing a variety of services such as : 
+         We create software products that make an organization’s processes more efficient and improve brand recognition.. Starting from any stage of development, SFL is dedicated to creating software solutions that are tailored to your organization. As a team of student volunteers, we aim to provide a variety of affordable technology services such as:
          <br/>  
          <br/>
          
           * Web Development
+          * Mobile Development
           * UI/UX Design
           * Data Analytics
           * Database Management
+        
+        Our team consists of like-minded individuals who provide services ranging from UI/UX design, software development, and deployment. SFL is successfully delivering software solutions to many clients using a variety of software languages, platforms, and approaches.
+        
+        We embrace transformation and innovation. We acknowledge the systemic challenges and barriers in using and implementing technology. We want to bring power and support to our communities to digitize their social impact.
+
 
         align: left
         image: images/Humaaans1.png
         image_alt: Volunteers placeholder image
         image_position: right
-         
-      # - title: Services 
-      #   content: >- 
-      #     Our team is dedicated to providing a variety of services such as :
-      #     <br/> 
-      #     Web Development
-      #     <br/>
-      #     UI/UX Design
-      #     <br/>
-      #     Data Analytics
-      #     <br/>
-      #     Database Management
-      #   align: left
-
 
         actions:
         - label: Learn More
           url: /organizations
           style: secondary
-          
 
       - title: Join The Team
         content: >-
