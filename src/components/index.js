@@ -19,7 +19,6 @@ import TeamSection from "./TeamSection";
 import TimelineSection from "./TimelineSection";
 import VolunteersForm from "./VolunteersForm";
 import Layout from "./Layout";
-import ProjectFeedItemFilter from "./ProjectFeedItemFilter";
 import ProjectFeedSection from "./ProjectFeedSection";
 
 export {
@@ -44,7 +43,6 @@ export {
     TimelineSection,
     VolunteersForm,
     Layout,
-    ProjectFeedItemFilter,
     ProjectFeedSection,
 };
 
@@ -70,6 +68,5 @@ export default {
     TimelineSection,
     VolunteersForm,
     Layout,
-    ProjectFeedItemFilter,
     ProjectFeedSection,
 };
