@@ -2,7 +2,7 @@
 title: Home
 sections:
   - type: hero_section
-    title: Hello, We are Software For Love <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
+    title: Hello, We are Software For Love!
     subtitle: >-
       Spreading love through software.
     actions:
