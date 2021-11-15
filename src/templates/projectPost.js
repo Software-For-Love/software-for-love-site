@@ -4,7 +4,7 @@ import moment from 'moment-strftime';
 import {graphql} from 'gatsby';
 
 
-import components, {Layout} from '../components/index';
+import {Layout} from '../components/index';
 import {withPrefix, getData, Link, htmlToReact} from '../utils';
 import BlogPostCategories from '../components/BlogPostCategories';
 import BlogPostTags from '../components/BlogPostTags';
@@ -34,15 +34,13 @@ export default class ProjectPost extends React.Component {
                   <div id="block1">
                   <h1 className="post__title">{_.get(this.props, 'pageContext.frontmatter.title', null)}</h1>
                   <div className="post__meta">
-                    <span>On <time dateTime={moment(_.get(this.props, 'pageContext.frontmatter.date', null)).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(this.props, 'pageContext.frontmatter.date', null)).strftime('%B %d, %Y')}</time></span>
+                    <span1>On <time dateTime={moment(_.get(this.props, 'pageContext.frontmatter.date', null)).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(this.props, 'pageContext.frontmatter.date', null)).strftime('%B %d, %Y')}</time></span1>
                     {_.get(this.props, 'pageContext.frontmatter.author', null) && ((() => {
                         let author = getData(this.props.pageContext.site.data, _.get(this.props, 'pageContext.frontmatter.author', null));
                         return (
                           author.link ? (
-                            <span> by <Link to={withPrefix(author.link)}>{author.first_name} {author.last_name}</Link></span>
-                          ) : 
-                            <span> by {author.first_name} {author.last_name}</span>
-                        );
+                            <span> by <Link to={withPrefix(author.link)}>{author.first_name} {author.last_name}</Link></span> ): 
+                            <span> by {author.first_name} {author.last_name}</span>);
                     })())}
                   </div>
                   </div>
@@ -72,14 +70,6 @@ export default class ProjectPost extends React.Component {
                 )}
               </div>
             </article>
-
-            {_.map(_.get(this.props, 'pageContext.frontmatter.sections', null), (section, section_idx) => {
-                let component = _.upperFirst(_.camelCase(_.get(section, 'type', null)));
-                let Component = components[component];
-                return (
-                  <Component key={section_idx} {...this.props} section={section} site={this.props.pageContext.site} />
-                )
-            })} 
             </Layout>
         );
     }
