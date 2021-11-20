@@ -16,7 +16,10 @@ export default class VolunteersForm extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = { minimumSelection: false }
+      this.state = { 
+        minimumSelection: false,
+        filesUploaded: []
+      }
     }
 
     handleOnChange = (event) => {
@@ -29,18 +32,28 @@ export default class VolunteersForm extends React.Component {
       this.setState({ [event.target.name]: event.target.value, minimumSelection : checkedOne });
     }
 
+    handleOnDrop = (acceptedFiles) =>{
+      this.setState({filesUploaded:acceptedFiles[0]}, () => {console.log(this.state.filesUploaded)}
+        );
+    }
+
     handleSubmit = (event) => {
       event.preventDefault();
       const form = event.target;
+      const resumeFormData = new FormData();
+      resumeFormData.append('resume-file', this.state.filesUploaded[0])
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "multipart/form-data" },
         body: encode({
           "form-name": form.getAttribute("name"),
           "subject": "A potential volunteer wants to join SFL",
-          ...this.state
+          ...this.state,
+          resumeFormData
         })
       }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
+
+      
     }
 
     render() {
@@ -182,7 +195,8 @@ export default class VolunteersForm extends React.Component {
 
                           <div className="form-group">
                             <label id="resume_label">Share your resume with us {required_star}</label>
-                            <DragDropComponent id="resume"/>
+                            <DragDropComponent id="resume" name="resume" onDrop={this.handleOnDrop} required/>
+
                           </div>
 
                           <div className="form-group">
@@ -192,7 +206,7 @@ export default class VolunteersForm extends React.Component {
 
 
                         <div className="form-group form-checkbox">
-                          <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" onChange={this.handleOnChange} required/>
+                          <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" onChange={this.handleOnChange} required={this.state.filesUploaded.length!==1}/>
                           <label id="consent-label" htmlFor="consent">I understand that this form is storing my submitted information so I can be
                             contacted. {required_star}</label>
                         </div>
