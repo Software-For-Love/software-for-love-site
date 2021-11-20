@@ -33,7 +33,7 @@ export default class VolunteersForm extends React.Component {
     }
 
     handleOnDrop = (acceptedFiles) =>{
-      this.setState({filesUploaded:acceptedFiles[0]}, () => {console.log(this.state.filesUploaded)}
+      this.setState({filesUploaded:acceptedFiles[0]}
         );
     }
 
