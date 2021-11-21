@@ -75,7 +75,7 @@ export default class VolunteersForm extends React.Component {
       let interests = [
         "Marketing",
         "Partnerships and Business Development",
-        "Legal and Finance",
+        "Finance",
         "HR and Culture",
         "Software Development",
         //"Front-end Engineering",
