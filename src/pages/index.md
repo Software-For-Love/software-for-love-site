@@ -4,7 +4,7 @@ sections:
   - type: hero_section
     title: Hello, We are Software For Love
     subtitle: >-
-      Spreading love through software!
+      Spreading Love Through Software!
     actions:
       - label: Work With Us
         url: /organizations
