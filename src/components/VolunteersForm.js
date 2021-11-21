@@ -42,8 +42,9 @@ export default class VolunteersForm extends React.Component {
 
     handleSubmit = (event) => {
       event.preventDefault();
-      if(this.state.filesUploaded.length !== 1){
+      if(this.state.filesUploaded.length === 0){
         console.log("No file uploaded")
+        console.log(this.state.filesUploaded.length)
         }
       else{
     
@@ -195,16 +196,16 @@ export default class VolunteersForm extends React.Component {
                                   </div>
                               )}
                           </div>
-
-                          <div className="form-group">
-                            <label id="linkedin_label" htmlFor="linkedin">LinkedIn </label>
-                            <input aria-labelledby="linkedin_label" type="text" name="linkedin" id="linkedin" placeholder="Linkedln URL Here" onChange={this.handleOnChange} />
-                          </div>
-
+                          
                           <div className="form-group">
                             <label id="resume_label">Share your resume with us {required_star}</label>
                             <DragDropComponent id="resume" name="resume" onDrop={this.handleOnDrop} required={!this.state.filesUploaded.length!==1}/>
                             
+                          </div>
+
+                          <div className="form-group">
+                            <label id="linkedin_label" htmlFor="linkedin">LinkedIn </label>
+                            <input aria-labelledby="linkedin_label" type="text" name="linkedin" id="linkedin" placeholder="Linkedln URL Here" onChange={this.handleOnChange} />
                           </div>
 
                           <div className="form-group">
