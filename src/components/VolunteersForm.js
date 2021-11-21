@@ -12,6 +12,8 @@ function encode(data) {
       .join("&")
 }
 
+
+
 export default class VolunteersForm extends React.Component {
 
     constructor(props) {
@@ -37,23 +39,29 @@ export default class VolunteersForm extends React.Component {
         );
     }
 
+
     handleSubmit = (event) => {
       event.preventDefault();
-      const form = event.target;
-      const resumeFormData = new FormData();
-      resumeFormData.append('resume-file', this.state.filesUploaded[0])
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "multipart/form-data" },
-        body: encode({
-          "form-name": form.getAttribute("name"),
-          "subject": "A potential volunteer wants to join SFL",
-          ...this.state,
-          resumeFormData
-        })
-      }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
-
-      
+      if(this.state.filesUploaded.length !== 1){
+        console.log("No file uploaded")
+        }
+      else{
+    
+        const form = event.target;
+        const resumeFormData = new FormData();
+        resumeFormData.append('resume-file', this.state.filesUploaded[0])
+        
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "multipart/form-data" },
+          body: encode({
+            "form-name": form.getAttribute("name"),
+            "subject": "A potential volunteer wants to join SFL",
+            ...this.state,
+            resumeFormData
+          })
+        }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
+      }
     }
 
     render() {
@@ -195,8 +203,8 @@ export default class VolunteersForm extends React.Component {
 
                           <div className="form-group">
                             <label id="resume_label">Share your resume with us {required_star}</label>
-                            <DragDropComponent id="resume" name="resume" onDrop={this.handleOnDrop} required/>
-
+                            <DragDropComponent id="resume" name="resume" onDrop={this.handleOnDrop} required={!this.state.filesUploaded.length!==1}/>
+                            
                           </div>
 
                           <div className="form-group">
@@ -206,7 +214,7 @@ export default class VolunteersForm extends React.Component {
 
 
                         <div className="form-group form-checkbox">
-                          <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" onChange={this.handleOnChange} required={this.state.filesUploaded.length!==1}/>
+                          <input aria-labelledby="consent-label" type="checkbox" name="consent" id="consent" onChange={this.handleOnChange} required/>
                           <label id="consent-label" htmlFor="consent">I understand that this form is storing my submitted information so I can be
                             contacted. {required_star}</label>
                         </div>
