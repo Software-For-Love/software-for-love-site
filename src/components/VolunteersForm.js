@@ -8,8 +8,8 @@ import DragDropComponent from './DragDropComponent';
 
 function encode(data) {
   return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&")
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
 }
 
 
@@ -44,14 +44,12 @@ export default class VolunteersForm extends React.Component {
       event.preventDefault();
       if(this.state.filesUploaded.length === 0){
         console.log("No file uploaded")
-        console.log(this.state.filesUploaded.length)
         }
       else{
     
         const form = event.target;
-        //const resumeFormData = new FormData();
-        //resumeFormData.append('resume-file', this.state.filesUploaded[0])
-        
+        const resumeFormData = new FormData();
+        resumeFormData.append('resume-file', this.state.filesUploaded[0])
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "multipart/form-data" },
@@ -59,7 +57,7 @@ export default class VolunteersForm extends React.Component {
             "form-name": form.getAttribute("name"),
             "subject": "A potential volunteer wants to join SFL",
             ...this.state,
-            //resumeFormData
+            "resume-file":resumeFormData
           })
         }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
       }
