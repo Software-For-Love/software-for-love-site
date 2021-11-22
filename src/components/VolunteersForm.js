@@ -49,8 +49,8 @@ export default class VolunteersForm extends React.Component {
       else{
     
         const form = event.target;
-        const resumeFormData = new FormData();
-        resumeFormData.append('resume-file', this.state.filesUploaded[0])
+        //const resumeFormData = new FormData();
+        //resumeFormData.append('resume-file', this.state.filesUploaded[0])
         
         fetch("/", {
           method: "POST",
@@ -59,7 +59,7 @@ export default class VolunteersForm extends React.Component {
             "form-name": form.getAttribute("name"),
             "subject": "A potential volunteer wants to join SFL",
             ...this.state,
-            resumeFormData
+            //resumeFormData
           })
         }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
       }
@@ -199,7 +199,7 @@ export default class VolunteersForm extends React.Component {
                           
                           <div className="form-group">
                             <label id="resume_label">Share your resume with us {required_star}</label>
-                            <DragDropComponent id="resume" name="resume" onDrop={this.handleOnDrop} required={!this.state.filesUploaded.length!==1}/>
+                            <DragDropComponent id="resume" name="resume" onDrop={this.handleOnDrop} />
                             
                           </div>
 
