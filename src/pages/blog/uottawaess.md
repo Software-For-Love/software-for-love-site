@@ -13,6 +13,7 @@ tags:
     - spreadinglovethroughsoftware
 image: images/ess-website.png
 image_alt: uOttawa ESS Website
+
 excerpt: >-
     How we made the website for the uOttawa ESS student government!
 template: post
