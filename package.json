@@ -12,8 +12,8 @@
   "dependencies": {
     "@babel/runtime": "^7.14.6",
     "@stackbit/gatsby-plugin-menus": "0.0.4",
+    "chokidar": "^3.5.2",
     "antd": "^4.16.13",
-    "chokidar": "^3.4.0",
     "classnames": "^2.2.6",
     "fs-extra": "^7.0.1",
     "gatsby": "2.22.17",
