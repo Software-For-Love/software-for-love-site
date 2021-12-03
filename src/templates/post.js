@@ -47,15 +47,15 @@ export default class Post extends React.Component {
                   </div>
                   <div id="block2">
                   <h5 className="post__intro">{_.get(this.props, 'pageContext.frontmatter.intro', null)}</h5>
-                  <Link to="https://www.ctsbionics.com">
-                    <button>Visit Us</button>
+                  <Link to={_.get(this.props, 'pageContext.frontmatter.link', null)}>
+                    <button>{_.get(this.props, 'pageContext.frontmatter.buttontxt', null)}</button>
                   </Link>
                   </div>
                   <div id = "block3">
-                  <header5>Services&nbsp;</header5>
-                  <header5>UI/UX-Design&nbsp;</header5>
-                  <header5>Deliverables&nbsp;</header5>
-                  <header5>Responsive-Website&nbsp;</header5>
+                  <p className="post__header1">{_.get(this.props, 'pageContext.frontmatter.header1', null)}</p>
+                  <p className="post__header2">{_.get(this.props, 'pageContext.frontmatter.header2', null)}</p>
+                  <p className="post__header3">{_.get(this.props, 'pageContext.frontmatter.header3', null)}</p>
+                  <p className="post__header4">{_.get(this.props, 'pageContext.frontmatter.header4', null)}</p>
                   </div>
                 </header>
                 <h5 className="post__divider">{_.get(this.props, 'pageContext.frontmatter.divider', null)}</h5>

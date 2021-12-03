@@ -1,5 +1,5 @@
 ---
-title: Software For Love and Snyk Pursuing Impact Together
+title: SFL X Snyk
 date: "2021-07-26"
 author: src/data/team/Executive-Team/hrithik-shah.yaml
 categories:
@@ -10,8 +10,12 @@ tags:
     - Empowerment
 image: images/snyk-partnership.png
 image_alt: SFL x Snyk
-excerpt: >-
-    We have partnered with Snyk as part of their Snyk Impact effort to receive in-kind software security and code integration support.
+
+buttontxt: Visit SNYK
+# excerpt: >-
+#     We have partnered with Snyk as part of their Snyk Impact effort to receive in-kind software security and code integration support.
+intro: Software For Love and Snyk Pursuing Impact Together. We have partnered with Snyk as part of their Snyk Impact effort to receive in-kind software security and code integration support.
+link: https://snyk.io/
 template: post
 ---
 
