@@ -37,3 +37,5 @@ Software Engineers:
 
 ## Support
 If you have any questions, feel free to reach us at team@softwareforlove.com, or through our [contact form](https://www.softwareforlove.com/contact).
+
+jira link connection test
