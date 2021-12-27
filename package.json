@@ -20,7 +20,7 @@
     "gatsby-plugin-gdpr-cookies": "^2.0.8",
     "gatsby-plugin-react-helmet": "^3.3.3",
     "gatsby-plugin-sass": "^2.3.12",
-    "gatsby-plugin-social9-socialshare": "^1.0.4",
+    "gatsby-plugin-social9-socialshare": "^1.0.5",
     "gatsby-source-filesystem": "2.3.10",
     "gatsby-transformer-remark": "2.8.14",
     "js-yaml": "^3.12.2",
