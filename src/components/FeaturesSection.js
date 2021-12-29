@@ -29,6 +29,17 @@ export default class FeaturesSection extends React.Component {
                 }
               )}
             >
+              {_.get(feature, "image", null) && (
+                <div
+                  className={classNames("cell", "section__media", {
+                    "section__media--right":
+                      _.get(feature, "image_position", null) === "right",
+                  })}
+                >
+                  {    <img src={withPrefix(_.get(feature, 'image', null))} alt={_.get(feature, 'image_alt', null)} />}
+                </div>
+              )}
+
               {_.get(feature, "carousels", null) && (
                 <div
                   className={classNames("cell", "section__media", {

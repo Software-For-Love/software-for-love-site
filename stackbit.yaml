@@ -603,14 +603,13 @@ models:
               label: Content
               description: The text content of the feature
             - type: enum
-              name: align
-              label: Align
+              name: image_position
+              label: Image Position
               options:
                   - left
                   - right
-                  - center
               default: left
-              description: The alignment of the text content
+              description: The position of the image
     item:
       type: object
         label: Item
