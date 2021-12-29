@@ -19,8 +19,8 @@ sections:
       title: Executive Team
       team:
           - src/data/team/Executive-Team/faizaan-chishtie.yaml
-          - src/data/team/Executive-Team/hrithik-shah.yaml
           - src/data/team/Executive-Team/jacob-cleysen.yaml
+          - src/data/team/Executive-Team/hrithik-shah.yaml
           - src/data/team/Executive-Team/soorya-saravanapavan.yaml
           - src/data/team/Executive-Team/dharitri-dixit.yaml
           - src/data/team/Executive-Team/suhavi-garg.yaml
