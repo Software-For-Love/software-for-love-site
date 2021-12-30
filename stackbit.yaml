@@ -431,6 +431,9 @@ models:
         labelField: title
         fields:
             - type: string
+              name: testimonials
+
+            - type: string
               name: title
               label: Title
               description: The title of the section
@@ -473,6 +476,7 @@ models:
                   type: model
                   models:
                       - carousel
+                      
     hero_section:
         type: object
         label: Hero Section
