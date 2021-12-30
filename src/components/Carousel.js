@@ -23,19 +23,11 @@ export default class Carousel extends React.Component {
         <section class="carousel-box-container">
           <Flickity options={flickityOptions}>
             <div class="carousel-cell carousel-content">
-              {_.get(section, "image", null) && (
-                <div
-                  className={classNames("cell", "section__media", {
-                    "section__media--right":
-                      _.get(section, "image_position", null) === "right",
-                  })}
-                >
-                  <img
-                    src={withPrefix(_.get(section, "image", null))}
-                    alt={_.get(section, "image_alt", null)}
-                  />
-                </div>
-              )}
+                {_.get(section, 'image', null) && (
+                  <div className={classNames('cell', 'section__media', {'section__media--right': _.get(section, 'image_position', null) === 'right'})}>
+                    <img src={withPrefix(_.get(section, 'image', null))} alt={_.get(section, 'image_alt', null)} />
+                  </div>
+                )}
               <div class="content-wrapper">
                 <div class="quote-icon">
                   <svg
@@ -53,37 +45,33 @@ export default class Carousel extends React.Component {
                 </div>
                 <div class="overflow-container">
                   <p class="testimonial">
-                    <div className="container container--lg">
-                      <div
+                  <div className="container container--lg">
+                    <div
                         className={classNames(
-                          "flex",
-                          "flex--middle",
-                          "flex--center",
-                          "flex--col-2",
-                          "bg-gray"
+                            "flex",
+                            "flex--middle",
+                            "flex--center",
+                            "flex--col-2",
+                            "bg-gray"
                         )}
-                      >
-                        <Collapse className="section__body cell" ghost>
-                          {_.map(
-                            _.get(section, "carousels", null),
-                            (carousel, panel_idx) => (
+                    >
+                  <Collapse className="section__body cell" ghost>
+                      {_.map(
+                          _.get(section, "carousels", null),
+                          (carousel, panel_idx) => (
                               <CarouselSection key={panel_idx}>
-                                <p>
-                                  {markdownify(
-                                    _.get(carousel, "content", null)
-                                  )}
-                                </p>
+                                  <p>
+                                      {markdownify(
+                                          _.get(carousel, "content", null)
+                                      )}
+                                  </p>
                               </CarouselSection>
-                            )
-                          )}
-                        </Collapse>
-                      </div>
-                    </div>{" "}
-                    {console.log(this.props.testimonials)}
-                  </p>
+                          )
+                      )}
+                  </Collapse></div></div></p>
                   <div class="seperator"></div>
                   <p class="author">
-                    Joe M. ,<span> CEO of </span> Company
+                    Joe M.,<span> CEO of </span> Company
                   </p>
                 </div>
               </div>
@@ -108,7 +96,7 @@ export default class Carousel extends React.Component {
                   <p class="testimonial">
                     {" "}
                     This is an example of a testimonial from a client... it’s
-                    still going now checking scrollbar removee side effect...
+                    still going...
                   </p>
                   <div class="seperator"></div>
                   <p class="author">
