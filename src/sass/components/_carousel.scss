@@ -109,17 +109,19 @@
   height: 100%;
   -ms-overflow-style: none !important; /* IE and Edge */
   scrollbar-width: thin !important;
-  padding:3px 3px 0px;
+  padding:14px 3px 0px;
 }
 /* For chrome and safari and others hides scrollbar */
-.overflow-container::-webkit-scrollbar {
-  display: none !important;
-}
 
-.overflow-container::-webkit-scrollbar-thumb {
+.overflow-container p::-webkit-scrollbar {
+  width:0px;
+}
+/* scrollbar */
+/*
+.overflow-container p::-webkit-scrollbar-thumb {
   background: #3c4b71 !important;
   border-radius: 8px !important;
-}
+}*/
 
 .overflow-container p {
   /* gives scroll vertical effect*/
