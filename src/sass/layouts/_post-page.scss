@@ -1,131 +1,116 @@
 /**
  * Posts and Plain Pages
  */
-.post,
-.page {
-  padding-bottom: 3.75rem;
-  padding-top: 3.75rem;
-}
-
-.post__image,
-.post__header,
-.page__header {
-  margin: 0 0 1.5rem;
-}
-
-// #block1, #block2{
-//   display: flex;
-//   flex-direction: row;
-// }
-button{
-  background-color: transparent;
-  border-color: $color-btn-alt-border;
-  color: $color-btn-alt;
-  align-items: center;
-}
-.post__header{
-  @media screen and (min-width: 1000px) and (max-width: 10000px){
-    flex-flow:row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-  @media screen and (min-width: 0px) and (max-width: 1000px){
-    direction: column;
-    // flex-direction: column;
-  }
-}
-#block1{
-  @media screen and (min-width: 1200px) and (max-width: 10000px){
-  float:left;
-  }
-  // direction: column;
-  // flex-direction: column;
-
-  // display:inline;
-}
-#block2{
-  padding-bottom: 3rem;
-  @media screen and (min-width: 1200px) and (max-width: 10000px){
-    padding-left: 25rem;
-    align-items: center;
-  }
-  @media screen and (min-width: 0px) and (max-width: 1200px){
-
-  }
-  // float:right;
-}
-#block3{
-  @media only screen and (min-width: 1200px) and (max-width: 10000px){
-    display : inline; 
-    word-spacing: 200px;
-  }
-  @media only screen and (min-width: 900px) and (max-width: 1200px){
-    display : inline; 
-    word-spacing: 100px;
-  }
-  @media only screen and (min-width: 400px) and (max-width: 900px){
-    display : none; 
-    // word-spacing: 150px;
-  }
-  // @media only screen and (min-width: 400px) and (max-width: 900px){
-  //   display : inline; 
-  //   word-spacing: 75px;
-  // }
-  // @media only screen and (min-width: 0px) and (max-width: 400px){
-  //   display : inline; 
-  //   word-spacing: 50px;
-  // }
-}
-
-// .wrapper {
-//   // width:600px;
-//   // margin: 0 auto;
-// }
-
-// #block1 {
-//   float:left;
-// }
-
-// #block2
-// {
-//   float:right;
-//   margin-bottom: 20px;
-// }
-// .post__title,
-// .page__title {
-//   margin-top: 0;
-//   text-align:left;
-//   margin-right:0.5rem;
-//   display:inline;
-// }
-.post__intro{
-  margin-top: 0;
-  // text-align:right;
-  margin-right:0.5rem;
-  display: inline;
-  float: right;
-  font-size:14px;
-}
-.post__meta,
-.post__footer {
-  color: $color-meta;
-  font-size: 0.875rem;
-  text-align: left;
-}
-
-.post__meta {
-  margin-bottom: 0.75rem;
-}
-
-.post__footer {
-  margin-top: 2.25rem;
-
-  span {
-    display: inline-block;
-    margin-right: 0.5rem;
-
-    &:before {
-      content: "\0023";
-    }
-  }
-}
+ .post,
+ .page {
+   padding-bottom: 3.75rem;
+   padding-top: 3.75rem;
+ }
+ 
+ .post__image,
+ .post__header,
+ .page__header {
+   margin: 0 0 1.5rem;
+ }
+ 
+ // #block1, #block2{
+ //   display: flex;
+ //   flex-direction: row;
+ // }
+ button{
+   background-color: transparent;
+   border-color: $color-btn-alt-border;
+   color: $color-btn-alt;
+   align-items: center;
+ }
+ .post__header{
+   @media screen and (min-width: 1000px) and (max-width: 10000px){
+     flex-flow:row;
+     flex-wrap: nowrap;
+     justify-content: space-between;
+   }
+   @media screen and (min-width: 0px) and (max-width: 1000px){
+     direction: column;
+   }
+ }
+ #block1{
+   @media screen and (min-width: 1200px) and (max-width: 10000px){
+   float:left;
+   }
+ }
+ #block2{
+   padding-bottom: 3rem;
+   @media screen and (min-width: 1200px) and (max-width: 10000px){
+     padding-left: 25rem;
+     align-items: center;
+   }
+   @media screen and (min-width: 0px) and (max-width: 1200px){
+ 
+   }
+ }
+ .block3 h5{
+   @media only screen and (min-width: 1200px) and (max-width: 10000px){
+     display : inline;
+   }
+   @media only screen and (min-width: 900px) and (max-width: 1200px){
+     display : inline; 
+ 
+   }
+   @media only screen and (min-width: 400px) and (max-width: 900px){
+     display : none; 
+   }
+ }
+ .post__header1, 
+ .post__header2,
+ .post__header3 {
+   @media only screen and (min-width: 1200px) and (max-width: 10000px){
+     padding-right: 8rem;
+     display : inline;
+     
+   }
+   @media only screen and (min-width: 900px) and (max-width: 1200px){
+     padding-right: 2rem;
+     display : inline;
+   }
+ } 
+ 
+ .post__header2,
+ .post__header4
+ {
+  display : inline;
+ font-weight: normal;
+ }
+ .post__intro{
+   font-weight: normal;
+ }
+ 
+ .post__intro{
+   margin-top: 0;
+   margin-right:0.5rem;
+   display: inline;
+   float: right;
+   font-size:14px;
+ }
+ .post__meta,
+ .post__footer {
+   color: $color-meta;
+   font-size: 0.875rem;
+   text-align: left;
+ }
+ 
+ .post__meta {
+   margin-bottom: 0.75rem;
+ }
+ 
+ .post__footer {
+   margin-top: 2.25rem;
+ 
+   span {
+     display: inline-block;
+     margin-right: 0.5rem;
+ 
+     &:before {
+       content: "\0023";
+     }
+   }
+ }

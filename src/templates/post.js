@@ -5,7 +5,6 @@ import {graphql} from 'gatsby';
 
 import {Layout} from '../components/index';
 import {withPrefix, getData, Link, htmlToReact} from '../utils';
-import BlogPostCategories from '../components/BlogPostCategories';
 import BlogPostTags from '../components/BlogPostTags';
 
 // this minimal GraphQL query ensures that when 'gatsby develop' is running,
@@ -52,10 +51,10 @@ export default class Post extends React.Component {
                   </Link>
                   </div>
                   <div id = "block3">
-                  <p className="post__header1">{_.get(this.props, 'pageContext.frontmatter.header1', null)}</p>
-                  <p className="post__header2">{_.get(this.props, 'pageContext.frontmatter.header2', null)}</p>
-                  <p className="post__header3">{_.get(this.props, 'pageContext.frontmatter.header3', null)}</p>
-                  <p className="post__header4">{_.get(this.props, 'pageContext.frontmatter.header4', null)}</p>
+                  <h5 className="post__header1">{_.get(this.props, 'pageContext.frontmatter.header1', null)}</h5>
+                  <h5 className="post__header2">{_.get(this.props, 'pageContext.frontmatter.header2', null)}</h5>
+                  <h5 className="post__header3">{_.get(this.props, 'pageContext.frontmatter.header3', null)}</h5>
+                  <h5 className="post__header4">{_.get(this.props, 'pageContext.frontmatter.header4', null)}</h5>
                   </div>
                 </header>
                 <h5 className="post__divider">{_.get(this.props, 'pageContext.frontmatter.divider', null)}</h5>
