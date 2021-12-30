@@ -45,6 +45,7 @@ sections:
           - src/data/team/Software-Team/tisham-islam.yaml
           - src/data/team/Software-Team/jeyason-jeyaparan.yaml
           - src/data/team/Software-Team/michael-kagnew.yaml
+          - src/data/team/Software-Team/jasmine-kokkat.yaml
           - src/data/team/Software-Team/adhish-maheswaran.yaml         
           - src/data/team/Software-Team/harshit-manchanda.yaml
           - src/data/team/Software-Team/reshma-menon.yaml
