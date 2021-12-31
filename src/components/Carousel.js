@@ -60,7 +60,7 @@ export default class Carousel extends React.Component {
                       <div class="seperator"></div>
                       <p class="author">
                         {item["author"]}
-                        <span> {item["relation"]} </span> {item["company"]}
+                        <span> {item["relation"]} of </span> {item["company"]}
                       </p>
                     </div>
                   </div>
