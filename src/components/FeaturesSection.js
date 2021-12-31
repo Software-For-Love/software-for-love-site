@@ -36,12 +36,18 @@ export default class FeaturesSection extends React.Component {
                       _.get(feature, "image_position", null) === "right",
                   })}
                 >
-                  {    <img src={withPrefix(_.get(feature, 'image', null))} alt={_.get(feature, 'image_alt', null)} />}
+                  {
+                    <img
+                      src={withPrefix(_.get(feature, "image", null))}
+                      alt={_.get(feature, "image_alt", null)}
+                    />
+                  }
                 </div>
               )}
 
               {_.get(feature, "carousels", null) && (
                 <div
+                  style={{ order: 2 }}
                   className={classNames("cell", "section__media", {
                     "section__media--right":
                       _.get(feature, "image_position", null) === "right",
@@ -50,7 +56,7 @@ export default class FeaturesSection extends React.Component {
                   <Carousel items={feature["carousels"]["items"]}></Carousel>
                 </div>
               )}
-              <div className="section__body cell">
+              <div className="flex-2 section__body cell">
                 {_.get(feature, "title", null) &&
                   (_.get(section, "title", null) ? (
                     <h3 className="section__title">
