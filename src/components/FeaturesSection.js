@@ -36,12 +36,7 @@ export default class FeaturesSection extends React.Component {
                       _.get(feature, "image_position", null) === "right",
                   })}
                 >
-                  {
-                    <img
-                      src={withPrefix(_.get(feature, "image", null))}
-                      alt={_.get(feature, "image_alt", null)}
-                    />
-                  }
+                  {    <img src={withPrefix(_.get(feature, 'image', null))} alt={_.get(feature, 'image_alt', null)} />}
                 </div>
               )}
 
@@ -53,9 +48,7 @@ export default class FeaturesSection extends React.Component {
                   })}
                 >
                   {/*    <img src={withPrefix(_.get(feature, 'image', null))} alt={_.get(feature, 'image_alt', null)} /> */}
-                  <Carousel
-                    testimonial={_.get(feature, "testimonials", null)}
-                  ></Carousel>
+                  <Carousel></Carousel>
                 </div>
               )}
               <div className="section__body cell">

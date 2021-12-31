@@ -24,19 +24,11 @@ export default class Carousel extends React.Component {
         <section class="carousel-box-container">
           <Flickity options={flickityOptions}>
             <div class="carousel-cell carousel-content">
-              {_.get(section, "image", null) && (
-                <div
-                  className={classNames("cell", "section__media", {
-                    "section__media--right":
-                      _.get(section, "image_position", null) === "right",
-                  })}
-                >
-                  <img
-                    src={withPrefix(_.get(section, "image", null))}
-                    alt={_.get(section, "image_alt", null)}
-                  />
-                </div>
-              )}
+                {_.get(section, 'image', null) && (
+                  <div className={classNames('cell', 'section__media', {'section__media--right': _.get(section, 'image_position', null) === 'right'})}>
+                    <img src={withPrefix(_.get(section, 'image', null))} alt={_.get(section, 'image_alt', null)} />
+                  </div>
+                )}
               <div class="content-wrapper">
                 <div class="quote-icon">
                   <svg
@@ -54,11 +46,9 @@ export default class Carousel extends React.Component {
                 </div>
                 <div class="overflow-container">
                   <p class="testimonial">
-                    <div className="container container--lg"></div>
-                  </p>
                   <div class="seperator"></div>
                   <p class="author">
-                    Joe M. ,<span> CEO of </span> Company
+                    Joe M.,<span> CEO of </span> Company
                   </p>
                 </div>
               </div>
