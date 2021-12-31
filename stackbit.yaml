@@ -598,10 +598,6 @@ models:
         label: Carousel
         labelField: title
         fields:
-            - type: markdown
-              name: content
-              label: Content
-              description: The text content of the feature
             - type: enum
               name: image_position
               label: Image Position
@@ -610,6 +606,16 @@ models:
                   - right
               default: left
               description: The position of the image
+            - type: list
+              name: items
+              items:
+                  - type: string
+                    company: company
+                    author: author
+                    relation: relation
+                    testimonial: testimonial
+
+
     item:
       type: object
         label: Item

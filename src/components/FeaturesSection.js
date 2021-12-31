@@ -7,6 +7,8 @@ import { Carousel } from "./index";
 export default class FeaturesSection extends React.Component {
   render() {
     let section = _.get(this.props, "section", null);
+    // let items = section["features"]["1"]["carousels"]["items"];
+    // console.log(JSON.stringify(items));
     return (
       <section className="section section--features">
         {_.get(section, "title", null) && (
@@ -48,7 +50,7 @@ export default class FeaturesSection extends React.Component {
                   })}
                 >
                   {/*    <img src={withPrefix(_.get(feature, 'image', null))} alt={_.get(feature, 'image_alt', null)} /> */}
-                  <Carousel></Carousel>
+                  <Carousel items={feature["carousels"]["items"]}></Carousel>
                 </div>
               )}
               <div className="section__body cell">
