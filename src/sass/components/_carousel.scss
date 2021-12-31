@@ -6,11 +6,9 @@
 
   height: 100%;
   position: relative;
-  /*top: 950px;
-  right: 300px;*/
-  float:right;
+  float:none;
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .container {
     display: block;
   }
