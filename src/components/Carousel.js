@@ -26,6 +26,7 @@ export default class Carousel extends React.Component {
             {items.map((item) => {
               return (
                 <div class="carousel-cell carousel-content">
+
                   {_.get(section, "image", null) && (
                     <div
                       className={classNames("cell", "section__media", {
@@ -66,6 +67,7 @@ export default class Carousel extends React.Component {
                 </div>
               );
             })}
+
           </Flickity>
         </section>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
