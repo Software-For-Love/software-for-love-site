@@ -18,7 +18,11 @@ export default class Carousel extends React.Component {
       pageDots: false,
     };
     let section = _.get(this.props, "section", null);
+<<<<<<< HEAD
     const items = this.props.items;
+=======
+
+>>>>>>> 6a35556dc89765243bc7aab4dbbc70f11ad4c1e6
     return (
       <>
         <section class="carousel-box-container">
@@ -36,7 +40,11 @@ export default class Carousel extends React.Component {
                 <div class="quote-icon">
                   <svg
                     width="25"
+<<<<<<< HEAD
                     height="20"
+=======
+                    height="15"
+>>>>>>> 6a35556dc89765243bc7aab4dbbc70f11ad4c1e6
                     viewBox="0 0 25 21"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -48,9 +56,13 @@ export default class Carousel extends React.Component {
                   </svg>
                 </div>
                 <div class="overflow-container">
+<<<<<<< HEAD
                   <p class="testimonial">
                   {item["testimonial"]}
                   </p>
+=======
+                  <p class="testimonial"></p>
+>>>>>>> 6a35556dc89765243bc7aab4dbbc70f11ad4c1e6
                   <div class="seperator"></div>
                   <p class="author">
                     {item["author"]}<span> {item["relation"]} </span> {item["company"]}
