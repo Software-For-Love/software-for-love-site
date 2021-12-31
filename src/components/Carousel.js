@@ -37,7 +37,6 @@ export default class Carousel extends React.Component {
                   <svg
                     width="25"
                     height="20"
-                    height="15"
                     viewBox="0 0 25 21"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +51,6 @@ export default class Carousel extends React.Component {
                   <p class="testimonial">
                   {item["testimonial"]}
                   </p>
-                  <p class="testimonial"></p>
                   <div class="seperator"></div>
                   <p class="author">
                     {item["author"]}<span> {item["relation"]} </span> {item["company"]}
