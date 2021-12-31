@@ -45,7 +45,7 @@ export default class Carousel extends React.Component {
                   </svg>
                 </div>
                 <div class="overflow-container">
-                  <p class="testimonial">
+                  <p class="testimonial"></p>
                   <div class="seperator"></div>
                   <p class="author">
                     Joe M.,<span> CEO of </span> Company
