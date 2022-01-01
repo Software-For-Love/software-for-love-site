@@ -9,11 +9,15 @@ export default class Carousel extends React.Component {
   }
 
   render() {
-    const { flickityOptions, children } = this.props;
+    const { items, flickityOptions, carouselTemplate } = this.props;
     return (
       <>
         <section class="carousel-box-container">
-          <Flickity options={flickityOptions}>{children}</Flickity>
+          <Flickity options={flickityOptions}>
+            {items.map((item) => {
+              return carouselTemplate(item);
+            })}
+          </Flickity>
         </section>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
       </>
