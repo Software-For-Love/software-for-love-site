@@ -14,7 +14,7 @@ export default class FeaturesSection extends React.Component {
       
 
                       return (
-                        <div class="carousel-cell carousel-content">
+                        <div class="carousel-content">
                           {_.get(section, "image", null) && (
                             <div
                               className={classNames("cell", "section__media", {
