@@ -110,6 +110,12 @@
   scrollbar-width: thin !important;
   padding: 14px 3px 0px;
 }
+/* IOS smoothness */
+@media (max-width: 600px) {
+  .overflow-container {
+    -webkit-overflow-scrolling: touch;
+  }
+}
 /* For chrome and safari and others hides scrollbar */
 .overflow-container::-webkit-scrollbar {
   display: none !important;
