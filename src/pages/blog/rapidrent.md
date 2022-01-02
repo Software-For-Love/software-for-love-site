@@ -13,7 +13,7 @@ tags:
   - Google
   - Facebook
   - spreadinglovethroughsoftware
-image: images/ess-website.png
+image: images/rapidrent.png
 image_alt: RapidRent
 excerpt: >-
   Creating a renting platform from scratch
@@ -44,6 +44,6 @@ The project was delivered to the client using Github with documentation on how t
 
 Once RapidRent goes live with their product we will update this blog post with a link to the site so you can check them out! You can also follow us on social media (our links in the bottom right corner) to stay in the loop about this project.
 
-#### Community Impact
+## Community Impact
 
 Software for love acknowledges that many indigenous nations have a long-standing relationship with the territories upon where software for love was founded. Ottawa is a traditional territory of the Algonquin people. SFL is grateful to be present on this territory and we acknowledge the troublesome history Canada has with indigenous people nationwide. We are still continuously working on developing a land acknowledgment that is holistic and impactful, instead of being performative. This means supporting our indigenous community and uplifting Indigenous voices through our work. As we continue on our mission of _#spreadinglovethroughsoftware_, it is equally important to spread awareness in our communities. With this project we were able to support and donate to the [Canadian Roots Exchange (CRE)](https://canadianroots.ca/), a non profit organization dedicated to improving Indigenous and non-Indigenous relationships through a Youth-led approach in order to facilitate dialogue and strengthen relationships.
