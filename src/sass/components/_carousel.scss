@@ -45,3 +45,9 @@
   right: 0px !important;
   transform: translate(50%, -50%) !important;
 }
+/* IOS smoothness scroll effect */
+@media (max-width: 600px) {
+  .flickity-prev-next-button {
+    -webkit-overflow-scrolling: touch;
+  }
+}
