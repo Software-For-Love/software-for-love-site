@@ -10,7 +10,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@babel/runtime": "^7.16.3",
+    "@babel/runtime": "^7.16.5",
     "@stackbit/gatsby-plugin-menus": "0.0.4",
     "chokidar": "^3.5.2",
     "antd": "^4.17.3",
