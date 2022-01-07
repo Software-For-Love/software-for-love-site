@@ -42,10 +42,10 @@ export default class VolunteersForm extends React.Component {
 
     handleSubmit = (event) => {
       event.preventDefault();
-      if(this.state.filesUploaded.length < 0){
+      /*if(this.state.filesUploaded.length < 0){
         console.log("No file uploaded")
         }
-      else{
+      else{*/
     
         const form = event.target;
         /*const resumeFormData = new FormData();
@@ -61,7 +61,7 @@ export default class VolunteersForm extends React.Component {
             //"resume-file":resumeFormData
           })
         }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
-      }
+      //}
     }
 
     render() {
