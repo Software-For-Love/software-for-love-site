@@ -7,9 +7,11 @@ import SectionActions from './SectionActions';
 import DragDropComponent from './DragDropComponent';
 
 function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
+  const formData = new FormData();
+  Object.keys(data).forEach((k)=>{
+    formData.append(k,data[k])
+  });
+  return formData
 }
 
 
@@ -18,9 +20,9 @@ export default class VolunteersForm extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = { 
+      this.state = {
         minimumSelection: false,
-        filesUploaded: []
+        resume: []
       }
     }
 
@@ -35,32 +37,33 @@ export default class VolunteersForm extends React.Component {
     }
 
     handleOnDrop = (acceptedFiles) =>{
-      this.setState({filesUploaded:acceptedFiles[0]}
+      let files = acceptedFiles;
+      console.log(files[0]);
+      this.setState({resume:files[0]}
         );
     }
 
 
     handleSubmit = (event) => {
-      event.preventDefault();
       /*if(this.state.filesUploaded.length < 0){
         console.log("No file uploaded")
         }
       else{*/
     
         const form = event.target;
-        /*const resumeFormData = new FormData();
-        resumeFormData.append('resume-file', this.state.filesUploaded[0])
-        console.log(resumeFormData)*/
+        const data = {"form-name": form.getAttribute("name"),
+                      "subject": "A potential volunteer wants to join SFL",
+                      ...this.state,}
+        console.log(data);
+        console.log(encode(data));
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "multipart/form-data" },
-          body: encode({
-            "form-name": form.getAttribute("name"),
-            "subject": "A potential volunteer wants to join SFL",
-            ...this.state,
-            //"resume-file":resumeFormData
-          })
-        }).then(() => navigate(form.getAttribute('action'))).catch(error => alert(error))
+          body: encode({data})
+        }).then(() => navigate(form.getAttribute('action')))
+        .catch(error => alert(error))
+
+        event.preventDefault();
       //}
     }
 
@@ -196,11 +199,11 @@ export default class VolunteersForm extends React.Component {
                               )}
                           </div>
                           
-                          {/*<div className="form-group">
+                          <div className="form-group">
                             <label id="resume_label">Share your resume with us {required_star}</label>
                             <DragDropComponent id="resume" name="resume" onDrop={this.handleOnDrop} />
                             
-                          </div>*/}
+                          </div>
 
                           <div className="form-group">
                             <label id="linkedin_label" htmlFor="linkedin">LinkedIn </label>
