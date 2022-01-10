@@ -109,7 +109,7 @@ export default class FeaturesSection extends React.Component {
                 >
                   <div className="carousel-wrapper">
                     <Carousel items={feature["carousels"]["items"]}
-                      flickityOptions={{ wrapAround: true, draggable: false, pageDots=false }}
+                      flickityOptions={{ wrapAround: true, draggable: false, pageDots: false }}
                       carouselTemplate={ ()=> carouselTemplate() }
                     >
                     
