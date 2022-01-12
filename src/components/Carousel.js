@@ -14,9 +14,11 @@ export default class Carousel extends React.Component {
       <>
         <section class="carousel-box-container">
           <Flickity options={flickityOptions}>
-            {items.map((item) => {
+            {items.map((item, index) => {
               return (
-                <div className="carousel-cell">{carouselTemplate(item)}</div>
+                <div key={index} className="carousel-cell">
+                  {carouselTemplate(item)}
+                </div>
               );
             })}
           </Flickity>
