@@ -6,6 +6,6 @@ sections:
       align: center
     - type: blog_feed_section
       show_recent: false
-      author: src/data/team/Software-Team/dharitri-dixit.yaml
+      author: src/data/team/Executive-Team/dharitri-dixit.yaml
 template: advanced
 ---

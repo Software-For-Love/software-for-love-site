@@ -2,7 +2,7 @@
  * Site Header
  */
 .site-header {
-    border-bottom: 1px solid $color-border;
+    background-color: $color-inverse-bg;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
 }
@@ -49,9 +49,11 @@
     }
 
     .navbar__item {
-        margin-left: 3rem;
+        margin-left: 8rem;
         white-space: nowrap;
         text-align: center;
+        font-size: 14px;
+        color: #fff !important;
     }
 
     .js-menu-toggle {
@@ -132,6 +134,7 @@
         }
 
         .btn {
+            color: aliceblue;
             padding-left: 0.75rem;
             padding-right: 0.75rem;
             width: 100%;
