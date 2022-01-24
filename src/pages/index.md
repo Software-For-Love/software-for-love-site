@@ -70,7 +70,7 @@ sections:
         align: center
         actions:
           - label: Our Year In Review
-            url: /
+            url: /assets/software-for-love-impact-report.pdf
             style: secondary
 template: advanced
 ---
