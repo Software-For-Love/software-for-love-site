@@ -66,5 +66,11 @@ sections:
           - label: Apply today
             url: /volunteers
             style: primary
+      - title: Impact Report
+        align: center
+        actions:
+          - label: Our Year In Review
+            url: /
+            style: secondary
 template: advanced
 ---
