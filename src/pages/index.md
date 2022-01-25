@@ -66,5 +66,11 @@ sections:
           - label: Apply today
             url: /volunteers
             style: primary
+      - title: Impact Report
+        align: center
+        actions:
+          - label: 2021 in Review
+            url: /assets/software-for-love-impact-report.pdf
+            style: secondary
 template: advanced
 ---
