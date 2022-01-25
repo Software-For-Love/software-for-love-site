@@ -69,7 +69,7 @@ sections:
       - title: Impact Report
         align: center
         actions:
-          - label: Our Year In Review
+          - label: 2021 in Review
             url: /assets/software-for-love-impact-report.pdf
             style: secondary
 template: advanced
