@@ -8,11 +8,20 @@ import { classNames, toStyleObj, withPrefix } from "../utils";
 import SectionActions from "./SectionActions";
 
 export default class OrganizationForm extends React.Component {
-    state = { phone: "" };
+    state = { 
+        phone: "",
+        minimumSelectionHAU: false,
+    };
 
     handleOnChange = (value) => {
         this.setState({ phone: value }, () => {});
     };
+
+    handleOnSelectHAU = (event) =>{
+        var checkbox = document.querySelectorAll('#'+event.target.id);
+        var checkedMinimum = (Array.prototype.slice.call(checkbox).some(x => x.checked));
+        this.setState({ [event.target.name]: event.target.value, minimumSelectionHAU:checkedMinimum });
+      }
 
     render() {
         let section = _.get(this.props, "section", null);
@@ -28,6 +37,16 @@ export default class OrganizationForm extends React.Component {
             _.get(background, "background_image_repeat", null) || "no-repeat";
         let starStyle = { color: "red" };
         let required_star = <span style={starStyle}>*</span>;
+        let heard = [
+            "Search Engine",
+            "LinkedIn",
+            "Facebook",
+            "Twitter",
+            "Instagram",
+            "Email",
+            "Word of Mouth",
+            "Other"
+        ]
 
         function encode(data) {
             return Object.keys(data)
@@ -285,6 +304,18 @@ export default class OrganizationForm extends React.Component {
                                         onChange={this.handleOnChange}
                                         required
                                     />
+                                </div>
+
+                                <div className="form-group">
+                                    <label id="heard-about-us" html="heard">
+                                        How did you hear about Software For Love? (Select all that apply) {required_star} 
+                                    </label>
+                                    {heard.map((heard_option, index) =>
+                                        <div className="form-checkbox" key={index}>
+                                            <label id={heard_option} htmlFor={heard_option}>{heard_option}</label>
+                                            <input aria-labelledby={heard_option} type="checkbox" name={heard_option} id="heard_about_us_option" onChange={this.handleOnSelectHAU} required={!this.state.minimumSelectionHAU} />
+                                        </div>
+                                    )}
                                 </div>
 
                                 <div className="form-group">
