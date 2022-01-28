@@ -7,6 +7,7 @@ import {withPrefix} from '../utils';
 import '../sass/main.scss';
 import Header from './Header';
 import Footer from './Footer';
+import Action from './Action';
 
 import CookieConsent from 'react-cookie-consent';
 
@@ -23,6 +24,17 @@ export default class Body extends React.Component {
                     <link rel="icon" href={withPrefix(_.get(this.props, 'pageContext.site.siteMetadata.favicon', null))}/>
                     )}
                 </Helmet>
+                <CookieConsent
+                    location="Top"
+                    buttonText="Close"
+                    cookieName="impact-report"
+                    font-family = "Segoe UI"
+                    style={{ background: "#89c5cc", position: "sticky", top: "0px" }}
+                    buttonStyle={{ background: "#FFFFFF", color:"#394A74", fontSize: "1em", borderRadius: '5px', padding: "0.625em 1.5em" }}>
+                    <div className="inverse">
+                        <Action action={{ label: '2021 in Review', url: "/assets/software-for-love-impact-report.pdf", style: "secondary" }}/>
+                    </div>
+                </CookieConsent>
                 <div id="site-wrap" className="site">
                   <Header {...this.props} />
                   <main id="content" className="site-content">
