@@ -2,9 +2,9 @@
  * Site Footer
  */
 .site-footer {
-    border-top: 1px solid $color-border;
-    padding-bottom: 1.5em;
-    padding-top: 1.5em;
+    background-color: $color-inverse-bg;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
     text-align: center;
 
     .btn {
@@ -17,15 +17,17 @@
     margin-bottom: 1.5rem;
 
     li {
+        color: #fff;
         font-size: 0.875rem;
         margin-bottom: 0.375rem;
     }
 }
 
 .site-footer__copyright {
-    font-size: 0.8125em;
+    font-size: 0.86rem;
     width: 100%;
-    text-align: center;
+    color: #fff;
+    text-align: left;
     & > span,
     & > a {
         margin-right: 5px;

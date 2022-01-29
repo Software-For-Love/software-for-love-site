@@ -8,6 +8,7 @@ import _ from 'lodash';
  * @return {Object}
  */
 export default function getPage(pages, urlPath) {
+    
     urlPath = _.trim(urlPath, '/');
     urlPath = urlPath.replace(/^src\/pages\//, '');
 
