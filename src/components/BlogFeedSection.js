@@ -22,11 +22,11 @@ export default class BlogFeedSection extends React.Component {
         }
         return (
             <section className="section section--posts">
-              {_.get(section, 'title', null) && (
+              {/* {_.get(section, 'title', null) && (
               <div className="container container--md align-center">
                 <h2 className="section__title">{_.get(section, 'title', null)}</h2>
               </div>
-              )}
+              )} */}
               <div className="container container--lg">
                 <div className="flex flex--col-3">
                   {_.map(posts_sorted, (post, post_idx) => {
