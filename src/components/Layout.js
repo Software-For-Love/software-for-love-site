@@ -10,6 +10,7 @@ import Footer from './Footer';
 import Action from './Action';
 
 import CookieConsent from 'react-cookie-consent';
+import {CloseOutlined} from '@ant-design/icons';
 
 export default class Body extends React.Component {
     render() {
@@ -26,11 +27,11 @@ export default class Body extends React.Component {
                 </Helmet>
                 <CookieConsent
                     location="Top"
-                    buttonText="Close"
+                    ButtonComponent={CloseOutlined}
                     cookieName="impact-report"
                     font-family = "Segoe UI"
-                    style={{ background: "#89c5cc", position: "sticky", top: "0px" }}
-                    buttonStyle={{ background: "#FFFFFF", color:"#394A74", fontSize: "1em", borderRadius: '5px', padding: "0.625em 1.5em" }}>
+                    style={{ background: "#394A74", position: "sticky", top: "0px", alignItems: "center" }}
+                    buttonStyle={{ background: "none", color:"white", fontSize: "1.25em" }}>
                     <div className="inverse">
                         <Action action={{ label: '2021 in Review', url: "/assets/software-for-love-impact-report.pdf", style: "secondary" }}/>
                     </div>
