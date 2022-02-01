@@ -36,7 +36,7 @@ export default class Body extends React.Component {
                     declineButtonText="Decline"
                     font-family = "Segoe UI"
                     cookieName="gatsby-gdpr-google-analytics"
-                    style={{ background: "#8CC8CA" }}
+                    style={{ background: "#394A74" }}
                     buttonStyle={{ background: "#FFFFFF", color:"#394A74", fontSize: "1em", borderRadius: '5px', padding: "0.625em 1.5em" }}>
                     We value your privacy. We use cookies to give you the best online experience and to better understand our visitors. To find out more, please read our <Link to="/terms/"> privacy policy</Link>.
                 </CookieConsent>
