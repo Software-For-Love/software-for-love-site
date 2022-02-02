@@ -42,14 +42,14 @@ sections:
         align: left
         carousels:
           items:
-            - company: uBionics
+            - company: uBionics CTS
               author: Tharaka Abeykoon
-              relation: Worker
+              relation: Founder
               testimonial: Software For Love was given fairly tight deadlines, to which they followed and produced quality work. The weekly meetings were helpful for both parties to update designs / get any questions answered. The team was very responsive, and gave their feedback/opinions for specific website details which was very helpful as well during the 1.5-2 month process. Overall each page of the website was done well, and uOttawa Bionics CTS loves their page!
 
             - company: ESS
               author: Kaleigh Ionadi
-              relation: Worker
+              relation: VP Comm
               testimonial: Software For Love was very pleasant to work with and produced a quality product for our team at ESS to use for many years to come.
 
         image_position: right
