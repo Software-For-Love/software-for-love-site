@@ -7,8 +7,10 @@ import {withPrefix} from '../utils';
 import '../sass/main.scss';
 import Header from './Header';
 import Footer from './Footer';
+import Action from './Action';
 
 import CookieConsent from 'react-cookie-consent';
+import {CloseOutlined} from '@ant-design/icons';
 
 export default class Body extends React.Component {
     render() {
@@ -23,6 +25,17 @@ export default class Body extends React.Component {
                     <link rel="icon" href={withPrefix(_.get(this.props, 'pageContext.site.siteMetadata.favicon', null))}/>
                     )}
                 </Helmet>
+                <CookieConsent
+                    location="Top"
+                    ButtonComponent={CloseOutlined}
+                    cookieName="impact-report"
+                    font-family = "Segoe UI"
+                    style={{ background: "#394A74", position: "sticky", top: "0px", alignItems: "center" }}
+                    buttonStyle={{ background: "none", color:"white", fontSize: "1.25em" }}>
+                    <div className="inverse">
+                        <Action action={{ label: '2021 in Review', url: "/assets/software-for-love-impact-report.pdf", style: "secondary" }}/>
+                    </div>
+                </CookieConsent>
                 <div id="site-wrap" className="site">
                   <Header {...this.props} />
                   <main id="content" className="site-content">
