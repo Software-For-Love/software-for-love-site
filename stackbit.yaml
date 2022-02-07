@@ -273,6 +273,7 @@ models:
                       - timeline_section
                       - cta_section
                       - features_section
+                      - new_features_section
                       - general_form
                       - hero_section
                       - organizations_form
@@ -416,6 +417,47 @@ models:
                   type: model
                   models:
                       - feature
+             - type: object
+              name: background
+              label: Background Configuration
+              fields:
+                  - type: enum
+                    name: background_color
+                    label: Background Color
+                    options:
+                        - white
+                        - gray
+                        - blue
+                        - mintgreen
+                    default: white
+                    description: The background color of the section
+                  - type: image
+                    name: background_image
+                    label: Background Image
+                    description: The image displayed in the background of the section
+                  - type: number
+                    name: background_image_opacity
+                    label: Background Image Opacity
+                    description: >-
+                        An integer between 0 and 100. A lower value makes the image more
+                        transparent.
+                  - type: enum
+                    name: background_image_size
+                    label: Background Image Size
+                    options:
+                        - auto
+                        - contain
+                        - cover
+                    default: cover
+                    description: The size of the background image
+                  - type: enum
+                    name: background_image_repeat
+                    label: Background Image Repeat
+                    options:
+                        - repeat
+                        - no-repeat
+                    default: no-repeat
+                    description: Repeat the image to cover the whole area.
     hero_section:
         type: object
         label: Hero Section
@@ -506,6 +548,7 @@ models:
                         - no-repeat
                     default: no-repeat
                     description: Repeat the image to cover the whole area.
+                    
     team_section:
         type: object
         label: Team Section

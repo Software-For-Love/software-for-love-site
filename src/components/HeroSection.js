@@ -5,6 +5,7 @@ import { markdownify } from "../utils";
 import { classNames, toStyleObj, withPrefix } from "../utils";
 import SectionActions from "./SectionActions";
 
+
 export default class HeroSection extends React.Component {
     render() {
         let section = _.get(this.props, "section", null);
@@ -132,3 +133,4 @@ export default class HeroSection extends React.Component {
         );
     }
 }
+

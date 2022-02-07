@@ -19,6 +19,7 @@
 }
 
 .bg-blue,
+.bg-light,
 .bg-gray,
 .bg-mintgreen,
 .has-bg {
@@ -28,6 +29,9 @@
 
 .bg-blue {
     background-color: $color-inverse-bg;
+}
+.bg-light{
+    background-color: $color-inverse-light;
 }
 
 .bg-gray {

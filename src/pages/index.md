@@ -22,8 +22,16 @@ sections:
       background_image_opacity: 20
       background_image_size: auto
       background_image_repeat: repeat
+
   - type: features_section
+    has_background: true
+    background:
+          background_color: white
+          background_image_opacity: 20
+          background_image_size: auto
+          background_image_repeat: repeat
     title: About Us
+    
     features:
       - title: What We Do
         content: >-
@@ -55,7 +63,17 @@ sections:
           url: /organizations
           style: secondary
 
+  - type: features_section
+    has_background: true
+    background:
+          background_color: light
+          background_image_opacity: 20
+          background_image_size: auto
+          background_image_repeat: repeat
+
+    features:
       - title: Join The Team
+
         content: >-
           Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We actively recruit new talent for marketing, finance, engineering, and more.
         align: left
@@ -65,6 +83,8 @@ sections:
         actions:
           - label: Apply today
             url: /volunteers
-            style: primary
+            style: secondary
+
+    
 template: advanced
 ---
