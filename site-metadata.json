@@ -7,6 +7,11 @@
     "has_nav": true,
     "nav_links": [
       {
+        "label": "Projects",
+        "url": "/projects",
+        "style": "link"
+      },
+      {
         "label": "Organizations",
         "url": "/organizations",
         "style": "link"
