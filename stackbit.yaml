@@ -342,8 +342,8 @@ models:
                         name: string
                         label: Project Image
                       - type: string
-                        name: readMore
-                        label: Read More Link
+                        name: redirect
+                        label: Link to projects page
                       - type: list
                         name: tags
                         label: Project Tags
