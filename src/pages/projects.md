@@ -9,7 +9,7 @@ sections:
         - title: uBionics
           description: >-
             Creating a front-end focused informational site in less than 2 months. See how we used Javascript and other platforms while being immersed in an agile environment to accomplish this. The site was created for the uOttawa uBionics team.
-          image: /images/ubionics-logo.png
+          image: /images/ubionics-logo.svg
           redirect: /blog/bionics
           tags:
             - React
@@ -28,7 +28,7 @@ sections:
         - title: RapidRent
           description: >-
             Read our experience working with a startup, RapidRent,  to create a full stack rental application. We used many different APIs like Google, Facebook and Stripe to implement crucial features.
-          image: /images/rapidrent-logo.png
+          image: /images/rapidrent-logo.svg
           redirect: /blog/rapidrent
           tags:
             - Angular 
