@@ -37,6 +37,11 @@
   border-radius: 50%;
 }
 
+.flickity-button:hover {
+  color: #3b4b71 !important;
+  cursor: pointer !important;
+}
+
 .flickity-prev-next-button.previous {
   left: 0px !important;
   transform: translate(-90%, -50%) !important;
