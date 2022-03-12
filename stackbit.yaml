@@ -602,6 +602,9 @@ models:
                   type: model
                   models:
                       - action
+            - type: string
+              name: background-color
+              label: Background Color
     action:
         type: object
         label: Action

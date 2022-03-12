@@ -66,6 +66,7 @@ sections:
           - label: Apply today
             url: /volunteers
             style: primary
+        background-color: gray
       - title: Impact Report
         align: center
         actions:
