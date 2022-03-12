@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import {graphql} from 'gatsby';
+import Carousel from '../components/Carousel';
 
 import components, {Layout} from '../components/index';
 
