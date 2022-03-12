@@ -18,7 +18,7 @@ sections:
         - title: Engineering Students Society
           description: >-
             When your end client needs an evolving site that's editable. In this project, we developed a site for the Engineering Students Society (ESS) at uOttawa. Check out the details of this project which resulted in a bilingual and editable site.
-          image: /images/ess-logo.svg
+          image: /images/site-drawing.svg
           redirect: /blog/uottawaess
           tags:
             - React
