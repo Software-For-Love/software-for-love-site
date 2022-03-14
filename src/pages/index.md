@@ -2,7 +2,7 @@
 title: Home
 sections:
   - type: hero_section
-    title: Software for Love
+    title: TESTING
     subtitle: >-
       Software For Love is a non-profit organization that focuses on providing software solutions. We are a team of young professionals who are passionate about technology and seek to give back to our community.
     actions:
