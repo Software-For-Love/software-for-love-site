@@ -2,7 +2,7 @@
 title: Home
 sections:
   - type: hero_section
-    title: Hello, we are Software For Love
+    title: Hello, we are Software For Love!
     subtitle: >-
       Spreading Love Through Software!
     actions:
