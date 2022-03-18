@@ -14,6 +14,7 @@ import Footer from "./Footer";
 import GeneralForm from "./GeneralForm";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
+import ImageGroup from "./ImageGroup";
 import OrganizationsForm from "./OrganizationsForm";
 import SectionActions from "./SectionActions";
 import TeamSection from "./TeamSection";
@@ -37,6 +38,7 @@ export {
     GeneralForm,
     Header,
     HeroSection,
+    ImageGroup,
     OrganizationsForm,
     SectionActions,
     TeamSection,

@@ -664,6 +664,16 @@ models:
               name: image
               label: Image
               description: The image of the feature
+            - type: list
+              name: image_group
+              description: Group of images of the feature
+              items:
+                - type: object
+                  fields:
+                    - type: string
+                      name: image
+                    - type: string
+                      name: image_alt
             - type: string
               name: image_alt
               label: Image Alt Text
