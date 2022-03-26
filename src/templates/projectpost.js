@@ -6,7 +6,6 @@ import {graphql} from 'gatsby';
 
 import {Layout} from '../components/index';
 import {withPrefix, getData, Link, htmlToReact} from '../utils';
-import BlogPostCategories from '../components/BlogPostCategories';
 import BlogPostTags from '../components/BlogPostTags';
 
 // this minimal GraphQL query ensures that when 'gatsby develop' is running,
