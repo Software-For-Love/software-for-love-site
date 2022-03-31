@@ -30,11 +30,11 @@ export default class Body extends React.Component {
                     ButtonComponent={CloseOutlined}
                     cookieName="impact-report"
                     font-family = "Segoe UI"
-                    display = "flex"
-                    alignItems = "center"
-                    style={{ background: "#394A74", position: "sticky", top: "0px" }}
-                    buttonStyle={{ background: "none", color:"white", fontSize: "1.25em" }}>
-                    <div className="inverse">
+                    display= "flex"
+                    align-items = "center"
+                    style={{ background: "#394A74", position: "sticky", top: "0px"}}
+                    buttonStyle={{ background: "none", color:"white", fontSize: "1.25em"}}>
+                    <div className="inverse" style={{display: "flex", justifyContent: "center"}}>
                         <Action action={{ label: '2021 in Review', url: "/assets/software-for-love-impact-report.pdf", style: "secondary" }}/>
                     </div>
                 </CookieConsent>
