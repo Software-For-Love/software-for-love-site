@@ -24,6 +24,7 @@ export default class ImageGroup extends React.Component {
                 }}
               onMouseOver={() => {this.setState({ hovered_image: image_idx })}}
               onMouseLeave={() => {this.setState({ hovered_image: null })}}
+              key={image_idx}
             >
               <img
                 src={withPrefix(_.get(image_info, "image", null))}

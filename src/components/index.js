@@ -8,6 +8,7 @@ import Carousel from "./Carousel"
 import ContactSection from "./ContactSection";
 import ContentSection from "./ContentSection";
 import CtaSection from "./CtaSection";
+import DonationForm from './DonationForm';
 import FaqSection from "./FaqSection";
 import FeaturesSection from "./FeaturesSection";
 import Footer from "./Footer";
@@ -32,6 +33,7 @@ export {
     ContentSection,
     CtaSection,
     Carousel,
+    DonationForm,
     FaqSection,
     FeaturesSection,
     Footer,
@@ -59,6 +61,7 @@ export default {
     ContentSection,
     CtaSection,
     Carousel,
+    DonationForm,
     FaqSection,
     FeaturesSection,
     Footer,

@@ -273,6 +273,7 @@ models:
                       - timeline_section
                       - cta_section
                       - features_section
+                      - donation_form
                       - general_form
                       - hero_section
                       - organizations_form
@@ -313,6 +314,9 @@ models:
     contact_section:
         type: object
         label: Contact Section
+    donation_form:
+      type: object
+      label: Donation Form
     general_form:
         type: object
         label: General Form

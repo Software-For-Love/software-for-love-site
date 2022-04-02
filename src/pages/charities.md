@@ -27,6 +27,6 @@ sections:
           - image: images/CRE Logo.png
             image_alt: Canadian Roots Exchange Logo
         image_position: right
-  - type: cta_section
+  - type: donation_form
 template: advanced
 ---
