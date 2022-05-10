@@ -13,6 +13,8 @@ import Footer from "./Footer";
 import GeneralForm from "./GeneralForm";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
+import ProjectFeedSection from "./ProjectFeedSection";
+import ProjectPostTags from "./ProjectPostTags";
 import OrganizationsForm from "./OrganizationsForm";
 import SectionActions from "./SectionActions";
 import TeamSection from "./TeamSection";
@@ -37,6 +39,8 @@ export {
     Header,
     HeroSection,
     OrganizationsForm,
+    ProjectFeedSection,
+    ProjectPostTags,
     SectionActions,
     TeamSection,
     TimelineSection,
@@ -61,6 +65,8 @@ export default {
     Header,
     HeroSection,
     OrganizationsForm,
+    ProjectFeedSection,
+    ProjectPostTags,
     SectionActions,
     TeamSection,
     TimelineSection,

@@ -1,10 +1,14 @@
 ---
 title: uBionics Website
 date: "2021-07-01"
-author: 
-    - src/data/team/Software-Team/dharitri-dixit.yaml
+author: src/data/team/Executive-Team/dharitri-dixit.yaml
 categories:
     - src/data/categories/project.yaml
+
+projectTags:
+    - React
+    - Gatsby.JS
+    - Netlify
 
 tags:
     - React
@@ -13,21 +17,29 @@ tags:
 
 image: images/ubionics-blogImg.png
 image_alt: uBionics placeholder image
+intro: The Carpal Tunnel Solutions team at uBionics at the University of Ottawa, are a student run team that is developing a wrist guard for those with Carpal Tunnel Syndrome (CTS). Their goal currently is to create a product that can be entered into clinical trials.
 
-header1: Services
-header2: Web Development and UI/UX
-header3: Deliverables
-header4: Responsive Website
+# header1: Services
+# header2: Web Development and UI/UX
+# header3: Deliverables
+# header4: Responsive Website
 
 buttontxt: Visit Site
 
-link: https://www.ctsbionics.com
+link: https://www.ctsbionics.com 
+# # sections:
+#     actions:
+#         - label: Visit Site
+#         url: https://www.ctsbionics.com
+#         style: secondary
 
-intro: The Carpal Tunnel Solutions team at uBionics at the University of Ottawa, are a student run team that is developing a wrist guard for those with Carpal Tunnel Syndrome (CTS). Their goal currently is to create a product that can be entered into clinical trials.
+
+
 excerpt: >-
     How we made the website for the uBionics organization!
 template: projectpost  
 ---
+
 ## Client
 
 The Carpal Tunnel Solutions team at uBionics at the University of Ottawa, are a student run team that is developing a wrist guard for those with Carpal Tunnel Syndrome (CTS). Their goal currently is to create a product that can be entered into clinical trials.
@@ -46,4 +58,4 @@ SFL dedicated a team of four developers and a project manager to create an ideal
 
 The site was developed under a tight deadline thanks to the commitment of the team. Each week the developers would meet twice and would meet once a week with the client to ensure constant communication and feedback throughout the project. As a result of the meetings, development could be done in an agile manner. As goals were set, they were implemented on a regular basis. Further, due to the client’s feedback, changes could be made alongside development preventing any major surprises or requests for changes at the end of the development cycle. It also ensured that the project satisfied the client’s demands. Once the client was completely satisfied with the project we began to execute the deployment of the site. The site was deployed using Netlify alongside the client, and handed over at completion.
 
-Check out the project: [uBionics Wesbite](https://www.ctsbionics.com/)
+Check out the project: [uBionics Website](https://www.ctsbionics.com/)
