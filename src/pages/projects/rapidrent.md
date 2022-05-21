@@ -4,6 +4,16 @@ date: "2021-12-23"
 author: src/data/team/Executive-Team/hrithik-shah.yaml
 categories:
   - src/data/categories/project.yaml
+
+projectTags:
+  - Angular
+  - Node.js
+  - MongoDB
+  - Express
+  - Stripe
+  - Google
+  - Facebook
+  - spreadinglovethroughsoftware
 tags:
   - Angular
   - Node.js
@@ -13,11 +23,12 @@ tags:
   - Google
   - Facebook
   - spreadinglovethroughsoftware
+  
 image: images/rapidrent.png
 image_alt: RapidRent
 excerpt: >-
   Creating a renting platform from scratch
-template: post
+template: projectpost
 ---
 
 ## RapidRent: a new take on renting
