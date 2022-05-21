@@ -258,8 +258,8 @@ models:
     projectpost:
         type: page
         urlPath: "/projects/{slug}"
-        label: Project Post
-        layout: projects post
+        label: projectpost
+        layout: projectpost
         folder: projects
         exclude:
             - index.md
