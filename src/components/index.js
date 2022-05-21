@@ -4,9 +4,11 @@ import BlogFeedSection from "./BlogFeedSection";
 import BlogPostCategories from "./BlogPostCategories";
 import BlogPostFeedItem from "./BlogPostFeedItem";
 import BlogPostTags from "./BlogPostTags";
+import Carousel from "./Carousel"
 import ContactSection from "./ContactSection";
 import ContentSection from "./ContentSection";
 import CtaSection from "./CtaSection";
+import DonationForm from './DonationForm';
 import FaqSection from "./FaqSection";
 import FeaturesSection from "./FeaturesSection";
 import Footer from "./Footer";
@@ -15,13 +17,13 @@ import Header from "./Header";
 import HeroSection from "./HeroSection";
 import ProjectFeedSection from "./ProjectFeedSection";
 import ProjectPostTags from "./ProjectPostTags";
+import ImageGroup from "./ImageGroup";
 import OrganizationsForm from "./OrganizationsForm";
 import SectionActions from "./SectionActions";
 import TeamSection from "./TeamSection";
 import TimelineSection from "./TimelineSection";
 import VolunteersForm from "./VolunteersForm";
 import Layout from "./Layout";
-
 export {
     Action,
     BlogFeedItemFilter,
@@ -32,12 +34,15 @@ export {
     ContactSection,
     ContentSection,
     CtaSection,
+    Carousel,
+    DonationForm,
     FaqSection,
     FeaturesSection,
     Footer,
     GeneralForm,
     Header,
     HeroSection,
+    ImageGroup,
     OrganizationsForm,
     ProjectFeedSection,
     ProjectPostTags,
@@ -47,6 +52,7 @@ export {
     VolunteersForm,
     Layout,
 };
+    
 
 export default {
     Action,
@@ -58,6 +64,8 @@ export default {
     ContactSection,
     ContentSection,
     CtaSection,
+    Carousel,
+    DonationForm,
     FaqSection,
     FeaturesSection,
     Footer,

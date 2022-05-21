@@ -10,12 +10,12 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@ant-design/icons": "^4.7.0",
-    "@babel/runtime": "^7.16.3",
+    "@babel/runtime": "^7.16.5",
     "@stackbit/gatsby-plugin-menus": "0.0.4",
-    "antd": "^4.17.3",
     "chokidar": "^3.5.2",
+    "antd": "^4.17.4",
     "classnames": "^2.3.1",
+    "flickity": "^2.3.0",
     "fs-extra": "^7.0.1",
     "gatsby": "2.22.17",
     "gatsby-plugin-gdpr-cookies": "^2.0.8",
@@ -34,6 +34,7 @@
     "react": "^16.14.0",
     "react-cookie-consent": "^6.4.1",
     "react-dom": "^16.14.0",
+    "react-flickity-component": "^3.6.2",
     "react-helmet": "^5.2.0",
     "react-html-parser": "^2.0.2",
     "react-phone-number-input": "^3.1.44",

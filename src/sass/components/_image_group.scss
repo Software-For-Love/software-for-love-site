@@ -1,0 +1,12 @@
+.image-group-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-group-media {
+  transition: opacity 0.3s ease-in-out;
+
+  padding: 20px;
+}

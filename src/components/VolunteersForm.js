@@ -73,18 +73,11 @@ export default class VolunteersForm extends React.Component {
       let starStyle = {color: "red"};
       let required_star = <span style={starStyle}>*</span>
       let interests = [
-        "Marketing",
-        "Partnerships and Business Development",
-        "Finance",
-        "HR and Culture",
+        "Marketing Content Creation",
+        "Marketing Analysis",
+        "Business Development",
         "Software Development",
-        //"Front-end Engineering",
-        //"Back-end Engineering",
-        "Data Science",
-        "Project Management",
-        //"UI/UX and Design",
-        "Graphic Design"
-        //"DevOps"
+        "Software Project Management"
       ]
       let heard = [
         "Search Engine",

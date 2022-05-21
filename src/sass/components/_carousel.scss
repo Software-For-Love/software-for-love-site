@@ -1,0 +1,53 @@
+.carousel-box-container {
+  margin: 0 auto;
+  width: 120% !important;
+
+  height: 100%;
+  position: relative;
+  float: none;
+}
+.carousel-cell {
+  width: 76%;
+  height: 230px;
+  border: 1px solid #e8edf3;
+
+  margin: 0 8px 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.25);
+
+  border-radius: 3px;
+}
+
+/* --- default flickity button styles --- */
+.flickity-button {
+  position: absolute;
+  background: none !important;
+  border: none;
+  color: #3b4b71 !important;
+}
+
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+  top: 50%;
+  width: 25px !important;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.flickity-prev-next-button.previous {
+  left: 0px !important;
+  transform: translate(-50%, -50%) !important;
+}
+.flickity-prev-next-button.next {
+  right: 0px !important;
+  transform: translate(50%, -50%) !important;
+}
+/* IOS smoothness scroll effect */
+@media (max-width: 600px) {
+  .flickity-prev-next-button {
+    -webkit-overflow-scrolling: touch;
+  }
+}

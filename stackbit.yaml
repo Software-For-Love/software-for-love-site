@@ -347,6 +347,7 @@ models:
                       - timeline_section
                       - cta_section
                       - features_section
+                      - donation_form
                       - general_form
                       - hero_section
                       - organizations_form
@@ -423,6 +424,9 @@ models:
     contact_section:
         type: object
         label: Contact Section
+    donation_form:
+      type: object
+      label: Donation Form
     general_form:
         type: object
         label: General Form
@@ -461,6 +465,31 @@ models:
                   type: model
                   models:
                       - panel
+    # carousel_section:
+    #     type: object
+    #     label: Features Section
+    #     labelField: title
+    #     fields:
+    #         - type: string
+    #           name: title
+    #           label: Title
+    #           description: The title of the section
+    #         - type: list
+    #           name: features
+    #           label: Features
+    #           items:
+    #               type: model
+    #               name: model
+    #               models:
+    #                   - feature
+    #         - type: carousel
+    #           name: carousel
+    #           label: Carousel
+    #           carousel:
+    #               type: model
+    #               models:
+    #                   - carousel
+
       timeline_section:
         type: object
         label: Timeline Section
@@ -526,6 +555,38 @@ models:
                   type: model
                   models:
                       - feature
+            - type: enum
+              name: align
+              label: Align
+              options:
+                  - left
+                  - right
+                  - center
+              default: left
+              description: The alignment of the text content
+            # - type: image
+            #   name: image
+            #   label: Image
+            #   description: The image of the section
+            # - type: string
+            #   name: image_alt
+            #   label: Image Alt Text
+            #   description: The alt text of the image
+            # - type: enum
+            #   name: image_position
+            #   label: Image Position
+            #   options:
+            #       - left
+            #       - right
+            #   default: left
+            #   description: The position of the image
+            - type: list
+              name: carousels
+              label: Carousel
+              carousels:
+                  type: model
+                  models:
+                      - carousel
     hero_section:
         type: object
         label: Hero Section
@@ -645,6 +706,30 @@ models:
               name: content
               label: Content
               description: The text content of the feature
+    
+    carousel:
+      type: object
+        label: Carousel
+        labelField: title
+        fields:
+            - type: enum
+              name: image_position
+              label: Image Position
+              options:
+                  - left
+                  - right
+              default: left
+              description: The position of the image
+            - type: list
+              name: items
+              items:
+                  - type: string
+                    company: company
+                    author: author
+                    relation: relation
+                    testimonial: testimonial
+
+
     item:
       type: object
         label: Item
@@ -693,6 +778,16 @@ models:
               name: image
               label: Image
               description: The image of the feature
+            - type: list
+              name: image_group
+              description: Group of images of the feature
+              items:
+                - type: object
+                  fields:
+                    - type: string
+                      name: image
+                    - type: string
+                      name: image_alt
             - type: string
               name: image_alt
               label: Image Alt Text

@@ -2,11 +2,11 @@
 title: Home
 sections:
   - type: hero_section
-    title: Hello, we are Software For Love
+    title: Software for Love
     subtitle: >-
-      Spreading Love Through Software!
+      Software For Love is a non-profit organization that focuses on providing software solutions. We are a team of young professionals who are passionate about technology and seek to give back to our community.
     actions:
-      - label: Work With Us
+      - label: Partner With Us
         url: /organizations
         style: primary
       - label: Volunteer
@@ -27,34 +27,41 @@ sections:
     features:
       - title: What We Do
         content: >-
-          We create software products that make an organization’s processes more efficient and improve brand recognition.. Starting from any stage of development, SFL is dedicated to creating software solutions that are tailored to your organization. As a team of student volunteers, we aim to provide a variety of affordable technology services such as:
-          
-          * Web Development
-          
-          * Mobile Development
-          
-          * UI/UX Design
-          
-          * Data Analytics
-          
-          * Database Management
-          </ul>
-          
-          Our team consists of like-minded individuals who provide services ranging from UI/UX design, software development, and deployment. SFL is successfully delivering software solutions to many clients using a variety of software languages, platforms, and approaches.
-          <br/><br/>
-          We embrace transformation and innovation. We acknowledge the systemic challenges and barriers in using and implementing technology. We want to bring power and support to our communities to digitize their social impact.
-          <br/><br/>
-          
+          Our team is dedicated to providing a variety of services such as web development, UI/UX design, data analytics, and database management. We seek to develop software for clients in return for a charitable contribution, or a charitable service provided by an organization.
         align: left
         image: images/Humaaans1.png
         image_alt: Volunteers placeholder image
         image_position: right
-
         actions:
-        - label: Learn More
-          url: /organizations
-          style: secondary
+          - label: Partner With Us
+            url: /organizations
+            style: secondary
+      - title: Work With Us
+        content: >-
+          Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We recruit new talent for marketing, finance, engineering, and more.
+        align: left
+        carousels:
+          items:
+            - company: uBionics CTS
+              author: Tharaka Abeykoon
+              relation: Founder
+              testimonial: Software For Love was given tight deadlines which they followed through and the website was done very well. uBionics loves their work!
 
+            - company: ESS
+              author: Kaleigh Ionadi
+              relation: VP Comm
+              testimonial: Software For Love was very pleasant to work with and produced a quality product for our team at ESS to use for many years to come.
+            
+            - company: Santropol Roulant
+              author: Laura Marec
+              relation: Manager
+              testimonial: Software For Love is super professional and efficient, they are solution driven and adapt to the need of their clients.
+
+        image_position: right
+        actions:
+          - label: Work With Us
+            url: /organizations
+            style: secondary
       - title: Join The Team
         content: >-
           Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We actively recruit new talent for marketing, finance, engineering, and more.
@@ -65,12 +72,19 @@ sections:
         actions:
           - label: Apply today
             url: /volunteers
-            style: primary
-      - title: Impact Report
-        align: center
-        actions:
-          - label: 2021 in Review
-            url: /assets/software-for-love-impact-report.pdf
             style: secondary
+  - type: cta_section
+    # title: Join us!
+    # subtitle: >-
+    #   Apply as Partner or as a Volunteer to get involved with Software for Love
+    # actions:
+    #   - label: Organizations
+    #     url: /organizations
+    #     style: primary
+    #   - label: Volunteers
+    #     url: /volunteers
+    #     style: secondary
+    # has_background: true
+    # background_color: gray
 template: advanced
 ---
