@@ -17,27 +17,27 @@ export default class ProjectFeedSection extends React.Component {
         if (_.get(section1, 'author', null)) {section_author = getData(this.props.pageContext.site.data, _.get(section1, 'author', null));}
         if (_.get(section1, 'category', null)) {section_category = getData(this.props.pageContext.site.data, _.get(section1, 'category', null));}
         return (
-            <section className="section section--posts">
-              {_.get(section1, 'title', null) && (
-              <div className="container container--md align-center">
-                <h2 className="section__title">{_.get(section1, 'title', null)}</h2>
-              </div>)}
-              <div className="container container--lg">
-                <div className="flex flex--col-3">
-                  {_.map(posts_sorted, (post, post_idx) => {
-                      let is_post = false;
-                      if ((_.get(post, 'frontmatter.template', null) === 'post')) {
-                           is_post = true;}
-                      return (<React.Fragment key={post_idx + '.1'}>
-                        {(is_post && ((show_recent === false) || (post_count < recent_count))) && ((() => {
-                             post_count = post_count + 1;
-                            return (<ProjectFeedItemFilter ProjectPostFeedItem key={post_idx} {...this.props} project_feed_section={section1} post_page={post} section_author={section_author} section_category={section_category} />);
-                        })())}
-                      </React.Fragment>)
-                  })}
-                </div> 
-              </div>
-            </section>
-        );
+          <section className="section section--posts">
+            {_.get(section1, 'title', null) && (
+            <div className="container container--md align-center">
+              <h2 className="section__title">{_.get(section1, 'title', null)}</h2>
+            </div>)}
+            <div className="container container--lg">
+              <div className="flex flex--col-3">
+                {_.map(posts_sorted, (post, post_idx) => {
+                    let is_post = false;
+                    if ((_.get(post, 'frontmatter.template', null) === 'projectpost')) {
+                         is_post = true;}
+                    return (<React.Fragment key={post_idx + '.1'}>
+                      {(is_post && ((show_recent === false) || (post_count < recent_count))) && ((() => {
+                           post_count = post_count + 1;
+                          return (<ProjectFeedItemFilter ProjectPostFeedItem key={post_idx} {...this.props} project_feed_section={section1} post_page={post} section_author={section_author} section_category={section_category} />);
+                      })())}
+                    </React.Fragment>)
+                })}
+              </div> 
+            </div>
+          </section>
+      );
     }
 }
