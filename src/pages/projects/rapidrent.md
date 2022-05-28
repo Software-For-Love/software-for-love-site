@@ -9,11 +9,6 @@ projectTags:
   - Angular
   - Node.js
   - MongoDB
-  - Express
-  - Stripe
-  - Google
-  - Facebook
-  - spreadinglovethroughsoftware
 tags:
   - Angular
   - Node.js
@@ -26,14 +21,18 @@ tags:
   
 image: images/rapidrent.png
 image_alt: RapidRent
+intro: RapidRent is a startup based out of Ottawa working to simplify the renting process. The founders were inspired by the arduous renting process they faced as students. Finding a new apartment every year, sometimes every semester for co-op students is difficult and tiring. Scavenging through multiple sites like Kijiji, Rentals.ca and university-affiliated student housing sites is time consuming, and RapidRent decided to consolidate it.
+
+buttontxt: Visit Site
+
+link: https://www.rapidrent.io
+
 excerpt: >-
   Creating a renting platform from scratch
 template: projectpost
 ---
 
 ## RapidRent: a new take on renting
-
-RapidRent is a startup based out of Ottawa working to simplify the renting process. The founders were inspired by the arduous renting process they faced as students. Finding a new apartment every year, sometimes every semester for co-op students is difficult and tiring. Scavenging through multiple sites like Kijiji, Rentals.ca and university-affiliated student housing sites is time consuming, and RapidRent decided to consolidate it.
 
 Our team at SFL worked on creating a landing site which showcased the RapidRent product, a login experience that supports Google and Facebook log in, a subscription service handled using Stripe, and functionality related to renting a property.
 

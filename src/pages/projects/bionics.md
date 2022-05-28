@@ -26,7 +26,7 @@ intro: The Carpal Tunnel Solutions team at uBionics at the University of Ottawa,
 
 buttontxt: Visit Site
 
-link: https://www.ctsbionics.com 
+link: https://www.ctsbionics.com
 # # sections:
 #     actions:
 #         - label: Visit Site
