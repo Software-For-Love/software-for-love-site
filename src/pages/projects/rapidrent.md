@@ -25,7 +25,7 @@ intro: RapidRent is a startup based out of Ottawa working to simplify the rentin
 
 buttontxt: Visit Site
 
-link: https://www.rapidrent.io
+link: ./
 
 excerpt: >-
   Creating a renting platform from scratch

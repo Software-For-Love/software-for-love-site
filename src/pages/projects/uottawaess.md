@@ -23,7 +23,7 @@ image_alt: uOttawa ESS Website
 intro: The Engineering Students' Society of the University of Ottawa (ESS) is an organization run by students and for students. ESS' goal is to improve the Engineering Student Experience at uOttawa by providing resources and services to facilitate the lives of Engineering students. They also plan events where students get to network with professionals in the industry. as well as their peers from other Engineering schools in Canada. They advertise more of their work and core values on their website.
 
 buttontxt: Visit Site
-link: https://www.essaeg.ca
+link: ./
 
 
 
