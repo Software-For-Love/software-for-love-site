@@ -4,6 +4,12 @@ date: "2021-10-31"
 author: src/data/team/Software-Team/jean-loickandikandi.yaml
 categories:
     - src/data/categories/project.yaml
+
+projectTags:
+    - React
+    - Gatsby.JS
+    - Netlify
+
 tags:
     - React
     - Gatsby.JS
@@ -11,15 +17,20 @@ tags:
     - Ant Design
     - i18N
     - spreadinglovethroughsoftware
+
 image: images/ess-website.png
 image_alt: uOttawa ESS Website
+intro: The Engineering Students' Society of the University of Ottawa (ESS) is an organization run by students and for students. ESS' goal is to improve the Engineering Student Experience at uOttawa by providing resources and services to facilitate the lives of Engineering students. They also plan events where students get to network with professionals in the industry. as well as their peers from other Engineering schools in Canada. They advertise more of their work and core values on their website.
+
+buttontxt: Visit Site
+link: ./
+
+
+
 excerpt: >-
     How we made the website for the uOttawa ESS student government!
-template: post
+template: projectpost
 ---
-
-The Engineering Students' Society of the University of Ottawa (ESS) is an organization run by students and for students. ESS' goal is to improve the Engineering Student Experience at uOttawa by providing resources and services to facilitate the lives of Engineering students. They also plan events where students get to network with professionals in the industry. as well as their peers from other Engineering schools in Canada. They advertise more of their work and core values on their website.
-
 
 For the last couple of years, ESS had been maintaining their website using Wordpress. While it is a great content management system, it didn't give them enough flexibility to experiment with the design to make it look more modern. Software for Love reached out to the student organization with a proposal to revamp their website using modern frameworks. The goal was to create a maintainable product that meets the current Web UI standards. There were two core requirements to the project: 
 
