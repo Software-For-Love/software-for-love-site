@@ -1,8 +1,5 @@
-import _ from "lodash";
 import React from 'react';
-import { InputNumber, Space } from 'antd';
 import { Action } from './index';
-import { withPrefix } from "../utils";
 
 export default class DonationForm extends React.Component {
   constructor() {
@@ -10,6 +7,12 @@ export default class DonationForm extends React.Component {
     this.state = {
       amount: 0,
     };
+  }
+
+  handleSetAmount(amount) {
+    return () => {
+      this.setState({...this.state, amount})
+    }
   }
 
   render () {
@@ -34,46 +37,30 @@ export default class DonationForm extends React.Component {
               </h3>
               <form>
                 <div className="form-group" style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span onClick={() => this.setState({ amount: 1 })}>
+                  <span onClick={this.handleSetAmount(1)}>
                     <Action action={{ label: '$1', style: 'secondary' }} />
                   </span>
-                  <span onClick={() => this.setState({ amount: 5 })}>
+                  <span onClick={this.handleSetAmount(5)}>
                     <Action action={{ label: '$5', style: 'secondary' }} />
                   </span>
-                  <span onClick={() => this.setState({ amount: 10 })}>
+                  <span onClick={this.handleSetAmount(10)}>
                     <Action action={{ label: '$10', style: 'secondary' }} />
                   </span>
-                  <span onClick={() => this.setState({ amount: 20 })}>
+                  <span onClick={this.handleSetAmount(20)}>
                     <Action action={{ label: '$20', style: 'secondary' }} />
                   </span>
                 </div>
                 <div className="form-group">
                   <label htmlFor="amount">Enter Amount</label>
                   <div style={{position: 'relative'}}>
-                    <span style={{position: 'absolute', fontSize: '16px', top: '47.5%', transform: 'translateY(-50%)', left: '8px'}}>
+                    <span style={{position: 'absolute', fontSize: '16px', top: '50%', transform: 'translateY(-50%)', left: '8px'}}>
                       $
                     </span>
                     <input type="number" name="amount" id="amount" placeholder="Amount" value={this.state.amount} onChange={(event) => this.setState({ amount: event.target.value })} style={{width: '50%', paddingLeft: '20px  '}} required />
                   </div>
                 </div>
-                <div className="form-group">
-                  <label htmlFor="name">Name</label>
-                  <input type="text" name="name" id="name" placeholder="Name" />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email</label>
-                  <input type="text" name="email" id="email" placeholder="Email" />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="card-info">Card Info</label>
-                  <div style={{display:'flex'}}>
-                    <input type="text" placeholder="Card Number" style={{flex:'4'}} required />
-                    <input type="text" placeholder="CVV" style={{flex:'1'}} required />
-                    <input type="text" placeholder="Exp" style={{flex:'1'}} required />
-                  </div>
-                </div>
                 <div className="form-submit">
-                  <button type="submit" className="button" id="submit">Submit</button>
+                  <button type="submit" className="button" id="submit">Donate</button>
                 </div>
               </form>
             </div>
