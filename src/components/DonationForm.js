@@ -22,7 +22,7 @@ export default class DonationForm extends React.Component {
 	
 	if(value > 0){
 		
-	  fetch('localhost:8000', {
+	  fetch('/.netlify/functions/checkout', {
 	    method: 'POST',
 	    headers: {
 		  'Content-Type': 'application/json',
