@@ -16,9 +16,30 @@ export default class DonationForm extends React.Component {
   }
   
   handleSubmit = function (submitEvent) {
-    alert('sucessfully submited');
     submitEvent.preventDefault();
-}
+	var value = submitEvent.target.elements.amount.value;
+	const amount = {amount : value}
+	
+	if(value > 0){
+		
+	  fetch('localhost:8000', {
+	    method: 'POST',
+	    headers: {
+		  'Content-Type': 'application/json',
+	    },
+	    body: JSON.stringify(amount),
+	  })
+	  .then(response => response.json())
+	  .then(data => {
+	    console.log('Success:', amount);
+	  })
+	  .catch((error) => {
+	    console.error('Error:', error);
+	  });
+	} else {
+	  alert("Invalid donation amount")	
+	}	
+  }
 
   render () {
     return (
