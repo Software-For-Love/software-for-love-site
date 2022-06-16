@@ -14,6 +14,11 @@ export default class DonationForm extends React.Component {
       this.setState({...this.state, amount})
     }
   }
+  
+  handleSubmit = function (submitEvent) {
+    alert('sucessfully submited');
+    submitEvent.preventDefault();
+}
 
   render () {
     return (
@@ -35,7 +40,7 @@ export default class DonationForm extends React.Component {
               <h3 className="section__title" style={{paddingBottom: '20px'}}>
                 Support Us!
               </h3>
-              <form>
+              <form onSubmit={this.handleSubmit}>
                 <div className="form-group" style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span onClick={this.handleSetAmount(1)}>
                     <Action action={{ label: '$1', style: 'secondary' }} />
