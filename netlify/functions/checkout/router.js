@@ -39,8 +39,8 @@ checkoutRouter.post('/', async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: `https://www.softwareforlove.com?id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `https://www.softwareforlove.com?error=true`,
+      success_url: `http://localhost:8888/charities?id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `http://localhost:8888/charities?error=true`,
     });
 
     res.send({ data: { url }, error: '' });
