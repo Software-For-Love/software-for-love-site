@@ -1,5 +1,6 @@
 import React from 'react';
 import { Action } from './index';
+import "../sass/components/_donation-form.scss";
 
 export default class DonationForm extends React.Component {
   constructor() {
@@ -50,7 +51,7 @@ export default class DonationForm extends React.Component {
   render() {
     return (
       <section className="section bg-gray" style={{ paddingTop: '100px' }}>
-        <div className="container container--lg" style={{ display: 'flex' }}>
+        <div className="donation-form-container container container--lg" style={{ display: 'flex' }}>
           <div style={{ display: 'flex', flex: '1' }}>
             <div style={{ maxWidth: '360px' }}>
               <h3 className="section__title" style={{ paddingBottom: '20px' }}>
@@ -62,7 +63,7 @@ export default class DonationForm extends React.Component {
             </div>
           </div>
 
-          <div className="flex--center" style={{ display: 'flex', flex: '1' }}>
+          <div className="donation-form-form flex--center" style={{ display: 'flex', flex: '1' }}>
             <div style={{ backgroundColor: 'white', width: '500px', borderRadius: '5px', padding: '50px', display: 'flex', flexDirection: 'column' }}>
               <h3 className="section__title" style={{ paddingBottom: '20px' }}>
                 Support Us!
