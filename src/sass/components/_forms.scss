@@ -103,3 +103,19 @@ input[type="email"]:valid {
     font-weight: normal;
   }
 }
+
+.form-dropdown {
+  padding-left: 0.4em;
+  position: relative;
+
+  input[type=dropdown] {
+    height: 1.5em;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  label {
+    font-weight: normal;
+  }
+}

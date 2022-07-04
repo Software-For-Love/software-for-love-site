@@ -40,6 +40,20 @@ export default class VolunteersForm extends React.Component {
       console.log(checkedMinimum);
     }
 
+    handleOnSelect = (event) => {
+      var otherTextField = document.getElementById("others-field");
+      var otherLabel = document.getElementById("other-label");
+      var element = document.getElementById('form-dropdown').value;
+      
+      if(element == 'other') {
+        otherTextField.style.display='block';
+        otherLabel.style.display='block';
+      } else {
+        otherTextField.style.display='none';
+        otherLabel.style.display='none';
+      }
+    }
+
     handleOnSelectHAU = (event) =>{
       var checkbox = document.querySelectorAll('#'+event.target.id);
       var checkedMinimum = (Array.prototype.slice.call(checkbox).some(x => x.checked));
@@ -147,6 +161,19 @@ export default class VolunteersForm extends React.Component {
                           <input aria-labelledby="last-name-label" type="text" name="last-name" id="last-name" placeholder="Your last name" onChange={this.handleOnChange} required />
                         </div>
 
+                        <div className="form-group">
+                            <label id="Pronouns" htmlFor="pronouns">Pronouns {required_star}</label>
+                              <select id="form-dropdown" onChange={this.handleOnSelect}>
+                                <option value="he/him">He/Him</option>
+                                <option value="she/her">She/Her</option>
+                                <option value="they/them">They/Them</option>
+                                <option value="any pronouns" selected>Any Pronouns</option>
+                                <option value="other">Other</option>
+                              </select>
+                            
+                            <label id="other-label" style={{display: 'none', marginTop: '1em'}}>Specify Your Pronouns {required_star}</label>
+                            <input aria-labelledby="other-label" type="text" name="others" id="others-field" placeholder="Please fill" style={{display: 'none'}} required/>
+                        </div>
 
                         <div className="form-group">
                           <label id="email-label" htmlFor="email">Email {required_star} </label>
