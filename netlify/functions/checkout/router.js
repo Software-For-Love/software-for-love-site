@@ -35,12 +35,14 @@ checkoutRouter.post('/', async (req, res) => {
           amount: Math.round(req.body.amount * 100),
           name: 'Donation',
           currency: 'CAD',
-          quantity: 1
+          quantity: 1,
+          images: ["https://www.softwareforlove.com/images/homepage.gif"],
+          description: "This is a description"
         },
       ],
       mode: 'payment',
-      success_url: `http://localhost:8888/charities?id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `http://localhost:8888/charities?error=true`,
+      success_url: `https://www.softwareforlove.com/charities?id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `https://www.softwareforlove.com/charities?error=true`,
     });
 
     res.send({ data: { url }, error: '' });
