@@ -37,7 +37,6 @@ checkoutRouter.post('/', async (req, res) => {
           currency: 'CAD',
           quantity: 1,
           images: ["https://www.softwareforlove.com/images/homepage.gif"],
-          description: "This is a description"
         },
       ],
       mode: 'payment',
