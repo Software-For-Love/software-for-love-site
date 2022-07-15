@@ -11,8 +11,8 @@ checkoutRouter.get('/:sessionId', async (req, res) => {
     const session = await stripe.checkout.sessions.retrieve(sessionId);
 
     res.send({ data: { session }, error: '' });
-  } catch {
-    res.send({ data: {}, error: 'An error occurred while fetching the session information.' });
+  } catch(err) {
+    res.send({ data: {}, error: 'An error occurred while fetching the session information: ' + err.message });
   }
 });
 
@@ -29,7 +29,7 @@ checkoutRouter.post('/', async (req, res) => {
   }
   
   const website_url = 'http://localhost:8888'
-  const success_url = website_url + '/charities?id={CHECKOUT_SESSION_ID}`'
+  const success_url = website_url + '/charities?id={CHECKOUT_SESSION_ID}'
   const cancel_url = website_url + '/charities?error=true'
 
   try {
