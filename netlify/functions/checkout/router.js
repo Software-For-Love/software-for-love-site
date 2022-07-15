@@ -28,7 +28,7 @@ checkoutRouter.post('/', async (req, res) => {
     return;
   }
   
-  const website_url = 'http://localhost:8888'
+  const website_url = '"https://www.softwareforlove.com'
   const success_url = website_url + '/charities?id={CHECKOUT_SESSION_ID}'
   const cancel_url = website_url + '/charities?error=true'
 
