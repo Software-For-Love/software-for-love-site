@@ -13,6 +13,21 @@ export default class DonationForm extends React.Component {
   // Use this method to get query params and display appropriate message
   componentDidMount() {
     const params = new URLSearchParams(window.location.search);
+	const fetch_url = '/.netlify/functions/checkout/' + params.get('id')
+	
+	fetch(fetch_url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then(response => response.json())
+        .then(({ data }) => {
+          alert(data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
   }
 
   handleSetAmount(amount) {

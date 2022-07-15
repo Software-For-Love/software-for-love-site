@@ -27,6 +27,10 @@ checkoutRouter.post('/', async (req, res) => {
     res.send({ data: {}, error: error.message });
     return;
   }
+  
+  const website_url = 'http://localhost:8888'
+  const success_url = website_url + '/charities?id={CHECKOUT_SESSION_ID}`'
+  const cancel_url = website_url + '/charities?error=true'
 
   try {
     const { url } = await stripe.checkout.sessions.create({
@@ -40,8 +44,8 @@ checkoutRouter.post('/', async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: `https://www.softwareforlove.com/charities?id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `https://www.softwareforlove.com/charities?error=true`,
+      success_url: success_url,
+      cancel_url: cancel_url,
     });
 
     res.send({ data: { url }, error: '' });
