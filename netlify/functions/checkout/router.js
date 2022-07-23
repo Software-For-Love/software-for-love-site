@@ -28,7 +28,7 @@ checkoutRouter.post('/', async (req, res) => {
     return;
   }
   
-  const website_url = '"https://www.softwareforlove.com'
+  const website_url = 'https://www.softwareforlove.com'
   const success_url = website_url + '/donation?id={CHECKOUT_SESSION_ID}'
   const cancel_url = website_url + '/donation?error=true'
 

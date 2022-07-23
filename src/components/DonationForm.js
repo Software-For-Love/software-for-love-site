@@ -1,3 +1,4 @@
+import { message } from 'antd';
 import React from 'react';
 import { Action } from './index';
 import "../sass/components/_donation-form.scss";
@@ -13,20 +14,24 @@ export default class DonationForm extends React.Component {
   // Use this method to get query params and display appropriate message
   componentDidMount() {
     const params = new URLSearchParams(window.location.search);
-	if(params.has('id')){
-		const fetch_url = '/.netlify/functions/checkout/' + params.get('id')
-		fetch(fetch_url, {
-			method: 'GET'
-		  })
-			.then(response => response.json())
-			.then(({ data }) => {
-			  const amount_dollars = data.session.amount_total/100;
-			  alert('Thank you for donating ' + amount_dollars + '$!');
-			})
-			.catch((error) => {
-			  console.error('Error:', error);
-			});
-	}
+    if (params.has('id')) {
+      const fetch_url = '/.netlify/functions/checkout/' + params.get('id')
+
+      fetch(fetch_url, {
+        method: 'GET'
+      })
+        .then(response => response.json())
+        .then(({ data }) => {
+          const amount_dollars = data.session.amount_total / 100;
+
+          message.success(`Thank you for donating ${amount_dollars}$!`, 5);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    } else if (params.has('error')) {
+      message.error('Something went wrong while donating.', 5);
+    }
   }
 
   handleSetAmount(amount) {
@@ -58,7 +63,7 @@ export default class DonationForm extends React.Component {
           console.error('Error:', error);
         });
     } else {
-      alert("Invalid donation amount")
+      message.error('Invalid donation amount');
     }
   }
 
