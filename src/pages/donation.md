@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Donation
 sections:
   - type: hero_section
     title: Thanks to our clients, we are able to give back to our community.

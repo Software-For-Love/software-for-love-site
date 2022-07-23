@@ -29,8 +29,8 @@ checkoutRouter.post('/', async (req, res) => {
   }
   
   const website_url = '"https://www.softwareforlove.com'
-  const success_url = website_url + '/charities?id={CHECKOUT_SESSION_ID}'
-  const cancel_url = website_url + '/charities?error=true'
+  const success_url = website_url + '/donation?id={CHECKOUT_SESSION_ID}'
+  const cancel_url = website_url + '/donation?error=true'
 
   try {
     const { url } = await stripe.checkout.sessions.create({
