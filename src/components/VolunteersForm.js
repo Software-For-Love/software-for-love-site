@@ -48,7 +48,10 @@ export default class VolunteersForm extends React.Component {
       if(element == 'other') {
         otherTextField.style.display='block';
         otherLabel.style.display='block';
+        otherTextField.setAttribute('required');
       } else {
+        otherTextField.removeAttribute('required');
+        otherTextField.innerText = '';
         otherTextField.style.display='none';
         otherLabel.style.display='none';
       }
@@ -172,7 +175,7 @@ export default class VolunteersForm extends React.Component {
                               </select>
                             
                             <label id="other-label" style={{display: 'none', marginTop: '1em'}}>Specify Your Pronouns {required_star}</label>
-                            <input aria-labelledby="other-label" type="text" name="others" id="others-field" placeholder="Please fill" style={{display: 'none'}} required/>
+                            <input aria-labelledby="other-label" type="text" name="others" id="others-field" placeholder="Please fill" style={{display: 'none'}}/>
                         </div>
 
                         <div className="form-group">
