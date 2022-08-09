@@ -273,6 +273,7 @@ models:
                       - timeline_section
                       - cta_section
                       - features_section
+                      - donation_form
                       - general_form
                       - hero_section
                       - organizations_form
@@ -313,6 +314,9 @@ models:
     contact_section:
         type: object
         label: Contact Section
+    donation_form:
+      type: object
+      label: Donation Form
     general_form:
         type: object
         label: General Form
@@ -664,6 +668,16 @@ models:
               name: image
               label: Image
               description: The image of the feature
+            - type: list
+              name: image_group
+              description: Group of images of the feature
+              items:
+                - type: object
+                  fields:
+                    - type: string
+                      name: image
+                    - type: string
+                      name: image_alt
             - type: string
               name: image_alt
               label: Image Alt Text

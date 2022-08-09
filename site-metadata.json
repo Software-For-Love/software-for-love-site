@@ -12,6 +12,11 @@
         "style": "link"
       },
       {
+        "label": "Donation",
+        "url": "/donation",
+        "style": "link"
+      },
+      {
         "label": "Volunteers",
         "url": "/volunteers",
         "style": "link"

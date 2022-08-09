@@ -3,7 +3,7 @@ import _ from "lodash";
 
 import { classNames, withPrefix, markdownify } from "../utils";
 import SectionActions from "./SectionActions";
-import { Carousel } from "./index";
+import { Carousel, ImageGroup } from "./index";
 import "../sass/components/_feature_carousel.scss";
 export default class FeaturesSection extends React.Component {
   render() {
@@ -88,7 +88,16 @@ export default class FeaturesSection extends React.Component {
                   }
                 </div>
               )}
-
+              {_.get(feature, "image_group", null) && (
+                <div
+                  className={classNames("cell", "section__media", {
+                    "section__media--right":
+                      _.get(feature, "image_position", null) === "right",
+                  })}
+                >
+                  <ImageGroup images={_.get(feature, "image_group", null)}/>
+                </div>
+              )}
               {_.get(feature, "carousels", null) && (
                 <div
                   style={{ order: 2 }}
