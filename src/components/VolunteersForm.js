@@ -44,16 +44,26 @@ export default class VolunteersForm extends React.Component {
       var otherTextField = document.getElementById("others-field");
       var otherLabel = document.getElementById("other-label");
       var element = document.getElementById('form-dropdown').value;
+      var submissionType = document.getElementById("form-dropdown");
+
+      console.log(submissionType.value);
       
       if(element == 'other') {
         otherTextField.style.display='block';
         otherLabel.style.display='block';
-        otherTextField.setAttribute('required');
+        
+        this.setState({
+          [submissionType.name]: trim(otherTextField.innerText)
+        })
       } else {
         otherTextField.removeAttribute('required');
         otherTextField.innerText = '';
         otherTextField.style.display='none';
         otherLabel.style.display='none';
+        
+        this.setState({
+          [submissionType.name]: trim(submissionType.value)
+        })
       }
     }
 
@@ -166,7 +176,7 @@ export default class VolunteersForm extends React.Component {
 
                         <div className="form-group">
                             <label id="Pronouns" htmlFor="pronouns">Pronouns {required_star}</label>
-                              <select id="form-dropdown" onChange={this.handleOnSelect}>
+                              <select name="pronoun" id="form-dropdown" onChange={this.handleOnSelect}>
                                 <option value="he/him">He/Him</option>
                                 <option value="she/her">She/Her</option>
                                 <option value="they/them">They/Them</option>
