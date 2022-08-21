@@ -40,11 +40,42 @@ export default class VolunteersForm extends React.Component {
       console.log(checkedMinimum);
     }
 
+    handleOnSelect = (event) => {
+      var otherTextField = document.getElementById("others-field");
+      var otherLabel = document.getElementById("other-label");
+      var element = document.getElementById('form-dropdown').value;
+      var submissionType = document.getElementById("form-dropdown");
+
+      if(element == 'other') {
+        otherTextField.style.display='block';
+        otherLabel.style.display='block';
+      } else {
+        otherTextField.removeAttribute('required');
+        otherTextField.innerText = '';
+        otherTextField.style.display='none';
+        otherLabel.style.display='none';
+
+        this.setState({
+          [submissionType.name]: trim(submissionType.value)
+        });
+      }
+    }
+
+    handleOnType = (event) => {
+      var otherTextField = document.getElementById("others-field");
+      var submissionType = document.getElementById("form-dropdown");
+      
+      this.setState({
+        [submissionType.name]: trim(otherTextField.value)
+      });
+    }
+
     handleOnSelectHAU = (event) =>{
       var checkbox = document.querySelectorAll('#'+event.target.id);
       var checkedMinimum = (Array.prototype.slice.call(checkbox).some(x => x.checked));
       this.setState({ [event.target.name]: event.target.value, minimumSelectionHAU:checkedMinimum });
     }
+    
     handleSubmit = (event) => {
       event.preventDefault();
 
@@ -147,6 +178,19 @@ export default class VolunteersForm extends React.Component {
                           <input aria-labelledby="last-name-label" type="text" name="last-name" id="last-name" placeholder="Your last name" onChange={this.handleOnChange} required />
                         </div>
 
+                        <div className="form-group">
+                            <label id="Pronouns" htmlFor="pronouns">Pronouns {required_star}</label>
+                              <select name="pronoun" id="form-dropdown" onChange={this.handleOnSelect}>
+                                <option value="he/him">He/Him</option>
+                                <option value="she/her">She/Her</option>
+                                <option value="they/them">They/Them</option>
+                                <option value="any pronouns" selected>Any Pronouns</option>
+                                <option value="other">Other</option>
+                              </select>
+                            
+                            <label id="other-label" style={{display: 'none', marginTop: '1em'}}>Specify Your Pronouns {required_star}</label>
+                            <input aria-labelledby="other-label" type="text" name="pronoun" id="others-field" placeholder="Please fill" onChange={this.handleOnType} style={{display: 'none'}}/>
+                        </div>
 
                         <div className="form-group">
                           <label id="email-label" htmlFor="email">Email {required_star} </label>
