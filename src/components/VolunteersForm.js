@@ -63,13 +63,13 @@ export default class VolunteersForm extends React.Component {
       
       if(element == 'other') {
         this.setState({
-          [submissionType.name]: trim(otherTextField.value)
+          ["Pronouns"]: trim(otherTextField.value)
         });
 
         console.log("other section: " + otherTextField.value);
       } else {
         this.setState({
-          [submissionType.name]: trim(submissionType.value)
+          ["Pronouns"]: trim(submissionType.value)
         });
       }
     }
