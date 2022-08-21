@@ -189,7 +189,7 @@ export default class VolunteersForm extends React.Component {
                               </select>
                             
                             <label id="other-label" style={{display: 'none', marginTop: '1em'}}>Specify Your Pronouns {required_star}</label>
-                            <input aria-labelledby="other-label" type="text" name="others" id="others-field" placeholder="Please fill" onChange={this.handleOnType} style={{display: 'none'}}/>
+                            <input aria-labelledby="other-label" type="text" name="pronoun" id="others-field" placeholder="Please fill" onChange={this.handleOnType} style={{display: 'none'}}/>
                         </div>
 
                         <div className="form-group">
