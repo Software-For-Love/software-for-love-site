@@ -53,6 +53,10 @@ export default class VolunteersForm extends React.Component {
         otherTextField.innerText = '';
         otherTextField.style.display='none';
         otherLabel.style.display='none';
+
+        this.setState({
+          [submissionType.name]: trim(submissionType.value)
+        });
       }
     }
 
