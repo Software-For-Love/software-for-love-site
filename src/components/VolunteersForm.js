@@ -72,7 +72,24 @@ export default class VolunteersForm extends React.Component {
       var checkedMinimum = (Array.prototype.slice.call(checkbox).some(x => x.checked));
       this.setState({ [event.target.name]: event.target.value, minimumSelectionHAU:checkedMinimum });
     }
+    
     handleSubmit = (event) => {
+      var otherTextField = document.getElementById("others-field");
+      var otherLabel = document.getElementById("other-label");
+      var element = document.getElementById('form-dropdown').value;
+      var submissionType = document.getElementById("form-dropdown");
+
+      console.log(submissionType.value);
+      
+      if(element == 'other') {
+        otherTextField.style.display='block';
+        otherLabel.style.display='block';
+        
+        this.setState({
+          [submissionType.name]: trim(otherTextField.innerText)
+        })
+      }
+
       event.preventDefault();
 
       const form = event.target;
