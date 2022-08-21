@@ -44,7 +44,8 @@ export default class VolunteersForm extends React.Component {
       var otherTextField = document.getElementById("others-field");
       var otherLabel = document.getElementById("other-label");
       var element = document.getElementById('form-dropdown').value;
-      
+      var submissionType = document.getElementById("form-dropdown");
+
       if(element == 'other') {
         otherTextField.style.display='block';
         otherLabel.style.display='block';
@@ -62,20 +63,11 @@ export default class VolunteersForm extends React.Component {
 
     handleOnType = (event) => {
       var otherTextField = document.getElementById("others-field");
-      var element = document.getElementById('form-dropdown').value;
       var submissionType = document.getElementById("form-dropdown");
       
-      if(element == 'other') {
-        this.setState({
-          [submissionType.name]: trim(otherTextField.value)
-        });
-
-        console.log("other section: " + otherTextField.value);
-      } else {
-        this.setState({
-          [submissionType.name]: trim(submissionType.value)
-        });
-      }
+      this.setState({
+        [submissionType.name]: trim(otherTextField.value)
+      });
     }
 
     handleOnSelectHAU = (event) =>{
