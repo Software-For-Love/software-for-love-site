@@ -78,15 +78,13 @@ export default class VolunteersForm extends React.Component {
       var otherLabel = document.getElementById("other-label");
       var element = document.getElementById('form-dropdown').value;
       var submissionType = document.getElementById("form-dropdown");
-
-      console.log(submissionType.value);
       
       if(element == 'other') {
         otherTextField.style.display='block';
         otherLabel.style.display='block';
         
         this.setState({
-          [submissionType.name]: trim(otherTextField.innerText)
+          [submissionType.name]: trim(otherTextField.value)
         })
       }
 
