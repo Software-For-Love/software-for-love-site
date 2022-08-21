@@ -44,26 +44,15 @@ export default class VolunteersForm extends React.Component {
       var otherTextField = document.getElementById("others-field");
       var otherLabel = document.getElementById("other-label");
       var element = document.getElementById('form-dropdown').value;
-      var submissionType = document.getElementById("form-dropdown");
-
-      console.log(submissionType.value);
       
       if(element == 'other') {
         otherTextField.style.display='block';
         otherLabel.style.display='block';
-        
-        this.setState({
-          [submissionType.name]: trim(otherTextField.innerText)
-        })
       } else {
         otherTextField.removeAttribute('required');
         otherTextField.innerText = '';
         otherTextField.style.display='none';
         otherLabel.style.display='none';
-        
-        this.setState({
-          [submissionType.name]: trim(submissionType.value)
-        })
       }
     }
 
@@ -75,17 +64,19 @@ export default class VolunteersForm extends React.Component {
     
     handleSubmit = (event) => {
       var otherTextField = document.getElementById("others-field");
-      var otherLabel = document.getElementById("other-label");
       var element = document.getElementById('form-dropdown').value;
       var submissionType = document.getElementById("form-dropdown");
       
       if(element == 'other') {
-        otherTextField.style.display='block';
-        otherLabel.style.display='block';
-        
         this.setState({
           [submissionType.name]: trim(otherTextField.value)
-        })
+        });
+
+        console.log("other section: " + otherTextField.value);
+      } else {
+        this.setState({
+          [submissionType.name]: trim(submissionType.value)
+        });
       }
 
       event.preventDefault();
