@@ -36,6 +36,28 @@ sections:
           - label: Partner With Us
             url: /organizations
             style: secondary
+      - title: Projects
+        bgcolor: e8edf3
+        justify-content: flex-start
+        cards:
+          - image: /images/Rectangle-19.png
+            alt: Phone taking screenshot of Nike hoodie
+            label:  Project A
+            caption: Web Development
+            redirect: http://localhost:8888/projects
+          - image: /images/Rectangle-23.png
+            alt: Ipad and coffee cup on table
+            label: Project B
+            caption: Web Development
+            redirect: http://localhost:8888/projects
+          - image: /images/Rectangle-24.png
+            alt: Light bulb being held up in front of the horizon
+            label:  Project C
+            caption: Web Development
+            redirect: http://localhost:8888/projects
+        link:
+          title: See All Projects
+          url: http://localhost:8888/
       - title: Work With Us
         content: >-
           Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We recruit new talent for marketing, finance, engineering, and more.
@@ -63,6 +85,7 @@ sections:
             url: /organizations
             style: secondary
       - title: Join The Team
+        bgcolor: e8edf3
         content: >-
           Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We actively recruit new talent for marketing, finance, engineering, and more.
         align: left
@@ -73,18 +96,18 @@ sections:
           - label: Apply today
             url: /volunteers
             style: secondary
-  - type: cta_section
-    # title: Join us!
-    # subtitle: >-
-    #   Apply as Partner or as a Volunteer to get involved with Software for Love
-    # actions:
-    #   - label: Organizations
-    #     url: /organizations
-    #     style: primary
-    #   - label: Volunteers
-    #     url: /volunteers
-    #     style: secondary
-    # has_background: true
-    # background_color: gray
+  # - type: cta_section
+  #   # title: Join us!
+  #   # subtitle: >-
+  #   #   Apply as Partner or as a Volunteer to get involved with Software for Love
+  #   # actions:
+  #   #   - label: Organizations
+  #   #     url: /organizations
+  #   #     style: primary
+  #   #   - label: Volunteers
+  #   #     url: /volunteers
+  #   #     style: secondary
+  #   # has_background: true
+  #   # background_color: gray
 template: advanced
 ---

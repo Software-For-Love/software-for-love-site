@@ -10,11 +10,10 @@
 
     &:last-child {
         margin-bottom: 0;
-        padding-bottom: 3.75em;
     }
 
     .container + .container {
-        margin-top: 2.25rem;
+        padding-top: 2.25rem;
     }
 }
 
@@ -73,7 +72,8 @@
 
 .section--features {
     .flex {
-        margin-bottom: 3.75rem;
+        padding-top: 2.25rem;
+        padding-bottom: 3.75rem;
     }
 }
 

@@ -1,7 +1,8 @@
 import React from "react";
 import _ from "lodash";
+import { Card, Space } from 'antd';
 
-import { classNames, withPrefix, markdownify } from "../utils";
+import { classNames, withPrefix, markdownify, Link } from "../utils";
 import SectionActions from "./SectionActions";
 import { Carousel, ImageGroup } from "./index";
 import "../sass/components/_feature_carousel.scss";
@@ -58,89 +59,115 @@ export default class FeaturesSection extends React.Component {
             <h2 className="section__title">{_.get(section, "title", null)}</h2>
           </div>
         )}
-        <div className="container container--lg">
+        <div>
           {_.map(_.get(section, "features", null), (feature, feature_idx) => (
-            <div
-              key={feature_idx}
-              className={classNames(
-                "flex",
-                "flex--middle",
-                "flex--center",
-                "flex--col-2",
-                {
-                  "align-center": _.get(feature, "align", null) === "center",
-                  "align-right": _.get(feature, "align", null) === "right",
-                }
-              )}
-            >
-              {_.get(feature, "image", null) && (
-                <div
-                  className={classNames("cell", "section__media", {
-                    "section__media--right":
-                      _.get(feature, "image_position", null) === "right",
-                  })}
-                >
+            <div style={{ backgroundColor: _.get(feature, "bgcolor", undefined) ? `#${_.get(feature, "bgcolor", undefined)}` : undefined, }}>
+              <div
+                key={feature_idx}
+                className={classNames(
+                  "flex",
+                  "flex--middle",
+                  "flex--center",
+                  "flex--col-2",
+                  "container",
+                  "container--lg",
                   {
-                    <img
-                      src={withPrefix(_.get(feature, "image", null))}
-                      alt={_.get(feature, "image_alt", null)}
-                    />
+                    "align-center": _.get(feature, "align", null) === "center",
+                    "align-right": _.get(feature, "align", null) === "right",
                   }
-                </div>
-              )}
-              {_.get(feature, "image_group", null) && (
-                <div
-                  className={classNames("cell", "section__media", {
-                    "section__media--right":
-                      _.get(feature, "image_position", null) === "right",
-                  })}
-                >
-                  <ImageGroup images={_.get(feature, "image_group", null)}/>
-                </div>
-              )}
-              {_.get(feature, "carousels", null) && (
-                <div
-                  style={{ order: 2 }}
-                  className={classNames("cell", "section__media", {
-                    "section__media--right":
-                      _.get(feature, "image_position", null) === "right",
-                  })}
-                >
-                  <div className="carousel-wrapper">
-                    <Carousel
-                      items={feature["carousels"]["items"]}
-                      flickityOptions={{
-                        wrapAround: true,
-                        draggable: false,
-                        pageDots: false,
-                      }}
-                      carouselTemplate={carouselTemplate}
-                    ></Carousel>
-                  </div>
-                </div>
-              )}
-              <div className="flex-2 section__body cell">
-                {_.get(feature, "title", null) &&
-                  (_.get(section, "title", null) ? (
-                    <h3 className="section__title">
-                      {_.get(feature, "title", null)}
-                    </h3>
-                  ) : (
-                    <h2 className="section__title">
-                      {_.get(feature, "title", null)}
-                    </h2>
-                  ))}
-                {_.get(feature, "content", null) && (
-                  <div className="section__copy">
-                    {markdownify(_.get(feature, "content", null))}
+                )}
+                style={{
+                  margin: 'auto',
+                  justifyContent: _.get(feature, "justify-content", null) || undefined,
+                }}
+              >
+                {_.get(feature, "image", null) && (
+                  <div
+                    className={classNames("cell", "section__media", {
+                      "section__media--right":
+                        _.get(feature, "image_position", null) === "right",
+                    })}
+                  >
+                    {
+                      <img
+                        src={withPrefix(_.get(feature, "image", null))}
+                        alt={_.get(feature, "image_alt", null)}
+                      />
+                    }
                   </div>
                 )}
-                {_.get(feature, "actions", null) && (
-                  <div className="section__actions btn-group">
-                    <SectionActions
-                      {...this.props}
-                      actions={_.get(feature, "actions", null)}
-                    />
+                {_.get(feature, "image_group", null) && (
+                  <div
+                    className={classNames("cell", "section__media", {
+                      "section__media--right":
+                        _.get(feature, "image_position", null) === "right",
+                    })}
+                  >
+                    <ImageGroup images={_.get(feature, "image_group", null)} />
+                  </div>
+                )}
+                {_.get(feature, "carousels", null) && (
+                  <div
+                    style={{ order: 2 }}
+                    className={classNames("cell", "section__media", {
+                      "section__media--right":
+                        _.get(feature, "image_position", null) === "right",
+                    })}
+                  >
+                    <div className="carousel-wrapper">
+                      <Carousel
+                        items={feature["carousels"]["items"]}
+                        flickityOptions={{
+                          wrapAround: true,
+                          draggable: false,
+                          pageDots: false,
+                        }}
+                        carouselTemplate={carouselTemplate}
+                      ></Carousel>
+                    </div>
+                  </div>
+                )}
+                <div className="flex-2 section__body cell">
+                  {_.get(feature, "title", null) &&
+                    (_.get(section, "title", null) ? (
+                      <h3 className="section__title">
+                        {_.get(feature, "title", null)}
+                      </h3>
+                    ) : (
+                      <h2 className="section__title">
+                        {_.get(feature, "title", null)}
+                      </h2>
+                    ))}
+                  {_.get(feature, "content", null) && (
+                    <div className="section__copy">
+                      {markdownify(_.get(feature, "content", null))}
+                    </div>
+                  )}
+                  {_.get(feature, "actions", null) && (
+                    <div className="section__actions btn-group">
+                      <SectionActions
+                        {...this.props}
+                        actions={_.get(feature, "actions", null)}
+                      />
+                    </div>
+                  )}
+                </div>
+                {_.get(feature, "cards", null) && (
+                  <Space size={50} style={{ flexBasis: '100%', justifyContent: 'space-between' }}>
+                    {_.map(_.get(feature, "cards", null), (card, card_idx) => (
+                      <Link to={_.get(card, "redirect")} style={{ textDecoration: 'none' }}>
+                        <Card key={card_idx} hoverable cover={<img alt={card.alt} src={card.image} />}>
+                          <Card.Meta title={card.label} description={card.caption} />
+                        </Card>
+                      </Link>
+                    ))}
+                  </Space>
+                )}
+                {_.get(feature, "link", null) && (
+                  <div className="cell" style={{ marginTop: '25px' }}>
+                    <Link to={_.get(feature, "link")["url"]}>
+                      {_.get(feature, "link")["title"]}
+                    </Link>
                   </div>
                 )}
               </div>

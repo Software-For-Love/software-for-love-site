@@ -471,6 +471,13 @@ models:
             #   default: left
             #   description: The position of the image
             - type: list
+              name: cards
+              label: Cards
+              cards:
+                  type: model
+                  models:
+                      - card
+            - type: list
               name: carousels
               label: Carousel
               carousels:
@@ -664,6 +671,15 @@ models:
                   - center
               default: left
               description: The alignment of the text content
+            - type: enum
+              name: justify-content
+              label: Content position
+              options:
+                  - flex-start
+              description: The position of the content
+            - type: string
+              name: bgcolor
+              label: Background color
             - type: image
               name: image
               label: Image
@@ -697,6 +713,43 @@ models:
                   type: model
                   models:
                       - action
+            - type: object
+              name: link
+              label: Link
+              field:
+                  - type: string
+                    name: title
+                    label: Title
+                    required: true
+                  - type: string
+                    name: url
+                    label: URL
+                    required: true
+    card:
+        type: object
+        label: Card
+        labelField: label
+        fields:
+            - type: string
+              name: image
+              label: Image
+              required: true
+            - type: string
+              name: alt
+              label: Alt
+              required: true
+            - type: string
+              name: label
+              label: Label
+              required: true
+            - type: string
+              name: caption
+              label: Caption
+              required: true
+            - type: string
+              name: redirect
+              label: Redirect
+              required: true
     action:
         type: object
         label: Action
