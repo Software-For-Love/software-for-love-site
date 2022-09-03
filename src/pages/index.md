@@ -45,12 +45,12 @@ sections:
             label:  Project A
             caption: Web Development
             redirect: http://localhost:8888/projects
-          - image: /images/Rectangle-23.png
+          - image: /images/Rectangle-19.png
             alt: Ipad and coffee cup on table
             label: Project B
             caption: Web Development
             redirect: http://localhost:8888/projects
-          - image: /images/Rectangle-24.png
+          - image: /images/Rectangle-19.png
             alt: Light bulb being held up in front of the horizon
             label:  Project C
             caption: Web Development
