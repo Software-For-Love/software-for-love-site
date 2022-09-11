@@ -83,7 +83,7 @@ export default class DonationForm extends React.Component {
           </div>
 
           <div className="donation-form-form flex--center" style={{ display: 'flex', flex: '1' }}>
-            <div style={{ backgroundColor: 'white', width: '500px', borderRadius: '5px', padding: '50px', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ backgroundColor: 'white', width: '100%', borderRadius: '5px', padding: '50px', display: 'flex', flexDirection: 'column' }}>
               <h3 className="section__title" style={{ paddingBottom: '20px' }}>
                 Support Us!
               </h3>
