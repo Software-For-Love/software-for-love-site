@@ -27,7 +27,7 @@ sections:
     features:
       - title: What We Do
         content: >-
-          Our team is dedicated to providing a variety of services such as web development, UI/UX design, data analytics, and database management. We seek to develop software for clients in return for a charitable contribution, or a charitable service provided by an organization.
+          Our team is dedicated to providing a variety of services such as web development, UI/UX design, data analytics, and database management. We understand that it may be difficult or expensive for charities or non-profits to acquire the software solutions that they need, so we work with them to build custom solutions, free of charge.
         align: left
         image: images/Humaaans1.png
         image_alt: Volunteers placeholder image
@@ -38,7 +38,7 @@ sections:
             style: secondary
       - title: Work With Us
         content: >-
-          Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We recruit new talent for marketing, finance, engineering, and more.
+          We're constantly looking for new non-profits and charities who could benefit from the services that we provide. Here are a few testimonies from our clients!
         align: left
         carousels:
           items:
@@ -70,7 +70,7 @@ sections:
         image_alt: Projects Page placeholder image
         image_position: left
         actions:
-          - label: Apply today
+          - label: Apply today!
             url: /volunteers
             style: secondary
   - type: cta_section
