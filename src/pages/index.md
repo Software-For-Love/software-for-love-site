@@ -44,20 +44,20 @@ sections:
             alt: Phone taking screenshot of Nike hoodie
             label:  Project A
             caption: Web Development
-            redirect: http://localhost:8888/projects
+            redirect: /projects
           - image: /images/Rectangle-19.png
             alt: Ipad and coffee cup on table
             label: Project B
             caption: Web Development
-            redirect: http://localhost:8888/projects
+            redirect: /projects
           - image: /images/Rectangle-19.png
             alt: Light bulb being held up in front of the horizon
             label:  Project C
             caption: Web Development
-            redirect: http://localhost:8888/projects
+            redirect: /projects
         link:
           title: See All Projects
-          url: http://localhost:8888/
+          url: /
       - title: Work With Us
         content: >-
           Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We recruit new talent for marketing, finance, engineering, and more.
