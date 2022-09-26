@@ -77,13 +77,13 @@ export default class DonationForm extends React.Component {
                 Help us continue our work by donating to us.
               </h3>
               <div>
-                All donations will go towards any expenses related to maintaining our organization. Any surplus will be donated to charities.
+              Thank you for helping us support the non-profits and charities who are working to achieve their goals. Your donation will go towards helping us improve our quality of services and maintaining our organization. <b>Please note that donations are not tax-deductible.</b>
               </div>
             </div>
           </div>
 
           <div className="donation-form-form flex--center" style={{ display: 'flex', flex: '1' }}>
-            <div style={{ backgroundColor: 'white', width: '500px', borderRadius: '5px', padding: '50px', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ backgroundColor: 'white', width: '100%', borderRadius: '5px', padding: '50px', display: 'flex', flexDirection: 'column' }}>
               <h3 className="section__title" style={{ paddingBottom: '20px' }}>
                 Support Us!
               </h3>
