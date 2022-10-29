@@ -62,9 +62,9 @@ sections:
           - label: Work With Us
             url: /organizations
             style: secondary
-      - title: Join The Team
+      - title: Volunteer Today!
         content: >-
-          Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We actively recruit new talent for marketing, finance, engineering, and more.
+          Our platform encourages young professionals to showcase their skills and abilities, while also providing back to the community. We actively recruit new talent for marketing, finance, human resources, and engineering.
         align: left
         image: images/Humaaan-Characters.png
         image_alt: Projects Page placeholder image
