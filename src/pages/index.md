@@ -33,8 +33,8 @@ sections:
         image_alt: Volunteers placeholder image
         image_position: right
         actions:
-          - label: Donate
-            url: /organizations
+          - label: Our Blog
+            url: /blog
             style: secondary
       - title: Work With Us
         content: >-
