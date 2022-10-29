@@ -6,8 +6,8 @@ sections:
     subtitle: >-
       Software For Love is a non-profit organization that focuses on providing software solutions. We are a team of young professionals who are passionate about technology and seek to give back to our community.
     actions:
-      - label: Partner With Us
-        url: /organizations
+      - label: Donate
+        url: /donation
         style: primary
       - label: Volunteer
         url: /volunteers
