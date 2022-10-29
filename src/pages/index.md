@@ -33,7 +33,7 @@ sections:
         image_alt: Volunteers placeholder image
         image_position: right
         actions:
-          - label: Partner With Us
+          - label: Donate
             url: /organizations
             style: secondary
       - title: Work With Us
