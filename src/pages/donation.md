@@ -2,7 +2,7 @@
 title: Donation
 sections:
   - type: hero_section
-    title: Thanks to our donors, we are able to give back to our community.
+    title: Thanks to our donors, we are able to give back to our community!
     align: left
     image: images/homepage.gif
     image_alt: Hero placeholder image
