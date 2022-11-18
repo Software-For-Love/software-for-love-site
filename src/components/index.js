@@ -4,7 +4,8 @@ import BlogFeedSection from "./BlogFeedSection";
 import BlogPostCategories from "./BlogPostCategories";
 import BlogPostFeedItem from "./BlogPostFeedItem";
 import BlogPostTags from "./BlogPostTags";
-import Carousel from "./Carousel"
+import Carousel from "./Carousel";
+import ContactButton from "./ContactButton";
 import ContactSection from "./ContactSection";
 import ContentSection from "./ContentSection";
 import CtaSection from "./CtaSection";
@@ -29,6 +30,7 @@ export {
     BlogPostCategories,
     BlogPostFeedItem,
     BlogPostTags,
+	ContactButton,
     ContactSection,
     ContentSection,
     CtaSection,
@@ -57,6 +59,7 @@ export default {
     BlogPostCategories,
     BlogPostFeedItem,
     BlogPostTags,
+	ContactButton,
     ContactSection,
     ContentSection,
     CtaSection,
