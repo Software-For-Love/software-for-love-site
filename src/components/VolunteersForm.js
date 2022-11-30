@@ -178,7 +178,9 @@ export default class VolunteersForm extends React.Component {
                         {/* // )} */}
 
                           <div className="form-group">
-                              <label id="Heard_about_us" htmlFor="herd">How did you hear about Software For Love? (Select all that Apply) {required_star}</label>
+                              <label id="Heard_about_us" htmlFor="herd">
+                                How did you hear about Software For Love? (Select all that apply) {required_star}
+                              </label>
                               {heard.map((herd, index) =>
                                   <div className="form-checkbox" key={index}>
                                     <label id={herd} htmlFor={herd}>{herd}</label>
