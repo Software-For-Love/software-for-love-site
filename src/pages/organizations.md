@@ -41,6 +41,5 @@ sections:
           - header: How often do project updates occur?
             content: >-
                 Based on your preference, we try to meet as much as possible. Usually this is weekly or bi-weekly based on your availability. We believe in an iterative design and development process where at each step your input is valued.
-    - type: contact_button
 template: advanced
 ---
