@@ -279,6 +279,7 @@ models:
                       - organizations_form
                       - team_section
                       - volunteers_form
+                      - projects_section
     blog_feed_section:
         type: object
         label: Blog Feed Section
@@ -326,6 +327,30 @@ models:
     volunteers_form:
         type: object
         label: Volunteers Form
+    projects_section:
+        type: object
+        label: Projects Section
+        fields:
+            - type: list
+              name: projects
+              items:
+                  type: object
+                  fields:
+                      - type: string
+                        name: title
+                        label: Project Title
+                      - type: markdown
+                        name: description
+                        label: Project Description
+                      - type: image
+                        name: string
+                        label: Project Image
+                      - type: string
+                        name: redirect
+                        label: Link to projects page
+                      - type: list
+                        name: tags
+                        label: Project Tags
     content_section:
         type: object
         label: Content Section

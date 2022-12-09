@@ -21,6 +21,7 @@ import SectionActions from "./SectionActions";
 import TeamSection from "./TeamSection";
 import TimelineSection from "./TimelineSection";
 import VolunteersForm from "./VolunteersForm";
+import ProjectsSection from './ProjectsSection';
 import Layout from "./Layout";
 export {
     Action,
@@ -46,6 +47,7 @@ export {
     TeamSection,
     TimelineSection,
     VolunteersForm,
+    ProjectsSection,
     Layout,
 };
     
@@ -73,5 +75,6 @@ export default {
     TeamSection,
     TimelineSection,
     VolunteersForm,
+    ProjectsSection,
     Layout,
 };
