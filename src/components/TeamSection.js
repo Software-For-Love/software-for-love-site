@@ -34,18 +34,6 @@ export default class TeamSection extends React.Component {
                                         }}
                                     >
                                         <div className="card team-member">
-                                            {person_data.photo && (
-                                                <figure className="card__media card__media--bottom">
-                                                    <img
-                                                        src={withPrefix(
-                                                            person_data.photo
-                                                        )}
-                                                        alt={
-                                                            person_data.photo_alt
-                                                        }
-                                                    />
-                                                </figure>
-                                            )}
                                             <div
                                                 className="card__body"
                                                 style={{
@@ -72,12 +60,31 @@ export default class TeamSection extends React.Component {
                                                     </h4>
                                                 </header>
                                                 {person_data.bio && (
-                                                    <div className="card__copy">
+                                                    <div 
+														className="card__copy"
+														style={{
+                                                            marginBottom: "0px",
+															marginTop: "0px",
+                                                        }}
+													>
                                                         {markdownify(
                                                             person_data.bio
                                                         )}
                                                     </div>
                                                 )}
+												
+												{person_data.photo && (
+													<figure className="card__media card__media--middle">
+														<img
+															src={withPrefix(
+																person_data.photo
+															)}
+															alt={
+																person_data.photo_alt
+															}
+														/>
+													</figure>
+												)}
 
                                                 <div
                                                     class="icon"
