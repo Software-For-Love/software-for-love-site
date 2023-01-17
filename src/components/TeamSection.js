@@ -37,7 +37,7 @@ export default class TeamSection extends React.Component {
                                             <div
                                                 className="card__body"
                                                 style={{
-                                                    padding: "0.5rem",
+                                                    padding: "0rem",
                                                     textAlign: "center",
                                                 }}
                                             >
