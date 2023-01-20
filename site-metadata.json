@@ -7,12 +7,12 @@
     "has_nav": true,
     "nav_links": [
       {
-        "label": "Organizations",
+        "label": "How It Works",
         "url": "/organizations",
         "style": "link"
       },
       {
-        "label": "Donation",
+        "label": "Donate",
         "url": "/donation",
         "style": "link"
       },
