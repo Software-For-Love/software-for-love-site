@@ -22,6 +22,22 @@ sections:
       background_image_opacity: 20
       background_image_size: auto
       background_image_repeat: repeat
+  - type: about_us_section
+    title: About Us
+    features:
+      - title: Our team is dedicated to providing a variety of services.
+        content: We're constantly looking for new non-profits and charities who could benefit from the services that we provide.
+        align: center
+        image_group:
+          - image: images/webdevelopment_icon.svg
+            image_caption: Web Development
+          - image: images/database_icon.svg
+            image_caption: Database Management
+          - image: images/UI&UX_icon.svg
+            image_caption: UI/UX Design
+          - image: images/data_icon.svg
+            image_caption: Data Analytics
+        image_position: right
   - type: features_section
     title: About Us
     features:
