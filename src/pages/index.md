@@ -39,6 +39,32 @@ sections:
             image_caption: Data Analytics
         image_position: right
   - type: features_section
+    features:
+      - content: >-
+          We understand that it may be difficult or expensive for charities or non-profits to acquire the software solutions that they need, so we work with them to build custom solutions, free of charge.
+        content_box_shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        content_background: rgba(141, 184, 191, 1)
+        content_padding: 6% 0.5em
+        content_color: white
+        content_size: 1.5em
+        content_font: roboto
+        content_margins: -0.5em 0 0 3em
+        button_margins: 0 0 0 5em
+        align: left 60%
+        image: images/Humaaans1.png
+        image_width: 25em
+        image_height: 15.65em
+        image_alt: Volunteers placeholder image
+        image_position: left
+        image_position_type: relative
+        image_zindex: 5
+        image_margins: 0 -5em 0 0
+        image_float: right
+        actions:
+          - label: Partner With Us
+            url: /organizations
+            style: primary
+  - type: features_section
     title: About Us
     features:
       - title: What We Do

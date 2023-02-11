@@ -88,6 +88,9 @@ export default class FeaturesSection extends React.Component {
 					  style={{
 						  position:_.get(feature, "image_position_type", null),
 						  zIndex: _.get(feature, "image_zindex", null),
+						  width: _.get(feature, "image_width", null),
+						  height: _.get(feature, "image_height", null),
+						  float: _.get(feature, "image_float", null)
 					  }}
                     />
                   }
@@ -142,13 +145,20 @@ export default class FeaturesSection extends React.Component {
                   ))}
                 {_.get(feature, "content", null) && (
                   <div className="section__copy"
-				  style={{margin:_.get(feature, "content_margins", null)}}>
+				  style={{
+					  margin:_.get(feature, "content_margins", null),
+					  color:_.get(feature, "content_color", null),
+					  fontSize:_.get(feature, "content_size", null),
+					  fontFamily: _.get(feature, "content_font", null)
+					  }}>
                     {markdownify(_.get(feature, "content", null))}
                   </div>
                 )}
                 {_.get(feature, "actions", null) && (
                   <div className="section__actions btn-group"
-				  style={{margin:_.get(feature, "button_margins", null)}}>
+				  style={{
+					  margin:_.get(feature, "button_margins", null)
+					  }}>
                     <SectionActions
                       {...this.props}
                       actions={_.get(feature, "actions", null)}
