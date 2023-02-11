@@ -50,7 +50,7 @@ sections:
         content_font: roboto
         content_margins: -0.5em 0 0 3em
         button_margins: 0 0 0 5em
-        align: left 60%
+        align: left
         image: images/Humaaans1.png
         image_width: 25em
         image_height: 15.65em
@@ -63,6 +63,32 @@ sections:
         actions:
           - label: Partner With Us
             url: /organizations
+            style: primary
+  - type: features_section
+    features:
+      - content: >-
+          Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We recruit new talent for marketing, finance, engineering, and more.
+        content_box_shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        content_background: rgba(161, 171, 205, 1)
+        content_padding: 6% 0.5em
+        content_color: white
+        content_size: 1.5em
+        content_font: roboto
+        content_margins: -0.5em 3em 0 1.5em
+        button_margins: 0 0 0 2em
+        align: left
+        image: images/Humaaan-Characters.png
+        image_width: 25em
+        image_height: 15.65em
+        image_alt: Volunteers placeholder image
+        image_position: right
+        image_position_type: relative
+        image_zindex: 5
+        image_margins: 0 0 0 -5em
+        image_float: left
+        actions:
+          - label: Become a Volunteer
+            url: /volunteers
             style: primary
   - type: features_section
     title: About Us
