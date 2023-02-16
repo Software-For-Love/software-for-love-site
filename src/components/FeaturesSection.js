@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from 'react';
 import _ from "lodash";
 
 import { classNames, withPrefix, markdownify } from "../utils";
@@ -6,8 +7,29 @@ import SectionActions from "./SectionActions";
 import { Carousel, ImageGroup } from "./index";
 import "../sass/components/_feature_carousel.scss";
 export default class FeaturesSection extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: window.innerWidth
+    };
+  }
+  
+  updateWidth = () => {
+     this.setState({width: window.innerWidth});
+  }
+  
+  componentDidMount() {
+    window.addEventListener('resize', this.updateWidth);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWidth)
+  }
+
   render() {
     let section = _.get(this.props, "section", null);
+	const largeScreenWidth = 820;
     const carouselTemplate = (item) => {
       return (
         <div class="carousel-content">
@@ -79,7 +101,7 @@ export default class FeaturesSection extends React.Component {
                     "section__media--right":
                       _.get(feature, "image_position", null) === "right",
                   })}
-				  style={{margin:_.get(feature, "image_margins", null) || "auto"}}
+				  style={{margin: this.state.width >= largeScreenWidth  ? _.get(feature, "image_margins", null) || "auto" : "auto"}}
                 >
                   {
                     <img
@@ -146,7 +168,7 @@ export default class FeaturesSection extends React.Component {
                 {_.get(feature, "content", null) && (
                   <div className="section__copy"
 				  style={{
-					  margin:_.get(feature, "content_margins", null),
+					  margin: this.state.width >= largeScreenWidth ? _.get(feature, "content_margins", null) : null,
 					  color:_.get(feature, "content_color", null),
 					  fontSize:_.get(feature, "content_size", null),
 					  fontFamily: _.get(feature, "content_font", null)
