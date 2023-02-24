@@ -109,11 +109,19 @@ export default class FeaturesSection extends React.Component {
                       "section__media--right":
                         _.get(feature, "image_position", null) === "right",
                     })}
+					style={{margin: this.state.width >= largeScreenWidth  ? _.get(feature, "image_margins", null) || "auto" : "auto"}}
                   >
                     {
                       <img
                         src={withPrefix(_.get(feature, "image", null))}
                         alt={_.get(feature, "image_alt", null)}
+							style={{
+								position:_.get(feature, "image_position_type", null),
+								zIndex: _.get(feature, "image_zindex", null),
+								width: _.get(feature, "image_width", null),
+								height: _.get(feature, "image_height", null),
+								float: _.get(feature, "image_float", null)
+							}}
                       />
                     }
                   </div>
@@ -149,7 +157,12 @@ export default class FeaturesSection extends React.Component {
                     </div>
                   </div>
                 )}
-                <div className="flex-2 section__body cell">
+                <div className="flex-2 section__body cell"
+				style={{
+				  boxShadow:_.get(feature, "content_box_shadow", null),
+				  backgroundColor: _.get(feature, "content_background", null),
+				  paddingBlock: _.get(feature, "content_padding", null)
+			    }}>
                   {_.get(feature, "title", null) &&
                     (_.get(section, "title", null) ? (
                       <h3 className="section__title">
@@ -161,12 +174,20 @@ export default class FeaturesSection extends React.Component {
                       </h2>
                     ))}
                   {_.get(feature, "content", null) && (
-                    <div className="section__copy">
+                    <div className="section__copy"
+					  style={{
+					    margin: this.state.width >= largeScreenWidth ? _.get(feature, "content_margins", null) : null,
+					    color:_.get(feature, "content_color", null),
+					    fontSize:_.get(feature, "content_size", null),
+					    fontFamily: _.get(feature, "content_font", null)
+					}}>
                       {markdownify(_.get(feature, "content", null))}
                     </div>
                   )}
                   {_.get(feature, "actions", null) && (
-                    <div className="section__actions btn-group">
+                    <div className="section__actions btn-group"style={{
+					  margin:_.get(feature, "button_margins", null)
+					  }}>
                       <SectionActions
                         {...this.props}
                         actions={_.get(feature, "actions", null)}

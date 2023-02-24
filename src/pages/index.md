@@ -64,6 +64,28 @@ sections:
           - label: Partner With Us
             url: /organizations
             style: primary
+      - title: Projects
+        bgcolor: e8edf3
+        justify-content: flex-start
+        cards:
+          - image: /images/Rectangle-19.png
+            alt: Phone taking screenshot of Nike hoodie
+            label:  Project A
+            caption: Web Development
+            redirect: /projects
+          - image: /images/Rectangle-19.png
+            alt: Ipad and coffee cup on table
+            label: Project B
+            caption: Web Development
+            redirect: /projects
+          - image: /images/Rectangle-19.png
+            alt: Light bulb being held up in front of the horizon
+            label:  Project C
+            caption: Web Development
+            redirect: /projects
+        link:
+          title: See All Projects
+          url: /
   - type: features_section
     features:
       - content: >-
@@ -77,7 +99,7 @@ sections:
         content_margins: -0.5em 3em 0 1.5em
         button_margins: 0 0 0 2em
         align: left
-        image: images/Humaaan-Characters.png
+        image: images/Humaaan-Characters-NoAlpha.png
         image_width: 25em
         image_height: 15.65em
         image_alt: Volunteers placeholder image
