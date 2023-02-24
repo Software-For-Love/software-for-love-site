@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from 'react';
 import _ from "lodash";
 import { Card, Space } from 'antd';
 
@@ -7,8 +8,29 @@ import SectionActions from "./SectionActions";
 import { Carousel, ImageGroup } from "./index";
 import "../sass/components/_feature_carousel.scss";
 export default class FeaturesSection extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: window.innerWidth
+    };
+  }
+  
+  updateWidth = () => {
+     this.setState({width: window.innerWidth});
+  }
+  
+  componentDidMount() {
+    window.addEventListener('resize', this.updateWidth);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWidth)
+  }
+
   render() {
     let section = _.get(this.props, "section", null);
+	const largeScreenWidth = 820;
     const carouselTemplate = (item) => {
       return (
         <div class="carousel-content">

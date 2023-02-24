@@ -19,9 +19,9 @@ sections:
             content: >-
                 After filling out the form below, we set up a time to call and understand your needs. We work with you to understand the problem and how best we can apply our technical expertise to solve it.
             align: left
-          - title: 2. Charity Donation
+          - title: 2. Project Planning
             content: >-
-                We ask all our clients to donate to charity on behalf of the services we provided. A charity is mutually chosen before the signing of a contract. If you don't have one in mind, we are happy to you refer established charities across North America!
+                After our initial meeting, our team will thoroughly investigate the presented project requirements and create a proposed plan for implementation. We will work with our legal team to create a contract that will detail a timeline for the project with the breakdown of our planned solution.
             align: left
           - title: 3. Software Development
             content: >-
@@ -34,10 +34,6 @@ sections:
     - type: faq_section
       title: FAQs
       panels:
-          
-          - header: How does SFL prove they have donated to charities?
-            content: >-
-                Software For Love does **not** donate to charities. We actually ask the client to directly donate to the charity and send us the receipts of their donations. This way our clients get the pleasure and satisfaction when they themselves donate to charity, as well as get tax benefits because of their donations.
           - header: How often do project updates occur?
             content: >-
                 Based on your preference, we try to meet as much as possible. Usually this is weekly or bi-weekly based on your availability. We believe in an iterative design and development process where at each step your input is valued.

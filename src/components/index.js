@@ -1,3 +1,4 @@
+import AboutUsSection from "./AboutUsSection";
 import Action from "./Action";
 import BlogFeedItemFilter from "./BlogFeedItemFilter";
 import BlogFeedSection from "./BlogFeedSection";
@@ -23,6 +24,7 @@ import TimelineSection from "./TimelineSection";
 import VolunteersForm from "./VolunteersForm";
 import Layout from "./Layout";
 export {
+	AboutUsSection,
     Action,
     BlogFeedItemFilter,
     BlogFeedSection,
@@ -51,6 +53,7 @@ export {
     
 
 export default {
+	AboutUsSection,
     Action,
     BlogFeedItemFilter,
     BlogFeedSection,
