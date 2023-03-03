@@ -10,11 +10,11 @@ export default class FeaturesSection extends React.Component {
     return (
       <section className="section section--features" style={{backgroundColor: '#F0F3F8', maxWidth: '1140px', marginRight: 'auto', marginLeft: 'auto'}}>
         {_.get(section, "title", null) && (
-          <div className="container container--md align-center">
+          <div className="container container--md align-center" style={{paddingTop: "2em", marginBottom: "-2em"}}>
             <h2 className="section__title" style={{color:'#263455'}}>{_.get(section, "title", null)}</h2>
           </div>
         )}
-        <div className="container container--lg">
+        <div>
           {_.map(_.get(section, "features", null), (feature, feature_idx) => (
             <div
               key={feature_idx}
