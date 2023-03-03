@@ -144,6 +144,9 @@ export default class FeaturesSection extends React.Component {
                         _.get(feature, "image_position", null) === "right",
                     })}
                   >
+                    <h2 className="carousel__title">
+                        {_.get(feature, "carousel_title", null)}
+                    </h2>
                     <div className="carousel-wrapper">
                       <Carousel
                         items={feature["carousels"]["items"]}
@@ -157,7 +160,7 @@ export default class FeaturesSection extends React.Component {
                     </div>
                   </div>
                 )}
-                <div className="flex-2 section__body cell"
+                {_.get(feature, "title", null) || _.get(feature, "content", null) || _.get(feature, "actions", null) ? ( <div className="flex-2 section__body cell"
 				style={{
 				  boxShadow:_.get(feature, "content_box_shadow", null),
 				  backgroundColor: _.get(feature, "content_background", null),
@@ -194,7 +197,7 @@ export default class FeaturesSection extends React.Component {
                       />
                     </div>
                   )}
-                </div>
+                </div>) : ""}
                 {_.get(feature, "cards", null) && (
                   <Space size={50} style={{ flexBasis: '100%', justifyContent: 'space-between' }}>
                     {_.map(_.get(feature, "cards", null), (card, card_idx) => (
