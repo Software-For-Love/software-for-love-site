@@ -83,7 +83,7 @@ sections:
               testimonial: Software For Love is super professional and efficient, they are solution driven and adapt to the need of their clients.
       - title: Past Projects
         bgcolor: e8edf3
-        justify-content: flex-start
+        justify-content: center
         cards:
           - image: /images/Rectangle-19.png
             alt: Phone taking screenshot of Nike hoodie
