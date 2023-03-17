@@ -33,23 +33,8 @@ export default class FeaturesSection extends React.Component {
 	const largeScreenWidth = 820;
     const carouselTemplate = (item) => {
       return (
-        <div class="carousel-content">
-          {_.get(section, "image", null) && (
-            <div
-              className={classNames("cell", "section__media", {
-                "section__media--right":
-                  _.get(section, "image_position", null) === "right",
-              })}
-            >
-              <img
-                src={withPrefix(_.get(section, "image", null))}
-                alt={_.get(section, "image_alt", null)}
-              />
-            </div>
-          )}
-		  
-          <div class="content-wrapper">
-            <div class="quote-icon">
+	    <div class="content-wrapper">
+            <div class="quote-icon" style={{position: "absolute", left: "-15px", top: "-15px"}}>
               <svg
                 width="25"
                 height="16"
@@ -72,6 +57,22 @@ export default class FeaturesSection extends React.Component {
                 <span> {item["relation"]} of </span> {item["company"]}
               </p>
             </div>
+        <div class="carousel-content">
+          {_.get(section, "image", null) && (
+            <div
+              className={classNames("cell", "section__media", {
+                "section__media--right":
+                  _.get(section, "image_position", null) === "right",
+              })}
+            >
+              <img
+                src={withPrefix(_.get(section, "image", null))}
+                alt={_.get(section, "image_alt", null)}
+              />
+            </div>
+          )}
+		  
+          
           </div>
         </div>
       );
