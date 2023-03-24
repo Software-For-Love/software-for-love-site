@@ -85,24 +85,24 @@ sections:
         bgcolor: e8edf3
         justify-content: center
         cards:
-          - image: /images/Rectangle-19.png
+          - image: /images/rapidrent_small.png
             alt: Phone taking screenshot of Nike hoodie
-            label:  Project A
+            label:  RapidRent
             caption: Web Development
-            redirect: /projects
-          - image: /images/Rectangle-19.png
-            alt: Ipad and coffee cup on table
-            label: Project B
+            redirect: /blog/rapidrent
+          - image: /images/ubionics_small.png
+            alt: uBionics Website
+            label: uBionics Website
             caption: Web Development
-            redirect: /projects
-          - image: /images/Rectangle-19.png
-            alt: Light bulb being held up in front of the horizon
-            label:  Project C
+            redirect:  /blog/bionics
+          - image: /images/ess-website_small.png
+            alt: uOttawa ESS Website
+            label:  uOttawa ESS Website
             caption: Web Development
-            redirect: /projects
+            redirect: /blog/uottawaess/
         link:
           title: See All Projects
-          url: /
+          url: /blog
   - type: features_section
     features:
       - content: >-
