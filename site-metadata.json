@@ -7,7 +7,7 @@
     "has_nav": true,
     "nav_links": [
       {
-        "label": "Organizations",
+        "label": "Our Services",
         "url": "/organizations",
         "style": "link"
       },

@@ -2,7 +2,7 @@
 title: Organization
 sections:
     - type: hero_section
-      title: Organizations
+      title: Our Services
       subtitle: >-
           At Software for Love, we foster a culture that promotes learning, collaboration, sustainability, and philanthropy. We always put our best foot forward and love taking on new challenges. We strive to use our knowledge and abilities to help our partners solve problems within our community.
       align: left
