@@ -39,7 +39,7 @@ sections:
                 Based on your preference, we try to meet as much as possible. Usually this is weekly or bi-weekly based on your availability. We believe in an iterative design and development process where at each step your input is valued.
     - type: organizations_form
       title: Contact Us
-      subtitle: Got a project request? Please fill out this form with a brief description of your project. We will contact you and schedule a meeting as soon as possible.
+      subtitle: If you have a project request, kindly fill out our form with a concise description of your project. Our team will promptly reach out to you to schedule a meeting at your convenience.
       image: images/undraw_contact_us_15o2.svg
       image_alt: Hero placeholder image
       image_position: right
