@@ -76,8 +76,9 @@ export default class VolunteersForm extends React.Component {
         "Marketing Content Creation",
         "Marketing Analysis",
         "Business Development",
-        "Software Development",
-        "Software Project Management"
+        "Platform Team",
+//         "Software Development",
+//         "Software Project Management"
       ]
       let heard = [
         "Search Engine",
@@ -155,7 +156,7 @@ export default class VolunteersForm extends React.Component {
 
 
                         <div className="form-group">
-                            <label id="university_label" htmlFor="university_id">University {required_star} </label>
+                            <label id="university_label" htmlFor="university_id">School {required_star} </label>
                             <input aria-labelledby="university_label" type="text" name="university" id="university_id" placeholder="Current Institution" onChange={this.handleOnChange} required/>
                         </div>
 

@@ -1,5 +1,5 @@
 {
-  "description": "Software For Love is a registered Canadian non-profit organization that focuses on providing software solutions in exchange for charitable contributions.",
+  "description": "Software For Love is an organization striving to give back to our community using software! #spreadinglovethroughsoftware",
   "favicon":"images/newLogoTest.svg",
   "header": {
     "logo": "images/logoBlue.svg",
@@ -73,7 +73,7 @@
       },
       {
         "label": "TikTok",
-        "url": "https://vm.tiktok.com/ZMd132SFD/",
+        "url": "https://www.tiktok.com/@softwareforlove",
         "style": "link",
         "new_window": true
       },

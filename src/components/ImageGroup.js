@@ -14,7 +14,7 @@ export default class ImageGroup extends React.Component {
   render () {
     return <div className="image-group-container">
         {_.map(this.props.images, (image_info, image_idx) => (
-            <div
+			<div
               className="image-group-media"
               style={{ 
                 opacity: 
@@ -26,10 +26,12 @@ export default class ImageGroup extends React.Component {
               onMouseLeave={() => {this.setState({ hovered_image: null })}}
               key={image_idx}
             >
-              <img
-                src={withPrefix(_.get(image_info, "image", null))}
-                alt={_.get(image_info, "image_alt", null)}
-              />
+				<a href={_.get(image_info, "image_url", null)}>
+				  <img
+					src={withPrefix(_.get(image_info, "image", null))}
+					alt={_.get(image_info, "image_alt", null)}
+				  />
+				</a>
             </div>
           )
         )

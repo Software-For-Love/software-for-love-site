@@ -77,7 +77,7 @@ export default class DonationForm extends React.Component {
                 Help us continue our work by donating to us.
               </h3>
               <div>
-                All donations will go towards any expenses related to maintaining our organization. Any surplus will be donated to charities.
+              Thank you for helping us support the non-profits and charities who are working to achieve their goals. Your donation will go towards helping us improve our quality of services and maintaining our organization. <b>Please note that donations are not tax-deductible.</b>
               </div>
             </div>
           </div>
