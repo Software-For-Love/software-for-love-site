@@ -4,6 +4,8 @@ sections:
   - type: hero_section
     title: Software for Love
     subtitle: >-
+      Spreading Love Through Software  
+  
       Software For Love is a non-profit organization that focuses on providing software solutions. We are a team of young professionals who are passionate about technology and seek to give back to our community.
     actions:
       - label: Partner With Us
@@ -38,7 +40,7 @@ sections:
             style: secondary
       - title: Work With Us
         content: >-
-          We're constantly looking for new non-profits and charities who could benefit from the services that we provide. Here are a few testimonies from our clients!
+          Working with us means that you'll have access to a team of experts who are dedicated to providing you with customized software solutions. We offer our services free of charge, so that you can focus on your mission and deliver your services to those who need it most. By partnering with us, you can rest assured that your organization will receive quality solutions that are tailored to your unique needs and requirements.
         align: left
         carousels:
           items:
