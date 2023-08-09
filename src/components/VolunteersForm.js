@@ -78,6 +78,7 @@ export default class VolunteersForm extends React.Component {
         "Business Development",
         "Finance",
 //        "Platform Team",
+        "Human Resources",
         "Software Development",
         "Software Project Management",
         "UI/UX Design"
