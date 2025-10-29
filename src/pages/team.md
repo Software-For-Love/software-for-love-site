@@ -37,7 +37,6 @@ sections:
       team:
           - src/data/team/Software-Team/avaneesh-madaram.yaml
           - src/data/team/Software-Team/fatimah-vakily.yaml
-          - src/data/team/Software-Team/hamzah-abouseta.yaml
           - src/data/team/Software-Team/zohair-ahmed.yaml
           - src/data/team/Software-Team/nirmal-chaudhari.yaml
           - src/data/team/Software-Team/ben-flynn.yaml
